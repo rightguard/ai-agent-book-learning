@@ -1,0 +1,15 @@
+# model config
+model:
+  name: qwen3.7-flash-2026-07-15
+  temperature: 0.3
+  top_p: 0.9
+  max_tokens: 4096
+
+agent:
+  max_iterations: 10
+  max_tool_calls: 20
+
+search:
+  enabled: true
+  max_iterations: 5
+  max_results: 10
