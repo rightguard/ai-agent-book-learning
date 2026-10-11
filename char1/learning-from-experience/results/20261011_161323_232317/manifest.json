@@ -1,0 +1,245 @@
+{
+  "experiment": "8-2-qlearning-versus-qwen-first-attempt",
+  "model": "qwen3.7-flash-2026-07-15",
+  "started_at": "2026-10-11T16:13:23",
+  "settings": {
+    "model": "qwen3.7-flash-2026-07-15",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "max_output_tokens": 768,
+    "api_timeout": 120,
+    "history_steps": 50,
+    "rl_episodes": 10000,
+    "rl_eval_episodes": 100,
+    "checkpoint_interval": 1000,
+    "seed": 42,
+    "learning_rate": 0.2,
+    "discount_factor": 0.99,
+    "epsilon": 1.0,
+    "epsilon_decay": 0.9995,
+    "epsilon_min": 0.1,
+    "max_llm_steps": 50,
+    "output_dir": "char1/learning-from-experience/results",
+    "quiet": false
+  },
+  "status": "completed",
+  "note": "Qwen replacement experiment, not an exact Kimi K3 reproduction; RL 100-episode evaluation and LLM first attempt have different sample sizes.",
+  "qlearning": {
+    "algorithm": "tabular Q-learning",
+    "training": {
+      "episodes": 10000,
+      "victories": 4510,
+      "victory_rate": 0.451,
+      "last_checkpoint": {
+        "episode": 10000,
+        "victory_rate": 0.981,
+        "avg_reward": 240.7625,
+        "q_table_size": 142,
+        "epsilon": 0.1
+      },
+      "q_table_size": 142,
+      "training_seconds": 9.958
+    },
+    "evaluation": {
+      "episodes": 100,
+      "victories": 100,
+      "victory_rate": 1.0,
+      "avg_steps": 12,
+      "avg_reward": 243.0,
+      "std_steps": 0.0,
+      "evaluation_seconds": 0.031
+    },
+    "learning_curve": [
+      {
+        "episode": 1000,
+        "victory_rate": 0.003,
+        "avg_reward": 6.002,
+        "q_table_size": 123,
+        "epsilon": 0.606454822840097
+      },
+      {
+        "episode": 2000,
+        "victory_rate": 0.0,
+        "avg_reward": 15.2865,
+        "q_table_size": 123,
+        "epsilon": 0.3677874521460121
+      },
+      {
+        "episode": 3000,
+        "victory_rate": 0.001,
+        "avg_reward": 16.2545,
+        "q_table_size": 126,
+        "epsilon": 0.22304647413401948
+      },
+      {
+        "episode": 4000,
+        "victory_rate": 0.001,
+        "avg_reward": 20.5565,
+        "q_table_size": 127,
+        "epsilon": 0.13526760995605422
+      },
+      {
+        "episode": 5000,
+        "victory_rate": 0.001,
+        "avg_reward": 24.401,
+        "q_table_size": 128,
+        "epsilon": 0.1
+      },
+      {
+        "episode": 6000,
+        "victory_rate": 0.559,
+        "avg_reward": 160.771,
+        "q_table_size": 137,
+        "epsilon": 0.1
+      },
+      {
+        "episode": 7000,
+        "victory_rate": 0.97,
+        "avg_reward": 237.7025,
+        "q_table_size": 138,
+        "epsilon": 0.1
+      },
+      {
+        "episode": 8000,
+        "victory_rate": 0.996,
+        "avg_reward": 243.1445,
+        "q_table_size": 138,
+        "epsilon": 0.1
+      },
+      {
+        "episode": 9000,
+        "victory_rate": 0.998,
+        "avg_reward": 243.7835,
+        "q_table_size": 139,
+        "epsilon": 0.1
+      },
+      {
+        "episode": 10000,
+        "victory_rate": 0.981,
+        "avg_reward": 240.7625,
+        "q_table_size": 142,
+        "epsilon": 0.1
+      }
+    ],
+    "first_evaluation_trajectory": [
+      {
+        "step": 1,
+        "room": "entrance",
+        "action": "take rusty sword",
+        "feedback": "You take the rusty sword.",
+        "reward": 2.5,
+        "victory": false
+      },
+      {
+        "step": 2,
+        "room": "entrance",
+        "action": "go east",
+        "feedback": "You move east to the storage.",
+        "reward": 0.5,
+        "victory": false
+      },
+      {
+        "step": 3,
+        "room": "storage",
+        "action": "take magic crystal",
+        "feedback": "You take the magic crystal.",
+        "reward": 1.5,
+        "victory": false
+      },
+      {
+        "step": 4,
+        "room": "storage",
+        "action": "take red key",
+        "feedback": "You take the red key.",
+        "reward": 4.5,
+        "victory": false
+      },
+      {
+        "step": 5,
+        "room": "storage",
+        "action": "try crafting",
+        "feedback": "You successfully craft a silver sword!",
+        "reward": 9.5,
+        "victory": false
+      },
+      {
+        "step": 6,
+        "room": "storage",
+        "action": "go west",
+        "feedback": "You move west to the entrance.",
+        "reward": 0.5,
+        "victory": false
+      },
+      {
+        "step": 7,
+        "room": "entrance",
+        "action": "go north",
+        "feedback": "You move north to the hallway.",
+        "reward": 0.5,
+        "victory": false
+      },
+      {
+        "step": 8,
+        "room": "hallway",
+        "action": "go north",
+        "feedback": "You unlock the door with the red key and move north.",
+        "reward": 4.5,
+        "victory": false
+      },
+      {
+        "step": 9,
+        "room": "guard_room",
+        "action": "attack with silver sword",
+        "feedback": "You defeat the strong guard with your silver sword!",
+        "reward": 19.5,
+        "victory": false
+      },
+      {
+        "step": 10,
+        "room": "guard_room",
+        "action": "drop silver sword",
+        "feedback": "You drop the silver sword.",
+        "reward": -0.5,
+        "victory": false
+      },
+      {
+        "step": 11,
+        "room": "guard_room",
+        "action": "go east",
+        "feedback": "You move east to the treasure_room.",
+        "reward": 0.5,
+        "victory": false
+      },
+      {
+        "step": 12,
+        "room": "treasure_room",
+        "action": "take dragon's treasure",
+        "feedback": "You take the dragon's treasure.\n\nVICTORY! You've collected the dragon's treasure!",
+        "reward": 199.5,
+        "victory": true
+      }
+    ]
+  },
+  "llm": {
+    "agent": "Qwen in-context learning; model weights not updated",
+    "model": "qwen3.7-flash-2026-07-15",
+    "environment": "same deterministic five-room treasure hunt as RL",
+    "attempts": 1,
+    "victory": true,
+    "steps": 24,
+    "max_steps": 50,
+    "stopped_reason": "victory",
+    "total_reward": 235.5,
+    "elapsed_seconds": 30.823,
+    "api_calls": 24,
+    "api_errors": 0,
+    "parser_failures": 0,
+    "fallback_actions": 0,
+    "prompt_tokens": 17496,
+    "completion_tokens": 1040,
+    "total_tokens": 18536,
+    "token_statistics_available": true
+  },
+  "finished_at": "2026-10-11T16:14:04"
+}

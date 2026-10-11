@@ -1,0 +1,20 @@
+{
+  "agent": "Qwen in-context learning; model weights not updated",
+  "model": "qwen3.7-flash-2026-07-15",
+  "environment": "same deterministic five-room treasure hunt as RL",
+  "attempts": 1,
+  "victory": true,
+  "steps": 24,
+  "max_steps": 50,
+  "stopped_reason": "victory",
+  "total_reward": 235.5,
+  "elapsed_seconds": 30.823,
+  "api_calls": 24,
+  "api_errors": 0,
+  "parser_failures": 0,
+  "fallback_actions": 0,
+  "prompt_tokens": 17496,
+  "completion_tokens": 1040,
+  "total_tokens": 18536,
+  "token_statistics_available": true
+}

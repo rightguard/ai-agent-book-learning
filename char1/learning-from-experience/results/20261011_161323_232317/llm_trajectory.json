@@ -1,0 +1,624 @@
+[
+  {
+    "step": 1,
+    "room_before": "entrance",
+    "inventory_before": [],
+    "available_actions": [
+      "go north",
+      "go east",
+      "take rusty sword",
+      "look around",
+      "check inventory"
+    ],
+    "action": "take rusty sword",
+    "reason": "初始房间有武器，拾取可增加战斗力或作为工具，且当前无其他紧急需求。",
+    "feedback": "You take the rusty sword.",
+    "reward": 2.5,
+    "done": false,
+    "victory": false,
+    "room_after": "entrance"
+  },
+  {
+    "step": 2,
+    "room_before": "entrance",
+    "inventory_before": [
+      "rusty sword"
+    ],
+    "available_actions": [
+      "go north",
+      "go east",
+      "use rusty sword",
+      "drop rusty sword",
+      "look around",
+      "check inventory"
+    ],
+    "action": "go north",
+    "reason": "当前房间出口为北和东，且未探索任何区域。向北移动是推进游戏进程、寻找宝藏或新线索的标准策略，避免在起始房间原地打转。",
+    "feedback": "You move north to the hallway.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "hallway"
+  },
+  {
+    "step": 3,
+    "room_before": "hallway",
+    "inventory_before": [
+      "rusty sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go north",
+      "use rusty sword",
+      "drop rusty sword",
+      "look around",
+      "check inventory"
+    ],
+    "action": "look around",
+    "reason": "当前房间描述仅提及北边有锁住的门，未提及其他物品或线索。在尝试使用武器前，先仔细观察环境以寻找可能的钥匙、机关或隐藏路径是更稳妥的策略。",
+    "feedback": "Room: hallway\nA long hallway with a locked door to the north.\nExits: south, north\nInventory: rusty sword\nMoves: 3/50",
+    "reward": -0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "hallway"
+  },
+  {
+    "step": 4,
+    "room_before": "hallway",
+    "inventory_before": [
+      "rusty sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go north",
+      "use rusty sword",
+      "drop rusty sword",
+      "look around",
+      "check inventory"
+    ],
+    "action": "go north",
+    "reason": "当前房间描述指出北边有一扇锁着的门，但作为探索步骤，尝试向北移动以触发后续交互（如开锁或发现钥匙）是推进游戏的关键。",
+    "feedback": "The north exit is locked. You need a red key.",
+    "reward": -1.0,
+    "done": false,
+    "victory": false,
+    "room_after": "hallway"
+  },
+  {
+    "step": 5,
+    "room_before": "hallway",
+    "inventory_before": [
+      "rusty sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go north",
+      "use rusty sword",
+      "drop rusty sword",
+      "look around",
+      "check inventory"
+    ],
+    "action": "go south",
+    "reason": "北门锁住且需要红钥匙，当前无钥匙，只能向南返回入口寻找线索或道具。",
+    "feedback": "You move south to the entrance.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "entrance"
+  },
+  {
+    "step": 6,
+    "room_before": "entrance",
+    "inventory_before": [
+      "rusty sword"
+    ],
+    "available_actions": [
+      "go north",
+      "go east",
+      "use rusty sword",
+      "drop rusty sword",
+      "look around",
+      "check inventory"
+    ],
+    "action": "go east",
+    "reason": "北出口被锁且需要红色钥匙，当前库存无钥匙，必须探索其他方向（东）以寻找钥匙或通关线索。",
+    "feedback": "You move east to the storage.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "storage"
+  },
+  {
+    "step": 7,
+    "room_before": "storage",
+    "inventory_before": [
+      "rusty sword"
+    ],
+    "available_actions": [
+      "go west",
+      "take red key",
+      "take magic crystal",
+      "use rusty sword",
+      "drop rusty sword",
+      "look around",
+      "check inventory"
+    ],
+    "action": "take red key",
+    "reason": "之前在北边走廊被锁住的门需要红色钥匙，现在在储物间找到了它，必须拾取以便后续开门。",
+    "feedback": "You take the red key.",
+    "reward": 4.5,
+    "done": false,
+    "victory": false,
+    "room_after": "storage"
+  },
+  {
+    "step": 8,
+    "room_before": "storage",
+    "inventory_before": [
+      "rusty sword",
+      "red key"
+    ],
+    "available_actions": [
+      "go west",
+      "take magic crystal",
+      "use rusty sword",
+      "drop rusty sword",
+      "use red key",
+      "drop red key",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "take magic crystal",
+    "reason": "当前房间内有未拾取的道具magic crystal，拾取它可能获得额外奖励或用于后续解谜/合成。",
+    "feedback": "You take the magic crystal.",
+    "reward": 1.5,
+    "done": false,
+    "victory": false,
+    "room_after": "storage"
+  },
+  {
+    "step": 9,
+    "room_before": "storage",
+    "inventory_before": [
+      "rusty sword",
+      "red key",
+      "magic crystal"
+    ],
+    "available_actions": [
+      "go west",
+      "use rusty sword",
+      "drop rusty sword",
+      "use red key",
+      "drop red key",
+      "use magic crystal",
+      "drop magic crystal",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "go west",
+    "reason": "当前房间出口只有西面，且已持有开启北方锁门的红钥匙，需返回走廊以使用钥匙继续推进。",
+    "feedback": "You move west to the entrance.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "entrance"
+  },
+  {
+    "step": 10,
+    "room_before": "entrance",
+    "inventory_before": [
+      "rusty sword",
+      "red key",
+      "magic crystal"
+    ],
+    "available_actions": [
+      "go north",
+      "go east",
+      "use rusty sword",
+      "drop rusty sword",
+      "use red key",
+      "drop red key",
+      "use magic crystal",
+      "drop magic crystal",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "go north",
+    "reason": "已持有红色钥匙，前往走廊尝试打开北面的锁门以继续推进。",
+    "feedback": "You move north to the hallway.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "hallway"
+  },
+  {
+    "step": 11,
+    "room_before": "hallway",
+    "inventory_before": [
+      "rusty sword",
+      "red key",
+      "magic crystal"
+    ],
+    "available_actions": [
+      "go south",
+      "go north",
+      "use rusty sword",
+      "drop rusty sword",
+      "use red key",
+      "drop red key",
+      "use magic crystal",
+      "drop magic crystal",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "use red key",
+    "reason": "之前尝试向北移动时提示需要红色钥匙，现在背包中有红色钥匙，使用它应该能打开北边的门继续前进。",
+    "feedback": "The red key will be used automatically when needed.",
+    "reward": -0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "hallway"
+  },
+  {
+    "step": 12,
+    "room_before": "hallway",
+    "inventory_before": [
+      "rusty sword",
+      "red key",
+      "magic crystal"
+    ],
+    "available_actions": [
+      "go south",
+      "go north",
+      "use rusty sword",
+      "drop rusty sword",
+      "use red key",
+      "drop red key",
+      "use magic crystal",
+      "drop magic crystal",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "go north",
+    "reason": "已持有红色钥匙，尝试向北移动以通过之前锁住的门。",
+    "feedback": "You unlock the door with the red key and move north.",
+    "reward": 4.5,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 13,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "rusty sword",
+      "red key",
+      "magic crystal"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use rusty sword",
+      "drop rusty sword",
+      "use red key",
+      "drop red key",
+      "use magic crystal",
+      "drop magic crystal",
+      "attack with rusty sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "attack with rusty sword",
+    "reason": "守卫阻挡了通往宝藏的路，且当前持有武器，必须击败守卫才能继续前进。",
+    "feedback": "Your rusty sword is not effective against the strong guard!",
+    "reward": -2.5,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 14,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "rusty sword",
+      "red key",
+      "magic crystal"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use rusty sword",
+      "drop rusty sword",
+      "use red key",
+      "drop red key",
+      "use magic crystal",
+      "drop magic crystal",
+      "attack with rusty sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "use magic crystal",
+    "reason": "之前的攻击无效，尝试使用魔法水晶对抗守卫以清除障碍。",
+    "feedback": "You can't use the magic crystal right now.",
+    "reward": -1.0,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 15,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "rusty sword",
+      "red key",
+      "magic crystal"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use rusty sword",
+      "drop rusty sword",
+      "use red key",
+      "drop red key",
+      "use magic crystal",
+      "drop magic crystal",
+      "attack with rusty sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "look around",
+    "reason": "当前攻击和道具使用均无效，且守卫阻挡去路。通过观察房间细节（如武器架）寻找可能的线索、隐藏物品或破解方法，是打破僵局的关键步骤。",
+    "feedback": "Room: guard_room\nA large room with weapon racks. A guard blocks the treasure!\nA guard blocks your way!\nExits: south, east\nInventory: rusty sword, red key, magic crystal\nMoves: 15/50",
+    "reward": -0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 16,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "rusty sword",
+      "red key",
+      "magic crystal"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use rusty sword",
+      "drop rusty sword",
+      "use red key",
+      "drop red key",
+      "use magic crystal",
+      "drop magic crystal",
+      "attack with rusty sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "try crafting",
+    "reason": "普通攻击无效且魔法水晶暂时无法使用，尝试制作可能获得能击败守卫的强力武器或道具。",
+    "feedback": "You successfully craft a silver sword!",
+    "reward": 9.5,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 17,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use red key",
+      "drop red key",
+      "use silver sword",
+      "drop silver sword",
+      "attack with silver sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "attack with silver sword",
+    "reason": "之前的铁剑无效，但刚合成的银剑奖励极高且针对守卫，应尝试使用它击败守卫以获取宝藏。",
+    "feedback": "You defeat the strong guard with your silver sword!",
+    "reward": 19.5,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 18,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use red key",
+      "drop red key",
+      "use silver sword",
+      "drop silver sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "use silver sword",
+    "reason": "守卫仍在阻挡宝藏，且之前的反馈显示银剑能有效击败守卫，使用它可以清除障碍并继续推进。",
+    "feedback": "You can't use the silver sword right now.",
+    "reward": -1.0,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 19,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use red key",
+      "drop red key",
+      "use silver sword",
+      "drop silver sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "look around",
+    "reason": "守卫已被击败，但状态显示其仍在阻挡宝藏。查看周围以确认宝藏位置或触发交互机制。",
+    "feedback": "Room: guard_room\nA large room with weapon racks. A guard blocks the treasure!\nExits: south, east\nInventory: red key, silver sword\nMoves: 19/50",
+    "reward": -0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 20,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use red key",
+      "drop red key",
+      "use silver sword",
+      "drop silver sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "look around",
+    "reason": "当前状态显示守卫仍在阻挡宝藏，且之前的攻击反馈存在矛盾或守卫已重生，需重新确认房间细节和守卫状态以决定下一步策略。",
+    "feedback": "Room: guard_room\nA large room with weapon racks. A guard blocks the treasure!\nExits: south, east\nInventory: red key, silver sword\nMoves: 20/50",
+    "reward": -0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 21,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use red key",
+      "drop red key",
+      "use silver sword",
+      "drop silver sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "look around",
+    "reason": "当前守卫仍在阻挡宝藏，且之前的攻击和物品使用反馈表明需要特定条件或机制。通过再次查看房间描述，确认是否有新的线索、可互动的武器架或其他隐藏机制，以便找到击败守卫或获取宝藏的方法。",
+    "feedback": "Room: guard_room\nA large room with weapon racks. A guard blocks the treasure!\nExits: south, east\nInventory: red key, silver sword\nMoves: 21/50",
+    "reward": -0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 22,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use red key",
+      "drop red key",
+      "use silver sword",
+      "drop silver sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "look around",
+    "reason": "当前状态显示守卫仍在阻挡宝藏，且之前的攻击和物品使用尝试未成功或无效。在有限的步数内，需要重新审视环境以寻找新的线索或机制（如守卫的弱点、隐藏路径或特定交互条件），避免盲目重复无效动作。",
+    "feedback": "Room: guard_room\nA large room with weapon racks. A guard blocks the treasure!\nExits: south, east\nInventory: red key, silver sword\nMoves: 22/50",
+    "reward": -0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "guard_room"
+  },
+  {
+    "step": 23,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "available_actions": [
+      "go south",
+      "go east",
+      "use red key",
+      "drop red key",
+      "use silver sword",
+      "drop silver sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "go east",
+    "reason": "守卫已被击败，宝藏应在东侧出口方向，继续探索以获取胜利。",
+    "feedback": "You move east to the treasure_room.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false,
+    "room_after": "treasure_room"
+  },
+  {
+    "step": 24,
+    "room_before": "treasure_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "available_actions": [
+      "go west",
+      "take dragon's treasure",
+      "use red key",
+      "drop red key",
+      "use silver sword",
+      "drop silver sword",
+      "look around",
+      "check inventory",
+      "try crafting"
+    ],
+    "action": "take dragon's treasure",
+    "reason": "已到达宝藏室，直接拾取最终目标物品以通关。",
+    "feedback": "You take the dragon's treasure.\n\nVICTORY! You've collected the dragon's treasure!",
+    "reward": 199.5,
+    "done": true,
+    "victory": true,
+    "room_after": "treasure_room"
+  }
+]

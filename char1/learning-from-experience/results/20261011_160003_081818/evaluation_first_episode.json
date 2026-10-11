@@ -1,0 +1,152 @@
+[
+  {
+    "step": 1,
+    "room_before": "entrance",
+    "inventory_before": [],
+    "action": "take rusty sword",
+    "feedback": "You take the rusty sword.",
+    "reward": 2.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 2,
+    "room_before": "entrance",
+    "inventory_before": [
+      "rusty sword"
+    ],
+    "action": "go east",
+    "feedback": "You move east to the storage.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 3,
+    "room_before": "storage",
+    "inventory_before": [
+      "rusty sword"
+    ],
+    "action": "take magic crystal",
+    "feedback": "You take the magic crystal.",
+    "reward": 1.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 4,
+    "room_before": "storage",
+    "inventory_before": [
+      "rusty sword",
+      "magic crystal"
+    ],
+    "action": "take red key",
+    "feedback": "You take the red key.",
+    "reward": 4.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 5,
+    "room_before": "storage",
+    "inventory_before": [
+      "rusty sword",
+      "magic crystal",
+      "red key"
+    ],
+    "action": "try crafting",
+    "feedback": "You successfully craft a silver sword!",
+    "reward": 9.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 6,
+    "room_before": "storage",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "action": "go west",
+    "feedback": "You move west to the entrance.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 7,
+    "room_before": "entrance",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "action": "go north",
+    "feedback": "You move north to the hallway.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 8,
+    "room_before": "hallway",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "action": "go north",
+    "feedback": "You unlock the door with the red key and move north.",
+    "reward": 4.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 9,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "action": "attack with silver sword",
+    "feedback": "You defeat the strong guard with your silver sword!",
+    "reward": 19.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 10,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key",
+      "silver sword"
+    ],
+    "action": "drop silver sword",
+    "feedback": "You drop the silver sword.",
+    "reward": -0.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 11,
+    "room_before": "guard_room",
+    "inventory_before": [
+      "red key"
+    ],
+    "action": "go east",
+    "feedback": "You move east to the treasure_room.",
+    "reward": 0.5,
+    "done": false,
+    "victory": false
+  },
+  {
+    "step": 12,
+    "room_before": "treasure_room",
+    "inventory_before": [
+      "red key"
+    ],
+    "action": "take dragon's treasure",
+    "feedback": "You take the dragon's treasure.\n\nVICTORY! You've collected the dragon's treasure!",
+    "reward": 199.5,
+    "done": true,
+    "victory": true
+  }
+]
