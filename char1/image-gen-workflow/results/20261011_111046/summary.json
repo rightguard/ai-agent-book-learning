@@ -1,0 +1,50 @@
+{
+  "run_id": "20261011_111046",
+  "passed": true,
+  "success_count": 6,
+  "failure_count": 0,
+  "images": [
+    {
+      "case_id": "weekend_programmer",
+      "route": "direct",
+      "image_file": "images/01_weekend_programmer_direct.png",
+      "original_prompt": "帮我画一个周末还在公司加班的程序员，桌上有电脑、咖啡和一堆文档，画面真实，略带疲惫感",
+      "final_prompt": "帮我画一个周末还在公司加班的程序员，桌上有电脑、咖啡和一堆文档，画面真实，略带疲惫感"
+    },
+    {
+      "case_id": "weekend_programmer",
+      "route": "rewritten",
+      "image_file": "images/02_weekend_programmer_rewritten.png",
+      "original_prompt": "帮我画一个周末还在公司加班的程序员，桌上有电脑、咖啡和一堆文档，画面真实，略带疲惫感",
+      "final_prompt": "一位年轻的程序员在周末的深夜独自坐在办公室工位上加班，神情略显疲惫，眼神中透着专注与倦意。桌面上杂乱地摆放着一台打开的笔记本电脑、一杯喝了一半的黑咖啡以及堆积如山的纸质文档和代码打印稿。画面采用写实风格，光线昏暗，主要光源来自电脑屏幕发出的冷蓝光和远处走廊透进来的微弱暖光，营造出一种孤独而安静的氛围。背景是模糊的深色办公区域，突出人物主体，细节丰富，质感真实。"
+    },
+    {
+      "case_id": "headphone_poster",
+      "route": "direct",
+      "image_file": "images/03_headphone_poster_direct.png",
+      "original_prompt": "帮我做一张新款降噪耳机的产品海报，主打\"深夜独处也清净\"这句文案，风格简约高级",
+      "final_prompt": "帮我做一张新款降噪耳机的产品海报，主打\"深夜独处也清净\"这句文案，风格简约高级"
+    },
+    {
+      "case_id": "headphone_poster",
+      "route": "rewritten",
+      "image_file": "images/04_headphone_poster_rewritten.png",
+      "original_prompt": "帮我做一张新款降噪耳机的产品海报，主打\"深夜独处也清净\"这句文案，风格简约高级",
+      "final_prompt": "极简主义高端产品摄影，主体为一款设计现代、线条流畅的新款降噪耳机，置于纯黑或深灰哑光背景中。柔和的侧逆光勾勒耳机轮廓，营造静谧、深邃的氛围，体现'深夜独处也清净'的意境。画面干净留白，突出产品质感与高级感，无杂乱元素，高分辨率，商业海报级画质。"
+    },
+    {
+      "case_id": "agi_programmer",
+      "route": "direct",
+      "image_file": "images/05_agi_programmer_direct.png",
+      "original_prompt": "帮我画一个 AGI 实现以后程序员的工作场景",
+      "final_prompt": "帮我画一个 AGI 实现以后程序员的工作场景"
+    },
+    {
+      "case_id": "agi_programmer",
+      "route": "rewritten",
+      "image_file": "images/06_agi_programmer_rewritten.png",
+      "original_prompt": "帮我画一个 AGI 实现以后程序员的工作场景",
+      "final_prompt": "一位年轻的程序员坐在充满未来科技感的极简主义办公室中，背景是巨大的落地窗，窗外是霓虹闪烁的赛博朋克风格城市夜景。程序员面前悬浮着多个半透明的全息屏幕，屏幕上流动着复杂的代码和数据流，但程序员的姿态轻松惬意，手中拿着一杯咖啡，面带微笑地看着屏幕，神情自信且从容。画面中心有一个发光的AGI智能助手图标在轻轻脉动，象征着人工智能的高效协作。整体色调为冷蓝色与暖橙色的对比，光线柔和且具有电影质感，8k分辨率，超高清细节，科幻写实风格。"
+    }
+  ]
+}

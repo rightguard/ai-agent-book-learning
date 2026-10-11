@@ -1,0 +1,290 @@
+{
+  "experiment": "1-4-image-workflow-qwen",
+  "run_id": "20261011_111046",
+  "started_at": "2026-10-11T11:10:46",
+  "text_model": "qwen3.7-flash-2026-07-15",
+  "image_model": "qwen-image-3.0-pro",
+  "image_size": "1024x1024",
+  "prompt_extend": false,
+  "tasks_total": 6,
+  "tasks": [
+    {
+      "case_id": "weekend_programmer",
+      "category": "specific",
+      "route": "direct",
+      "route_label": "原始需求直出的图",
+      "original_prompt": "帮我画一个周末还在公司加班的程序员，桌上有电脑、咖啡和一堆文档，画面真实，略带疲惫感",
+      "final_prompt": "帮我画一个周末还在公司加班的程序员，桌上有电脑、咖啡和一堆文档，画面真实，略带疲惫感",
+      "rewrite": null,
+      "image_file": "images/01_weekend_programmer_direct.png",
+      "image_sha256": "88d34f981b577a62fecb0e6242e478abe9223b9743013616b1609300c0268695",
+      "image_size_bytes": 1167721,
+      "image_request": {
+        "model": "qwen-image-3.0-pro",
+        "size": "1024x1024",
+        "n": 1,
+        "prompt_extend": false,
+        "seed": 42,
+        "watermark": false
+      },
+      "image_usage": {
+        "input_tokens": null,
+        "input_tokens_details": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "output_tokens_details": null,
+        "output_height": 1024,
+        "output_width": 1024,
+        "input_image_count": 0,
+        "input_image_type": "qima_input_1k",
+        "output_image_count": 1,
+        "output_image_type": "qima_output_1k"
+      },
+      "image_response": {
+        "request_id": "ec4afbd7-438d-9d73-9ab4-eb1b68d1a1e7",
+        "created": 1791688252,
+        "data_count": 1
+      }
+    },
+    {
+      "case_id": "weekend_programmer",
+      "category": "specific",
+      "route": "rewritten",
+      "route_label": "改写后生成的图",
+      "original_prompt": "帮我画一个周末还在公司加班的程序员，桌上有电脑、咖啡和一堆文档，画面真实，略带疲惫感",
+      "final_prompt": "一位年轻的程序员在周末的深夜独自坐在办公室工位上加班，神情略显疲惫，眼神中透着专注与倦意。桌面上杂乱地摆放着一台打开的笔记本电脑、一杯喝了一半的黑咖啡以及堆积如山的纸质文档和代码打印稿。画面采用写实风格，光线昏暗，主要光源来自电脑屏幕发出的冷蓝光和远处走廊透进来的微弱暖光，营造出一种孤独而安静的氛围。背景是模糊的深色办公区域，突出人物主体，细节丰富，质感真实。",
+      "rewrite": {
+        "raw_response": "{\n  \"prompt\": \"一位年轻的程序员在周末的深夜独自坐在办公室工位上加班，神情略显疲惫，眼神中透着专注与倦意。桌面上杂乱地摆放着一台打开的笔记本电脑、一杯喝了一半的黑咖啡以及堆积如山的纸质文档和代码打印稿。画面采用写实风格，光线昏暗，主要光源来自电脑屏幕发出的冷蓝光和远处走廊透进来的微弱暖光，营造出一种孤独而安静的氛围。背景是模糊的深色办公区域，突出人物主体，细节丰富，质感真实。\",\n  \"notes\": \"强调光影对比以体现深夜加班的氛围，注意表现人物面部的疲惫感（如黑眼圈、微皱的眉头），保持画面的真实感和生活气息，避免过度艺术化或卡通化。\"\n}",
+        "rewritten_prompt": "一位年轻的程序员在周末的深夜独自坐在办公室工位上加班，神情略显疲惫，眼神中透着专注与倦意。桌面上杂乱地摆放着一台打开的笔记本电脑、一杯喝了一半的黑咖啡以及堆积如山的纸质文档和代码打印稿。画面采用写实风格，光线昏暗，主要光源来自电脑屏幕发出的冷蓝光和远处走廊透进来的微弱暖光，营造出一种孤独而安静的氛围。背景是模糊的深色办公区域，突出人物主体，细节丰富，质感真实。",
+        "notes": "强调光影对比以体现深夜加班的氛围，注意表现人物面部的疲惫感（如黑眼圈、微皱的眉头），保持画面的真实感和生活气息，避免过度艺术化或卡通化。",
+        "usage": {
+          "completion_tokens": 159,
+          "prompt_tokens": 141,
+          "total_tokens": 300,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "text_tokens": 141
+          }
+        }
+      },
+      "image_file": "images/02_weekend_programmer_rewritten.png",
+      "image_sha256": "b6461f4dffdb32414ccf642f8a2241cb41e51f71cb805a0351c8be0873e54ce7",
+      "image_size_bytes": 1172850,
+      "image_request": {
+        "model": "qwen-image-3.0-pro",
+        "size": "1024x1024",
+        "n": 1,
+        "prompt_extend": false,
+        "seed": 42,
+        "watermark": false
+      },
+      "image_usage": {
+        "input_tokens": null,
+        "input_tokens_details": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "output_tokens_details": null,
+        "output_height": 1024,
+        "output_width": 1024,
+        "input_image_count": 0,
+        "input_image_type": "qima_input_1k",
+        "output_image_count": 1,
+        "output_image_type": "qima_output_1k"
+      },
+      "image_response": {
+        "request_id": "056a0f81-4703-9a3e-8a58-738f79bd6bde",
+        "created": 1791688265,
+        "data_count": 1
+      }
+    },
+    {
+      "case_id": "headphone_poster",
+      "category": "specific",
+      "route": "direct",
+      "route_label": "原始需求直出的图",
+      "original_prompt": "帮我做一张新款降噪耳机的产品海报，主打\"深夜独处也清净\"这句文案，风格简约高级",
+      "final_prompt": "帮我做一张新款降噪耳机的产品海报，主打\"深夜独处也清净\"这句文案，风格简约高级",
+      "rewrite": null,
+      "image_file": "images/03_headphone_poster_direct.png",
+      "image_sha256": "923642b40cd27e268d1839bc619d230643651dc518e4ab295e1944b90d89c907",
+      "image_size_bytes": 888760,
+      "image_request": {
+        "model": "qwen-image-3.0-pro",
+        "size": "1024x1024",
+        "n": 1,
+        "prompt_extend": false,
+        "seed": 42,
+        "watermark": false
+      },
+      "image_usage": {
+        "input_tokens": null,
+        "input_tokens_details": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "output_tokens_details": null,
+        "output_height": 1024,
+        "output_width": 1024,
+        "input_image_count": 0,
+        "input_image_type": "qima_input_1k",
+        "output_image_count": 1,
+        "output_image_type": "qima_output_1k"
+      },
+      "image_response": {
+        "request_id": "0736e8fa-e7d7-93c9-9f37-d73dd22555d1",
+        "created": 1791688275,
+        "data_count": 1
+      }
+    },
+    {
+      "case_id": "headphone_poster",
+      "category": "specific",
+      "route": "rewritten",
+      "route_label": "改写后生成的图",
+      "original_prompt": "帮我做一张新款降噪耳机的产品海报，主打\"深夜独处也清净\"这句文案，风格简约高级",
+      "final_prompt": "极简主义高端产品摄影，主体为一款设计现代、线条流畅的新款降噪耳机，置于纯黑或深灰哑光背景中。柔和的侧逆光勾勒耳机轮廓，营造静谧、深邃的氛围，体现'深夜独处也清净'的意境。画面干净留白，突出产品质感与高级感，无杂乱元素，高分辨率，商业海报级画质。",
+      "rewrite": {
+        "raw_response": "{\n  \"prompt\": \"极简主义高端产品摄影，主体为一款设计现代、线条流畅的新款降噪耳机，置于纯黑或深灰哑光背景中。柔和的侧逆光勾勒耳机轮廓，营造静谧、深邃的氛围，体现'深夜独处也清净'的意境。画面干净留白，突出产品质感与高级感，无杂乱元素，高分辨率，商业海报级画质。\",\n  \"notes\": \"确保文案'深夜独处也清净'以优雅字体清晰呈现于画面适当位置（如底部或留白处），字体颜色建议为白色或浅灰，与深色背景形成对比但不突兀。整体色调偏冷，强调宁静与科技感。\"\n}",
+        "rewritten_prompt": "极简主义高端产品摄影，主体为一款设计现代、线条流畅的新款降噪耳机，置于纯黑或深灰哑光背景中。柔和的侧逆光勾勒耳机轮廓，营造静谧、深邃的氛围，体现'深夜独处也清净'的意境。画面干净留白，突出产品质感与高级感，无杂乱元素，高分辨率，商业海报级画质。",
+        "notes": "确保文案'深夜独处也清净'以优雅字体清晰呈现于画面适当位置（如底部或留白处），字体颜色建议为白色或浅灰，与深色背景形成对比但不突兀。整体色调偏冷，强调宁静与科技感。",
+        "usage": {
+          "completion_tokens": 149,
+          "prompt_tokens": 139,
+          "total_tokens": 288,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "text_tokens": 139
+          }
+        }
+      },
+      "image_file": "images/04_headphone_poster_rewritten.png",
+      "image_sha256": "a1f7ec38205ca447fcb34e184ef7ae6aa0895386572244438c198eca18d3544a",
+      "image_size_bytes": 792514,
+      "image_request": {
+        "model": "qwen-image-3.0-pro",
+        "size": "1024x1024",
+        "n": 1,
+        "prompt_extend": false,
+        "seed": 42,
+        "watermark": false
+      },
+      "image_usage": {
+        "input_tokens": null,
+        "input_tokens_details": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "output_tokens_details": null,
+        "output_height": 1024,
+        "output_width": 1024,
+        "input_image_count": 0,
+        "input_image_type": "qima_input_1k",
+        "output_image_count": 1,
+        "output_image_type": "qima_output_1k"
+      },
+      "image_response": {
+        "request_id": "d80fa85b-103a-95ca-b94c-4c73a0562905",
+        "created": 1791688288,
+        "data_count": 1
+      }
+    },
+    {
+      "case_id": "agi_programmer",
+      "category": "broad",
+      "route": "direct",
+      "route_label": "原始需求直出的图",
+      "original_prompt": "帮我画一个 AGI 实现以后程序员的工作场景",
+      "final_prompt": "帮我画一个 AGI 实现以后程序员的工作场景",
+      "rewrite": null,
+      "image_file": "images/05_agi_programmer_direct.png",
+      "image_sha256": "dc59a964e939ac5b1dd288bd3d21790bf44041372a373d994fa46154d2bd2ce2",
+      "image_size_bytes": 1123084,
+      "image_request": {
+        "model": "qwen-image-3.0-pro",
+        "size": "1024x1024",
+        "n": 1,
+        "prompt_extend": false,
+        "seed": 42,
+        "watermark": false
+      },
+      "image_usage": {
+        "input_tokens": null,
+        "input_tokens_details": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "output_tokens_details": null,
+        "output_height": 1024,
+        "output_width": 1024,
+        "input_image_count": 0,
+        "input_image_type": "qima_input_1k",
+        "output_image_count": 1,
+        "output_image_type": "qima_output_1k"
+      },
+      "image_response": {
+        "request_id": "3626c399-8b45-9288-92cb-5e56f191dbf0",
+        "created": 1791688297,
+        "data_count": 1
+      }
+    },
+    {
+      "case_id": "agi_programmer",
+      "category": "broad",
+      "route": "rewritten",
+      "route_label": "改写后生成的图",
+      "original_prompt": "帮我画一个 AGI 实现以后程序员的工作场景",
+      "final_prompt": "一位年轻的程序员坐在充满未来科技感的极简主义办公室中，背景是巨大的落地窗，窗外是霓虹闪烁的赛博朋克风格城市夜景。程序员面前悬浮着多个半透明的全息屏幕，屏幕上流动着复杂的代码和数据流，但程序员的姿态轻松惬意，手中拿着一杯咖啡，面带微笑地看着屏幕，神情自信且从容。画面中心有一个发光的AGI智能助手图标在轻轻脉动，象征着人工智能的高效协作。整体色调为冷蓝色与暖橙色的对比，光线柔和且具有电影质感，8k分辨率，超高清细节，科幻写实风格。",
+      "rewrite": {
+        "raw_response": "{\n  \"prompt\": \"一位年轻的程序员坐在充满未来科技感的极简主义办公室中，背景是巨大的落地窗，窗外是霓虹闪烁的赛博朋克风格城市夜景。程序员面前悬浮着多个半透明的全息屏幕，屏幕上流动着复杂的代码和数据流，但程序员的姿态轻松惬意，手中拿着一杯咖啡，面带微笑地看着屏幕，神情自信且从容。画面中心有一个发光的AGI智能助手图标在轻轻脉动，象征着人工智能的高效协作。整体色调为冷蓝色与暖橙色的对比，光线柔和且具有电影质感，8k分辨率，超高清细节，科幻写实风格。\",\n  \"notes\": \"强调人与AI的和谐共存，避免表现焦虑或过度劳累的场景，突出AGI带来的效率提升和工作方式的变革。\"\n}",
+        "rewritten_prompt": "一位年轻的程序员坐在充满未来科技感的极简主义办公室中，背景是巨大的落地窗，窗外是霓虹闪烁的赛博朋克风格城市夜景。程序员面前悬浮着多个半透明的全息屏幕，屏幕上流动着复杂的代码和数据流，但程序员的姿态轻松惬意，手中拿着一杯咖啡，面带微笑地看着屏幕，神情自信且从容。画面中心有一个发光的AGI智能助手图标在轻轻脉动，象征着人工智能的高效协作。整体色调为冷蓝色与暖橙色的对比，光线柔和且具有电影质感，8k分辨率，超高清细节，科幻写实风格。",
+        "notes": "强调人与AI的和谐共存，避免表现焦虑或过度劳累的场景，突出AGI带来的效率提升和工作方式的变革。",
+        "usage": {
+          "completion_tokens": 163,
+          "prompt_tokens": 127,
+          "total_tokens": 290,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "text_tokens": 127
+          }
+        }
+      },
+      "image_file": "images/06_agi_programmer_rewritten.png",
+      "image_sha256": "afee000c7d52e9e21d6993178333aac4db936b4d7eec500df67b90f75bc68371",
+      "image_size_bytes": 1239451,
+      "image_request": {
+        "model": "qwen-image-3.0-pro",
+        "size": "1024x1024",
+        "n": 1,
+        "prompt_extend": false,
+        "seed": 42,
+        "watermark": false
+      },
+      "image_usage": {
+        "input_tokens": null,
+        "input_tokens_details": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "output_tokens_details": null,
+        "output_height": 1024,
+        "output_width": 1024,
+        "input_image_count": 0,
+        "input_image_type": "qima_input_1k",
+        "output_image_count": 1,
+        "output_image_type": "qima_output_1k"
+      },
+      "image_response": {
+        "request_id": "9a4eedf9-fdb5-9b93-aa71-43471aebd049",
+        "created": 1791688310,
+        "data_count": 1
+      }
+    }
+  ],
+  "failures": [],
+  "finished_at": "2026-10-11T11:11:54",
+  "success_count": 6,
+  "failure_count": 0,
+  "passed": true
+}

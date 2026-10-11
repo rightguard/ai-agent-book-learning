@@ -1,15 +1,44 @@
-# model config
+# 文本模型配置
 model:
   name: qwen3.7-flash-2026-07-15
   temperature: 0.3
   top_p: 0.9
-  max_tokens: 4096
-
-agent:
+  max_tokens: 8192
   max_iterations: 10
   max_tool_calls: 20
 
+# 搜索配置
 search:
   enabled: true
   max_iterations: 5
   max_results: 10
+
+
+# 图像生成模型
+image:
+  model: qwen-image-3.0-pro
+  size: "1024x1024"
+  n: 1
+  prompt_extend: false
+  seed: 42
+  watermark: false
+  timeout: 600
+
+experiment_1_4:
+  routes:
+    - direct
+    - rewritten
+
+  output_dir: "char1/image-gen-workflow/results"
+  cases:
+    - id: weekend_programmer
+      category: specific
+      prompt: "帮我画一个周末还在公司加班的程序员，桌上有电脑、咖啡和一堆文档，画面真实，略带疲惫感"
+
+    - id: headphone_poster
+      category: specific
+      prompt: '帮我做一张新款降噪耳机的产品海报，主打"深夜独处也清净"这句文案，风格简约高级'
+
+    - id: agi_programmer
+      category: broad
+      prompt: "帮我画一个 AGI 实现以后程序员的工作场景"
