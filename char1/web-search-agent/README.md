@@ -1,40 +1,36 @@
+# web-search-agent — 最简 ReAct 天气 Agent
 
-(vllm_wsl) root@DESKTOP-H4LVG45:/mnt/e/ai-agent-book# python char1/web-search-agent/weather_search.py
+本章最小可运行的 ReAct Agent 示例。工具在本地 Python 实现，通过 Chat Completions 的 `tools=[{...}]` 注册给模型，模型自主决定何时调用、调用哪个参数，然后拿到观察结果后再继续决策。
 
-[第1轮] tool_calls
-[行动] weather_search({"city": "广州"})
-[观察] {"city": "广州", "queried_at": "2026-10-10T11:13:02+08:00", "source": "https://api.open-meteo.com/v1/forecast?latitude=23.1291&longitude=113.2644&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cwind_speed_10m_max%2Cwind_direction_10m_dominant&timezone=Asia%2FShanghai&forecast_days=3", "daily_units": {"time": "iso8601", "weather_code": "wmo code", "temperature_2m_max": "°C", "temperature_2m_min": "°C", "wind_speed_10m_max": "km/h", "wind_direction_10m_dominant": "°"}, "daily": {"time": ["2026-10-10", "2026-10-11", "2026-10-12"], "weather_code": [3, 0, 2], "temperature_2m_max": [31.2, 32.7, 33.6], "temperature_2m_min": [21.6, 21.5, 23.4], "wind_speed_10m_max": [8.4, 8.0, 11.6], "wind_direction_10m_dominant": [35, 59, 146], "weather_text": ["阴", "晴", "局部多云"], "wind_direction_text": ["东北风", "东北风", "东南风"]}}
+## 文件
 
-[第2轮] tool_calls
-[行动] weather_search({"city": "深圳"})
-[观察] {"city": "深圳", "queried_at": "2026-10-10T11:13:03+08:00", "source": "https://api.open-meteo.com/v1/forecast?latitude=22.5431&longitude=114.0579&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cwind_speed_10m_max%2Cwind_direction_10m_dominant&timezone=Asia%2FShanghai&forecast_days=3", "daily_units": {"time": "iso8601", "weather_code": "wmo code", "temperature_2m_max": "°C", "temperature_2m_min": "°C", "wind_speed_10m_max": "km/h", "wind_direction_10m_dominant": "°"}, "daily": {"time": ["2026-10-10", "2026-10-11", "2026-10-12"], "weather_code": [2, 1, 0], "temperature_2m_max": [31.1, 31.2, 30.4], "temperature_2m_min": [22.0, 22.5, 23.0], "wind_speed_10m_max": [9.6, 10.6, 12.5], "wind_direction_10m_dominant": [77, 92, 98], "weather_text": ["局部多云", "大部晴", "晴"], "wind_direction_text": ["东风", "东风", "东风"]}}
+| 文件 | 说明 |
+|------|------|
+| `weather_search.py` | Agent 主脚本：注册一个 `weather_search` 工具 → 模型 ReAct 循环 → 打印最终回答 |
+| `weather_trace.json` | 某次运行的完整轨迹（每轮 tool_call 和 tool 结果） |
+| `run_log.md` | 2026-10-10 一次真实运行的终端输出 |
 
-[第3轮] stop
+## 运行
 
-[状态] completed
-[最终回答] 以下是广州和深圳未来三天（2026-10-10 至 2026-10-12）的天气情况：
+```bash
+# 必须从仓库根目录启动
+python char1/web-search-agent/weather_search.py
+```
 
-### **广州**
+## 工作方式
 
-* **数据来源**: https://api.open-meteo.com/v1/forecast?latitude=23.1291&longitude=113.2644&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cwind_speed_10m_max%2Cwind_direction_10m_dominant&timezone=Asia%2FShanghai&forecast_days=3
-* **查询时间**: 2026-10-10T11:13:02+08:00
+```
+模型第 1 轮 → 决定"查广州天气" → 本地 Python 函数被调用 → 工具结果返回
+模型第 2 轮 → 决定"查深圳天气" → 本地 Python 函数被调用 → 工具结果返回
+模型第 3 轮 → 工具够用了 → 生成最终自然语言回答
+```
 
-| 日期       | 天气     | 气温 (°C)  | 风速 (km/h) | 风向 (角度/描述) |
-| :--------- | :------- | :---------- | :---------- | :--------------- |
-| 2026-10-10 | 阴       | 21.6 ~ 31.2 | 8.4         | 35° (东北风)    |
-| 2026-10-11 | 晴       | 21.5 ~ 32.7 | 8.0         | 59° (东北风)    |
-| 2026-10-12 | 局部多云 | 23.4 ~ 33.6 | 11.6        | 146° (东南风)   |
+关键设计要点：
 
----
+- **工具是本地函数**，不是远程托管工具。脚本内部有一个 `weather_search()` 函数调 Open-Meteo 免费天气 API，没有外部 key 需求。
+- **ReAct 循环手写**：用 `for step in range(max_iterations)` 驱动，每轮把所有历史消息（包括 tool 结果）都发回给模型，直到模型返回的 `msg.tool_calls` 为空才算"生成完成"。
+- **容错与护栏**：搜索次数超过 `config.yaml` 的 `search.max_iterations` 时主动报错；工具异常时把 `{"error": ...}` 作为观察结果回灌，避免 Agent 假装成功。
 
-### **深圳**
+## 实验结果
 
-* **数据来源**: https://api.open-meteo.com/v1/forecast?latitude=22.5431&longitude=114.0579&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cwind_speed_10m_max%2Cwind_direction_10m_dominant&timezone=Asia%2FShanghai&forecast_days=3
-* **查询时间**: 2026-10-10T11:13:03+08:00
-
-| 日期                                                                  | 天气     | 气温 (°C)  | 风速 (km/h) | 风向 (角度/描述) |
-| :-------------------------------------------------------------------- | :------- | :---------- | :---------- | :--------------- |
-| 2026-10-10                                                            | 局部多云 | 22.0 ~ 31.1 | 9.6         | 77° (东风)      |
-| 2026-10-11                                                            | 大部晴   | 22.5 ~ 31.2 | 10.6        | 92° (东风)      |
-| 2026-10-12                                                            | 晴       | 23.0 ~ 30.4 | 12.5        | 98° (东风)      |
-| [轨迹] /mnt/e/ai-agent-book/char1/web-search-agent/weather_trace.json |          |             |             |                  |
+2026-10-10 那次运行中，Agent 在 3 轮内先后查询了广州和深圳的三天天气，成功生成 Markdown 表格回答。完整输出见 [run_log.md](run_log.md)，结构化轨迹见 [weather_trace.json](weather_trace.json)。
