@@ -1,0 +1,39 @@
+{
+  "experiment": "2-2",
+  "status": "complete",
+  "checks": {
+    "real_qwen3_architecture": true,
+    "local_weights_fingerprinted": true,
+    "three_layers_captured": true,
+    "lossless_attention_matrices_saved": true,
+    "simple_heatmap_saved": true,
+    "generated_heatmap_saved": true,
+    "causal_triangle_verified": true,
+    "attention_rows_normalized": true,
+    "explicit_think_open": true,
+    "explicit_think_close": true,
+    "final_answer_content_present": true,
+    "reasoning_region_metrics_saved": true,
+    "position_mass_measured": true
+  },
+  "canonical_default_settings": true,
+  "official_exact_complete": false,
+  "files": {
+    "attention_matrices.npz": {
+      "bytes": 992937,
+      "sha256": "5d05e9f1c97464f6aa33e601f676b848692324f5d345191e0514b4b6991c9c91"
+    },
+    "beijing_attention.png": {
+      "bytes": 88655,
+      "sha256": "6d196c5035b965f945d2026be46557eb988a5ea3ca55ce464e6fec166be32173"
+    },
+    "experiment_results.json": {
+      "bytes": 29891,
+      "sha256": "73ec2eb06ef1deba7067e2773741821816b54ade0256ff9d66e46382cf5d4587"
+    },
+    "reasoning_attention.png": {
+      "bytes": 1491308,
+      "sha256": "bce8226dad66398e043eda76f307580bcb8942461f973d56fd64d74b11bd1739"
+    }
+  }
+}

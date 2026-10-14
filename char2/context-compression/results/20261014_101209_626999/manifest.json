@@ -1,0 +1,20 @@
+{
+  "experiment": "2-10",
+  "status": "complete",
+  "credential_scan_passed": true,
+  "credential_findings": [],
+  "sha256_files": {
+    "cells/citations_trial_01.json": "c7f48ea11f5f19a5732bd3d7ca97ed1366c926b5b95bddd3e06745dc05469c9e",
+    "cells/combined_trial_01.json": "93f38d3213ded0164785017d7f488bd49e04535cd7f713ae2dbf78e76f822a88",
+    "cells/context_aware_trial_01.json": "5ff43fb2eb7df9d1d1800d70e2b1c76edea751c144caaf5fbeb95589064a2338",
+    "cells/individual_trial_01.json": "de4dfa6deb50f6e0ad1abfb0a19b93330be784baa6f33f525f13b114b4c636b1",
+    "cells/no_compression_trial_01.json": "28213b40ce37dbbd2b66bbe3178e23ae968c439f87a9bb51fd12477ff46d8b29",
+    "cells/windowed_trial_01.json": "f86cf5737ed59b965b801d800ace8ed2386e79b855b139de81b3b95e91f3d6d0",
+    "comparison.json": "3756928d4ab2ef4a940b06daae3006c9e491c877f94c440fc8f9c65075a668b9",
+    "context_token_comparison.png": "718c276e1d6fb5258bd983a8868c84c3ca1e06d403c2e446ccbce12d27365e65",
+    "protocol.json": "b0ea68a8fa2a7e625892ce6d07c9264df5c56b432c8a8dcc5907dfd61857ede3",
+    "retention_accuracy.png": "cd9b7ceec707460b3671a69dc5c87fc1450fb3f361eaf7421c1f9356029d5347",
+    "snapshot.json": "0b4946db3c672f2272057f56ca52ea48f17d2b22b89d8ed69395a755bdbeaced",
+    "summary.md": "97c0549f726a15a20e219c1ce5204719641507f4b2f3086511ddd6e28e3ad15d"
+  }
+}

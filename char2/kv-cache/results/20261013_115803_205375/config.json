@@ -1,0 +1,24 @@
+{
+  "provider": "dashscope",
+  "model": "qwen3.7-flash-2026-07-15",
+  "api_base": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "modes": [
+    "correct",
+    "dynamic_system",
+    "shuffled_tools",
+    "dynamic_profile",
+    "sliding_window",
+    "text_format"
+  ],
+  "phase": "all",
+  "cache_repeats": 2,
+  "cache_warmups": 1,
+  "cache_rounds": 4,
+  "cache_prefix_records": 48,
+  "max_iterations": 14,
+  "sliding_window_groups": 2,
+  "seed": 20261013,
+  "output_dir": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115803_205375",
+  "model_directory_when_local": "/mnt/e/ai-agent-book/qwen3_0.6b",
+  "analysis_note": "服务端缓存上报为0不等于字段缺失；缓存收益与Agent任务效果分开统计。"
+}

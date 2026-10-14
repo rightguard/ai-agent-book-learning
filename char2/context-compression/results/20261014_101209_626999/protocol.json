@@ -1,0 +1,26 @@
+{
+  "experiment": "2-10",
+  "provider": "dashscope",
+  "model": "qwen3.7-flash",
+  "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "key_present": true,
+  "strategies": [
+    "no_compression",
+    "individual",
+    "combined",
+    "context_aware",
+    "citations",
+    "windowed"
+  ],
+  "trials": 1,
+  "expected_runs": 6,
+  "snapshot_kind": "synthetic_fictional_fixture",
+  "snapshot_sha256": "293c6e288e43476a9bed8972608c6a85bb6e270f8c10a7a0307682cbb386ab2f",
+  "documents": 13,
+  "gold_records": 6,
+  "budget_tokens": 8500,
+  "raw_context_tokens_estimate": 8961,
+  "token_measurement": "cl100k_base_estimate_not_qwen",
+  "note": "Matched fixed-snapshot replay of chapter2/context-compression mechanisms; NOT official live-web results.",
+  "all_fixtures_are_fictional": true
+}

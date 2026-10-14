@@ -1,0 +1,146 @@
+(vllm_wsl) root@DESKTOP-H4LVG45:/mnt/e/ai-agent-book# python char2/kv-cache/experiment_2_3.py \
+  --mode correct \
+  --phase cache \
+  --cache-repeats 1
+[2-3] {"provider": "dashscope", "model": "qwen3.7-flash-2026-07-15", "api_base": "https://dashscope.aliyuncs.com/compatible-mode/v1", "modes": ["correct"], "phase": "cache", "cache_repeats": 1, "cache_warmups": 1, "cache_rounds": 4, "cache_prefix_records": 48, "max_iterations": 14, "sliding_window_groups": 2, "seed": 20261013, "output_dir": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115716_690616", "model_directory_when_local": "/mnt/e/ai-agent-book/qwen3_0.6b", "analysis_note": "服务端缓存上报为0不等于字段缺失；缓存收益与Agent任务效果分开统计。"}
+
+[缓存对照] 第 1/1 次重复；模式顺序：correct
+  --- correct ---
+cache-correct-r1: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.18请求/s]
+[
+  {
+    "source": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115716_690616/comparison.json",
+    "mode": "correct",
+    "cached_tokens": 10240,
+    "prompt_tokens": 11367,
+    "cache_ratio": 0.9008533474091669,
+    "cached_billable_token_equiv": 2151.0,
+    "TTFT_s": 0.554798502999347,
+    "agent_requests": null,
+    "agent_success": null,
+    "sliding_window_exercised": null
+  }
+]
+[2-3 验收] complete {"all_six_modes": false, "cache_measurements_complete": true, "cache_usage_reported": true, "correct_cache_hit_observed": true, "agent_receipts_complete": true, "agent_has_multiple_rounds": true, "sliding_window_really_evicted_tool_results": true}
+[输出] /mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115716_690616
+(vllm_wsl) root@DESKTOP-H4LVG45:/mnt/e/ai-agent-book# python char2/kv-cache/experiment_2_3.py --compare
+[2-3] {"provider": "dashscope", "model": "qwen3.7-flash-2026-07-15", "api_base": "https://dashscope.aliyuncs.com/compatible-mode/v1", "modes": ["correct", "dynamic_system", "shuffled_tools", "dynamic_profile", "sliding_window", "text_format"], "phase": "all", "cache_repeats": 2, "cache_warmups": 1, "cache_rounds": 4, "cache_prefix_records": 48, "max_iterations": 14, "sliding_window_groups": 2, "seed": 20261013, "output_dir": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115803_205375", "model_directory_when_local": "/mnt/e/ai-agent-book/qwen3_0.6b", "analysis_note": "服务端缓存上报为0不等于字段缺失；缓存收益与Agent任务效果分开统计。"}
+
+[缓存对照] 第 1/2 次重复；模式顺序：correct, text_format, shuffled_tools, dynamic_system, dynamic_profile, sliding_window
+  --- correct ---
+cache-correct-r1: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.03请求/s]
+  --- text_format ---
+cache-text_format-r1: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.07请求/s]
+  --- shuffled_tools ---
+cache-shuffled_tools-r1: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.24请求/s]
+  --- dynamic_system ---
+cache-dynamic_system-r1: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.16请求/s]
+  --- dynamic_profile ---
+cache-dynamic_profile-r1: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.12请求/s]
+  --- sliding_window ---
+cache-sliding_window-r1: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.12请求/s]
+
+[缓存对照] 第 2/2 次重复；模式顺序：dynamic_system, sliding_window, shuffled_tools, text_format, correct, dynamic_profile
+  --- dynamic_system ---
+cache-dynamic_system-r2: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.04请求/s]
+  --- sliding_window ---
+cache-sliding_window-r2: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.09请求/s]
+  --- shuffled_tools ---
+cache-shuffled_tools-r2: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.24请求/s]
+  --- text_format ---
+cache-text_format-r2: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:06<00:00,  1.28s/请求]
+  --- correct ---
+cache-correct-r2: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:14<00:00,  2.97s/请求]
+  --- dynamic_profile ---
+cache-dynamic_profile-r2: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:04<00:00,  1.03请求/s]
+
+[多轮 ReAct] 模式顺序： text_format, shuffled_tools, sliding_window, dynamic_profile, dynamic_system, correct
+  --- text_format ---
+agent-text_format:  21%|███████████████████████████████████████▏                                                                                                                                               | 3/14 [00:04<00:15,  1.42s/请求]
+  --- shuffled_tools ---
+agent-shuffled_tools:  50%|██████████████████████████████████████████████████████████████████████████████████████████                                                                                          | 7/14 [00:08<00:08,  1.22s/请求]
+  --- sliding_window ---
+agent-sliding_window:  50%|██████████████████████████████████████████████████████████████████████████████████████████                                                                                          | 7/14 [00:06<00:06,  1.02请求/s]
+  --- dynamic_profile ---
+agent-dynamic_profile:  50%|█████████████████████████████████████████████████████████████████████████████████████████▌                                                                                         | 7/14 [00:17<00:17,  2.50s/请求]
+  --- dynamic_system ---
+agent-dynamic_system:  50%|██████████████████████████████████████████████████████████████████████████████████████████                                                                                          | 7/14 [00:09<00:09,  1.35s/请求]
+  --- correct ---
+agent-correct:  50%|█████████████████████████████████████████████████████████████████████████████████████████████▌                                                                                             | 7/14 [00:19<00:19,  2.82s/请求]
+[
+  {
+    "source": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115803_205375/comparison.json",
+    "mode": "correct",
+    "cached_tokens": 20480,
+    "prompt_tokens": 22702,
+    "cache_ratio": 0.9021231609549819,
+    "cached_billable_token_equiv": 4270.0,
+    "TTFT_s": 1.9917268326250905,
+    "agent_requests": 7,
+    "agent_success": true,
+    "sliding_window_exercised": null
+  },
+  {
+    "source": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115803_205375/comparison.json",
+    "mode": "dynamic_system",
+    "cached_tokens": 0,
+    "prompt_tokens": 23022,
+    "cache_ratio": 0.0,
+    "cached_billable_token_equiv": 23022.0,
+    "TTFT_s": 0.7676774167498479,
+    "agent_requests": 7,
+    "agent_success": true,
+    "sliding_window_exercised": null
+  },
+  {
+    "source": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115803_205375/comparison.json",
+    "mode": "shuffled_tools",
+    "cached_tokens": 0,
+    "prompt_tokens": 22734,
+    "cache_ratio": 0.0,
+    "cached_billable_token_equiv": 22734.0,
+    "TTFT_s": 0.6623929001248143,
+    "agent_requests": 7,
+    "agent_success": true,
+    "sliding_window_exercised": null
+  },
+  {
+    "source": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115803_205375/comparison.json",
+    "mode": "dynamic_profile",
+    "cached_tokens": 20480,
+    "prompt_tokens": 22934,
+    "cache_ratio": 0.8929972965902154,
+    "cached_billable_token_equiv": 4502.0,
+    "TTFT_s": 0.8255247693746242,
+    "agent_requests": 7,
+    "agent_success": true,
+    "sliding_window_exercised": null
+  },
+  {
+    "source": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115803_205375/comparison.json",
+    "mode": "sliding_window",
+    "cached_tokens": 20480,
+    "prompt_tokens": 22172,
+    "cache_ratio": 0.9236875338264477,
+    "cached_billable_token_equiv": 3740.0,
+    "TTFT_s": 0.769701073625356,
+    "agent_requests": 7,
+    "agent_success": false,
+    "sliding_window_exercised": true
+  },
+  {
+    "source": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115803_205375/comparison.json",
+    "mode": "text_format",
+    "cached_tokens": 20480,
+    "prompt_tokens": 22782,
+    "cache_ratio": 0.8989553156000352,
+    "cached_billable_token_equiv": 4350.0,
+    "TTFT_s": 1.0397754725004233,
+    "agent_requests": 3,
+    "agent_success": false,
+    "sliding_window_exercised": null
+  }
+]
+[2-3 验收] partial {"all_six_modes": true, "cache_measurements_complete": true, "cache_usage_reported": true, "correct_cache_hit_observed": true, "agent_receipts_complete": true, "agent_has_multiple_rounds": false, "sliding_window_really_evicted_tool_results": true}
+[输出] /mnt/e/ai-agent-book/char2/kv-cache/results/20261013_115803_205375
+(vllm_wsl) root@DESKTOP-H4LVG45:/mnt/e/ai-agent-book# 

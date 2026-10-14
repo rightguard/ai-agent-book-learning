@@ -1,0 +1,211 @@
+(vllm_wsl) root@DESKTOP-H4LVG45:/mnt/e/ai-agent-book# python char2/kv-cache/experiment_2_3.py --compare
+[2-3] {"provider": "dashscope", "model": "qwen3.7-flash-2026-07-15", "api_base": "https://dashscope.aliyuncs.com/compatible-mode/v1", "modes": ["correct", "dynamic_system", "shuffled_tools", "dynamic_profile", "sliding_window", "text_format"], "test_workspace": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_110444_997150/fixture", "max_iterations": 8, "model_directory_when_local": "/mnt/e/ai-agent-book/qwen3_0.6b", "output_dir": "/mnt/e/ai-agent-book/char2/kv-cache/results/20261013_110444_997150"}
+
+--- 2-3: correct ---
+correct:  25%|██████████████████████████████████████████▎                                                                                                                              | 2/8 [00:06<00:20,  3.41s/请求, mode=correct, request=2]
+[结果] {"mode": "correct", "status": "complete", "task_success": true, "task_outcome": "success", "final_answer_present": true, "task_tools_completed": true, "provider_receipts_valid": true, "errors": [], "iterations": 2, "tools_called": 3, "tools_succeeded": 3, "repeated_tool_calls": 0, "ttft_first_s": 1.8224204199996166, "ttft_mean_s": 1.181458055999883, "ttft_mean_after_first_s": 0.5404956920001496, "first_to_later_ttft_improvement_pct": 70.34187687601397, "total_time_s": 4.241694456000005, "prompt_tokens": 1506, "completion_tokens": 180, "cached_tokens": 0, "cache_observed": true, "cache_hits": 0, "cache_misses": 2, "cache_hit_rate": 0.0, "cache_ratio": 0.0, "ttft_per_iteration_s": [1.8224204199996166, 0.5404956920001496], "provider_response_ids": ["chatcmpl-1ec6ec76-3079-9f8a-bad6-aa6507e7ee02", "chatcmpl-6b220247-33c9-9ab3-a374-0a2c2fe97753"]}
+
+--- 2-3: dynamic_system ---
+dynamic_system:  25%|██████████████████████████████████████▊                                                                                                                    | 2/8 [00:03<00:11,  1.97s/请求, mode=dynamic_system, request=2]
+[结果] {"mode": "dynamic_system", "status": "complete", "task_success": true, "task_outcome": "success", "final_answer_present": true, "task_tools_completed": true, "provider_receipts_valid": true, "errors": [], "iterations": 2, "tools_called": 3, "tools_succeeded": 3, "repeated_tool_calls": 0, "ttft_first_s": 0.5471171419994789, "ttft_mean_s": 0.6839971240001432, "ttft_mean_after_first_s": 0.8208771060008075, "first_to_later_ttft_improvement_pct": -50.036809850419445, "total_time_s": 3.607849860999522, "prompt_tokens": 1592, "completion_tokens": 199, "cached_tokens": 0, "cache_observed": true, "cache_hits": 0, "cache_misses": 2, "cache_hit_rate": 0.0, "cache_ratio": 0.0, "ttft_per_iteration_s": [0.5471171419994789, 0.8208771060008075], "provider_response_ids": ["chatcmpl-bb5d04f4-cba5-973b-a58a-6d08a26877d6", "chatcmpl-9305eca6-545c-93d2-9460-6d7d11632fc8"]}
+
+--- 2-3: shuffled_tools ---
+shuffled_tools:  25%|██████████████████████████████████████▊                                                                                                                    | 2/8 [00:03<00:11,  1.96s/请求, mode=shuffled_tools, request=2]
+[结果] {"mode": "shuffled_tools", "status": "complete", "task_success": true, "task_outcome": "success", "final_answer_present": true, "task_tools_completed": true, "provider_receipts_valid": true, "errors": [], "iterations": 2, "tools_called": 3, "tools_succeeded": 3, "repeated_tool_calls": 0, "ttft_first_s": 1.2748629950001487, "ttft_mean_s": 0.9098762900002839, "ttft_mean_after_first_s": 0.5448895850004192, "first_to_later_ttft_improvement_pct": 57.25896922748506, "total_time_s": 3.526947029000439, "prompt_tokens": 1506, "completion_tokens": 179, "cached_tokens": 256, "cache_observed": true, "cache_hits": 1, "cache_misses": 1, "cache_hit_rate": 0.5, "cache_ratio": 0.1699867197875166, "ttft_per_iteration_s": [1.2748629950001487, 0.5448895850004192], "provider_response_ids": ["chatcmpl-7cb8c430-f67f-94ff-9639-6195f686908b", "chatcmpl-1c4726aa-597c-995b-bd93-c47bcfb111b8"]}
+
+--- 2-3: dynamic_profile ---
+dynamic_profile:  25%|██████████████████████████████████████▎                                                                                                                  | 2/8 [00:03<00:11,  1.99s/请求, mode=dynamic_profile, request=2]
+[结果] {"mode": "dynamic_profile", "status": "complete", "task_success": true, "task_outcome": "success", "final_answer_present": true, "task_tools_completed": true, "provider_receipts_valid": true, "errors": [], "iterations": 2, "tools_called": 3, "tools_succeeded": 3, "repeated_tool_calls": 0, "ttft_first_s": 0.6620845630004624, "ttft_mean_s": 0.8050771715002156, "ttft_mean_after_first_s": 0.9480697799999689, "first_to_later_ttft_improvement_pct": -43.194666207510835, "total_time_s": 3.6500495520003824, "prompt_tokens": 1557, "completion_tokens": 186, "cached_tokens": 256, "cache_observed": true, "cache_hits": 1, "cache_misses": 1, "cache_hit_rate": 0.5, "cache_ratio": 0.16441875401412973, "ttft_per_iteration_s": [0.6620845630004624, 0.9480697799999689], "provider_response_ids": ["chatcmpl-4df3c942-4f1a-9725-825c-340bcdeb5550", "chatcmpl-a506b563-acee-9097-a26d-1e3938c03360"]}
+
+--- 2-3: sliding_window ---
+sliding_window:  25%|██████████████████████████████████████▊                                                                                                                    | 2/8 [00:03<00:10,  1.81s/请求, mode=sliding_window, request=2]
+[结果] {"mode": "sliding_window", "status": "complete", "task_success": true, "task_outcome": "success", "final_answer_present": true, "task_tools_completed": true, "provider_receipts_valid": true, "errors": [], "iterations": 2, "tools_called": 3, "tools_succeeded": 3, "repeated_tool_calls": 0, "ttft_first_s": 0.8561474319994886, "ttft_mean_s": 0.7045673239995267, "ttft_mean_after_first_s": 0.5529872159995648, "first_to_later_ttft_improvement_pct": 35.40981432273979, "total_time_s": 3.312360809999518, "prompt_tokens": 1506, "completion_tokens": 192, "cached_tokens": 512, "cache_observed": true, "cache_hits": 2, "cache_misses": 0, "cache_hit_rate": 1.0, "cache_ratio": 0.3399734395750332, "ttft_per_iteration_s": [0.8561474319994886, 0.5529872159995648], "provider_response_ids": ["chatcmpl-94b576af-3c3e-9e1c-a809-7500ebfbaa95", "chatcmpl-c9c2e630-3a0d-9c16-83a0-63cc04a61d34"]}
+
+--- 2-3: text_format ---
+text_format:  25%|████████████████████████████████████████▎                                                                                                                        | 2/8 [00:03<00:09,  1.62s/请求, mode=text_format, request=2]
+[结果] {"mode": "text_format", "status": "complete", "task_success": true, "task_outcome": "success", "final_answer_present": true, "task_tools_completed": true, "provider_receipts_valid": true, "errors": [], "iterations": 2, "tools_called": 3, "tools_succeeded": 3, "repeated_tool_calls": 0, "ttft_first_s": 0.9239391969995268, "ttft_mean_s": 0.7002594784999019, "ttft_mean_after_first_s": 0.476579760000277, "first_to_later_ttft_improvement_pct": 48.418709635010636, "total_time_s": 2.910315972999342, "prompt_tokens": 1607, "completion_tokens": 142, "cached_tokens": 256, "cache_observed": true, "cache_hits": 1, "cache_misses": 1, "cache_hit_rate": 0.5, "cache_ratio": 0.15930304915992533, "ttft_per_iteration_s": [0.9239391969995268, 0.476579760000277], "provider_response_ids": ["chatcmpl-7e503a44-76ed-9c09-b935-245c094da729", "chatcmpl-f86f3e6f-fdd4-9119-9ad0-ad985b44a18a"]}
+[
+  {
+    "mode": "correct",
+    "status": "complete",
+    "ttft_first_s": 1.8224204199996166,
+    "ttft_mean_s": 1.181458055999883,
+    "ttft_after_first_s": 0.5404956920001496,
+    "tool_repetitions": 0,
+    "cache_hit_rate": 0.0,
+    "prompt_tokens": 1506,
+    "cached_tokens": 0,
+    "cache_ratio": 0.0,
+    "billable_token_equivalent": 1506.0
+  },
+  {
+    "mode": "dynamic_system",
+    "status": "complete",
+    "ttft_first_s": 0.5471171419994789,
+    "ttft_mean_s": 0.6839971240001432,
+    "ttft_after_first_s": 0.8208771060008075,
+    "tool_repetitions": 0,
+    "cache_hit_rate": 0.0,
+    "prompt_tokens": 1592,
+    "cached_tokens": 0,
+    "cache_ratio": 0.0,
+    "billable_token_equivalent": 1592.0
+  },
+  {
+    "mode": "shuffled_tools",
+    "status": "complete",
+    "ttft_first_s": 1.2748629950001487,
+    "ttft_mean_s": 0.9098762900002839,
+    "ttft_after_first_s": 0.5448895850004192,
+    "tool_repetitions": 0,
+    "cache_hit_rate": 0.5,
+    "prompt_tokens": 1506,
+    "cached_tokens": 256,
+    "cache_ratio": 0.1699867197875166,
+    "billable_token_equivalent": 1275.6
+  },
+  {
+    "mode": "dynamic_profile",
+    "status": "complete",
+    "ttft_first_s": 0.6620845630004624,
+    "ttft_mean_s": 0.8050771715002156,
+    "ttft_after_first_s": 0.9480697799999689,
+    "tool_repetitions": 0,
+    "cache_hit_rate": 0.5,
+    "prompt_tokens": 1557,
+    "cached_tokens": 256,
+    "cache_ratio": 0.16441875401412973,
+    "billable_token_equivalent": 1326.6
+  },
+  {
+    "mode": "sliding_window",
+    "status": "complete",
+    "ttft_first_s": 0.8561474319994886,
+    "ttft_mean_s": 0.7045673239995267,
+    "ttft_after_first_s": 0.5529872159995648,
+    "tool_repetitions": 0,
+    "cache_hit_rate": 1.0,
+    "prompt_tokens": 1506,
+    "cached_tokens": 512,
+    "cache_ratio": 0.3399734395750332,
+    "billable_token_equivalent": 1045.2
+  },
+  {
+    "mode": "text_format",
+    "status": "complete",
+    "ttft_first_s": 0.9239391969995268,
+    "ttft_mean_s": 0.7002594784999019,
+    "ttft_after_first_s": 0.476579760000277,
+    "tool_repetitions": 0,
+    "cache_hit_rate": 0.5,
+    "prompt_tokens": 1607,
+    "cached_tokens": 256,
+    "cache_ratio": 0.15930304915992533,
+    "billable_token_equivalent": 1376.6
+  }
+]
+[2-3 验收] complete {"all_six_modes_run": true, "all_model_traces_collected": true, "all_prompt_token_counts_present": true, "all_provider_cache_stats_reported": true, "per_iteration_ttft_present": true}
+[输出] /mnt/e/ai-agent-book/char2/kv-cache/results/20261013_110444_997150
+(vllm_wsl) root@DESKTOP-H4LVG45:/mnt/e/ai-agent-book# grep -RniE '"cached_tokens"|"prompt_tokens"|"ttft_per_iteration"|"iterations"|"status"' \
+  char2/kv-cache/results/ | head -100
+char2/kv-cache/results/20261013_110444_997150/comparison.json:3:  "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/comparison.json:25:        "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/comparison.json:32:        "iterations": 2,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:41:        "prompt_tokens": 1506,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:43:        "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:93:            "prompt_tokens": 612,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:95:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:99:              "prompt_tokens": 612,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:104:                "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:260:            "prompt_tokens": 894,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:262:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:266:              "prompt_tokens": 894,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:271:                "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:415:        "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/comparison.json:422:        "iterations": 2,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:431:        "prompt_tokens": 1592,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:433:        "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:483:            "prompt_tokens": 655,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:485:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:489:              "prompt_tokens": 655,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:494:                "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:650:            "prompt_tokens": 937,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:652:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:656:              "prompt_tokens": 937,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:661:                "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:805:        "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/comparison.json:812:        "iterations": 2,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:821:        "prompt_tokens": 1506,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:823:        "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:873:            "prompt_tokens": 612,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:875:            "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:879:              "prompt_tokens": 612,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:884:                "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1040:            "prompt_tokens": 894,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1042:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1046:              "prompt_tokens": 894,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1051:                "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1195:        "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1202:        "iterations": 2,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1211:        "prompt_tokens": 1557,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1213:        "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1263:            "prompt_tokens": 638,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1265:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1269:              "prompt_tokens": 638,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1274:                "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1434:            "prompt_tokens": 919,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1436:            "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1440:              "prompt_tokens": 919,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1445:                "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1593:        "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1600:        "iterations": 2,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1609:        "prompt_tokens": 1506,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1611:        "cached_tokens": 512,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1661:            "prompt_tokens": 612,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1663:            "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1667:              "prompt_tokens": 612,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1672:                "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1828:            "prompt_tokens": 894,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1830:            "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1834:              "prompt_tokens": 894,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1839:                "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1983:        "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1990:        "iterations": 2,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:1999:        "prompt_tokens": 1607,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:2001:        "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:2051:            "prompt_tokens": 615,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:2053:            "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:2057:              "prompt_tokens": 615,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:2062:                "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:2218:            "prompt_tokens": 992,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:2220:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:2224:              "prompt_tokens": 992,
+char2/kv-cache/results/20261013_110444_997150/comparison.json:2229:                "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/manifest.json:3:  "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:4:    "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:11:    "iterations": 2,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:20:    "prompt_tokens": 1506,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:22:    "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:72:        "prompt_tokens": 612,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:74:        "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:78:          "prompt_tokens": 612,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:83:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:239:        "prompt_tokens": 894,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:241:        "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:245:          "prompt_tokens": 894,
+char2/kv-cache/results/20261013_110444_997150/result_correct.json:250:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:4:    "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:11:    "iterations": 2,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:20:    "prompt_tokens": 1557,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:22:    "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:72:        "prompt_tokens": 638,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:74:        "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:78:          "prompt_tokens": 638,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:83:            "cached_tokens": 0,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:243:        "prompt_tokens": 919,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:245:        "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:249:          "prompt_tokens": 919,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_profile.json:254:            "cached_tokens": 256,
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_system.json:4:    "status": "complete",
+char2/kv-cache/results/20261013_110444_997150/result_dynamic_system.json:11:    "iterations": 2,
+(vllm_wsl) root@DESKTOP-H4LVG45:/mnt/e/ai-agent-book# 

@@ -1,0 +1,32 @@
+{
+  "experiment": "2-3",
+  "status": "complete",
+  "gates": {
+    "all_six_modes_run": true,
+    "all_model_traces_collected": true,
+    "all_prompt_token_counts_present": true,
+    "all_provider_cache_stats_reported": true,
+    "per_iteration_ttft_present": true
+  },
+  "observations": {
+    "task_success_by_mode": {
+      "correct": true,
+      "dynamic_system": true,
+      "shuffled_tools": true,
+      "dynamic_profile": true,
+      "sliding_window": true,
+      "text_format": true
+    },
+    "agent_failure_is_valid_experimental_outcome": true
+  },
+  "artifacts_sha256": {
+    "result_correct.json": "8fa4de90b9cd11ab9c6ddb99cf9dce438f1978db21549e7e7096c671b078604e",
+    "result_dynamic_profile.json": "0ec3864f9f3a8357cbca99b82a0493825435ceb26d1a2c2f77f0af747074a815",
+    "result_dynamic_system.json": "75b8ad604aa668029e478baf08b8990a2504d1d973b0170e3f2eec7532f08c0c",
+    "result_shuffled_tools.json": "154dc2e0358f88430d7edb47f114771a266dd3df7e97bdee387bf1156ef75224",
+    "result_sliding_window.json": "f308355c811acd30c54059360acc5c2c265b6814eee6c6bb8b8ec66f56e0609a",
+    "result_text_format.json": "8911c7227ce21eca481e0a7d5580e6c395da67bb240fa6d86c258e52e04b3bd5",
+    "comparison.json": "c76391bb4afa775778b5e8ce2cc244d51f84dd2b10ad107c6739922d85c1ea07",
+    "cache_ratio.png": "91231f7943daee54b23cc3ec1092004adff9e96d51eeeee98c7cf55c1f99f425"
+  }
+}

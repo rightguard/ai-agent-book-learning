@@ -1,0 +1,33 @@
+{
+  "experiment": "2-3",
+  "status": "complete",
+  "gates": {
+    "all_six_modes": false,
+    "cache_measurements_complete": true,
+    "cache_usage_reported": true,
+    "correct_cache_hit_observed": true,
+    "agent_receipts_complete": true,
+    "agent_has_multiple_rounds": true,
+    "sliding_window_really_evicted_tool_results": true
+  },
+  "observations": {
+    "agent_success_by_mode": {
+      "correct": null
+    },
+    "cache_ratio_by_mode": {
+      "correct": 0.9008533474091669
+    },
+    "images": [
+      "cache_ratio.png",
+      "cache_ttft.png"
+    ]
+  },
+  "artifacts_sha256": {
+    "cache_ratio.png": "fbbe217ba2473fbb431effb898cbc0223fc7926a22b87807d32d90bc5540242f",
+    "cache_trials/correct_rep1.json": "152c674d2a5e8c83ecd6abf358cdd4b96042f8a92dc6e9723b80c5dd5d8e7fa1",
+    "cache_ttft.png": "efd4b08d74498bca514a1cb7f6be2b7004617cd1946d906342329a49a156d0b2",
+    "comparison.json": "d797829c9fa2638840c43bf940389e9b3857c97615e3c28efdf7a24a817ad451",
+    "config.json": "a237e16918280dbfa54b5ec4d38ea793ecbf8ad7578576a9b891fb06da5253ea",
+    "result_correct.json": "d4b9ddb82bc6b09c7cad7c79ed53cd027eeff7d79ac64f0172c627b168267622"
+  }
+}

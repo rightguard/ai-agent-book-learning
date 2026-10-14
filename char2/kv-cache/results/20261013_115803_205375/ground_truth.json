@@ -1,0 +1,17 @@
+{
+  "entry": "entry_aa5cdf563e.md",
+  "second": "notes/stage_two_aa5cdf563e.md",
+  "final": "reports/closing_aa5cdf563e.md",
+  "session": "SESSION-088E2397C29C",
+  "final_code": "FINAL-D030F5FB280EBF",
+  "clue_a": "FIND_A_41CB8EB2300E",
+  "clue_b": "FIND_B_E01206B7D840",
+  "expected_tool_sequence": [
+    "find",
+    "read_file",
+    "grep",
+    "read_file",
+    "grep",
+    "read_file"
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "summary": {
+    "mode": "dynamic_profile",
+    "status": "complete",
+    "task_success": true,
+    "task_outcome": "success",
+    "final_answer_present": true,
+    "task_tools_completed": true,
+    "provider_receipts_valid": true,
+    "errors": [],
+    "iterations": 2,
+    "tools_called": 3,
+    "tools_succeeded": 3,
+    "repeated_tool_calls": 0,
+    "ttft_first_s": 0.6620845630004624,
+    "ttft_mean_s": 0.8050771715002156,
+    "ttft_mean_after_first_s": 0.9480697799999689,
+    "first_to_later_ttft_improvement_pct": -43.194666207510835,
+    "total_time_s": 3.6500495520003824,
+    "prompt_tokens": 1557,
+    "completion_tokens": 186,
+    "cached_tokens": 256,
+    "cache_observed": true,
+    "cache_hits": 1,
+    "cache_misses": 1,
+    "cache_hit_rate": 0.5,
+    "cache_ratio": 0.16441875401412973,
+    "ttft_per_iteration_s": [
+      0.6620845630004624,
+      0.9480697799999689
+    ],
+    "provider_response_ids": [
+      "chatcmpl-4df3c942-4f1a-9725-825c-340bcdeb5550",
+      "chatcmpl-a506b563-acee-9097-a26d-1e3938c03360"
+    ]
+  },
+  "trace": [
+    {
+      "content": "",
+      "reasoning_content": "",
+      "tool_calls": [
+        {
+          "id": "call_6b1af2baa08e4c5c96d0b860",
+          "type": "function",
+          "function": {
+            "name": "find",
+            "arguments": "{\"pattern\": \"*.md\"}"
+          }
+        },
+        {
+          "id": "call_73c7a142fe7047439a6239ff",
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "arguments": "{\"file_path\": \"README.md\"}"
+          }
+        },
+        {
+          "id": "call_4af32abd63744fdab5a38c73",
+          "type": "function",
+          "function": {
+            "name": "grep",
+            "arguments": "{\"pattern\": \"KV Cache\"}"
+          }
+        }
+      ],
+      "id": "chatcmpl-4df3c942-4f1a-9725-825c-340bcdeb5550",
+      "ttft_s": 0.6620845630004624,
+      "elapsed_s": 1.3441942720000952,
+      "finish_reason": "tool_calls",
+      "usage": {
+        "prompt_tokens": 638,
+        "completion_tokens": 79,
+        "cached_tokens": 0,
+        "cached_reported": true,
+        "raw_usage": {
+          "completion_tokens": 79,
+          "prompt_tokens": 638,
+          "total_tokens": 717,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "text_tokens": 638
+          }
+        }
+      },
+      "message_count": 3,
+      "prompt_sha256": "13582074edd3721bb96956fdb36c5101608cc883679aa645a773bd26db54a542",
+      "iteration": 1,
+      "request_messages": [
+        {
+          "role": "system",
+          "content": "你是文件分析 Agent。你只能通过 find、read_file、grep 检索受限测试目录。完成全部三个检索步骤后给出简短总结；不要虚构文件内容。工具失败时根据返回的错误修正请求，不要无限重试。"
+        },
+        {
+          "role": "user",
+          "content": "[动态用户资料] 本轮调用额度=100; 序号=00000000"
+        },
+        {
+          "role": "user",
+          "content": "请检查这个实验工作区：先使用 find 找出所有 .md 文件，再用 read_file 阅读 README.md，使用 grep 找出文档里有关 KV Cache 的行，最后用不超过三句话总结。所有事实必须来自文件工具，不要臆测。"
+        }
+      ],
+      "request_tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "find",
+            "description": "在实验目录内递归查找文件名模式，返回相对路径。",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "pattern": {
+                  "type": "string",
+                  "description": "文件名通配符，如 *.md"
+                },
+                "directory": {
+                  "type": "string",
+                  "description": "相对目录，默认 ."
+                }
+              },
+              "required": [
+                "pattern"
+              ]
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "description": "读取实验目录内文件的内容。",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "file_path": {
+                  "type": "string",
+                  "description": "相对路径，如 README.md"
+                },
+                "offset": {
+                  "type": "integer",
+                  "description": "起始行，0起"
+                },
+                "size": {
+                  "type": "integer",
+                  "description": "最多读取行数"
+                }
+              },
+              "required": [
+                "file_path"
+              ]
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "grep",
+            "description": "按正则在实验目录中检索文件行。",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "pattern": {
+                  "type": "string",
+                  "description": "正则表达式"
+                },
+                "file_path": {
+                  "type": "string",
+                  "description": "指定文件；若省略则搜索所有测试文档"
+                }
+              },
+              "required": [
+                "pattern"
+              ]
+            }
+          }
+        }
+      ],
+      "tools_executed": [
+        {
+          "name": "find",
+          "args": {
+            "pattern": "*.md"
+          },
+          "result": {
+            "success": true,
+            "files": [
+              "README.md",
+              "docs/guide.md"
+            ]
+          }
+        },
+        {
+          "name": "read_file",
+          "args": {
+            "file_path": "README.md"
+          },
+          "result": {
+            "success": true,
+            "path": "README.md",
+            "content": "# KV Cache 实验笔记\n\nKV Cache 是保存注意力 Key/Value 张量的机制。\n跨请求复用要求已计算的 token 前缀保持稳定。\nTTFT 表示首个输出 token 的延迟。",
+            "total_lines": 5
+          }
+        },
+        {
+          "name": "grep",
+          "args": {
+            "pattern": "KV Cache"
+          },
+          "result": {
+            "success": true,
+            "matches": [
+              {
+                "file": "README.md",
+                "line": 1,
+                "text": "# KV Cache 实验笔记"
+              },
+              {
+                "file": "README.md",
+                "line": 3,
+                "text": "KV Cache 是保存注意力 Key/Value 张量的机制。"
+              },
+              {
+                "file": "docs/guide.md",
+                "line": 2,
+                "text": "稳定系统提示、固定工具顺序适合 KV Cache。"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "content": "实验工作区包含两个 Markdown 文件：README.md 和 docs/guide.md。README.md 标题为“KV Cache 实验笔记”，定义了 KV Cache 是保存注意力 Key/Value 张量的机制，并指出跨请求复用需保持已计算 token 前缀稳定，同时说明 TTFT 表示首个输出 token 的延迟。grep 检索显示 README.md 中有两行提及 KV Cache，docs/guide.md 中也有一行提到稳定系统提示和固定工具顺序适合 KV Cache。",
+      "reasoning_content": "",
+      "tool_calls": [],
+      "id": "chatcmpl-a506b563-acee-9097-a26d-1e3938c03360",
+      "ttft_s": 0.9480697799999689,
+      "elapsed_s": 2.305855280000287,
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 919,
+        "completion_tokens": 107,
+        "cached_tokens": 256,
+        "cached_reported": true,
+        "raw_usage": {
+          "completion_tokens": 107,
+          "prompt_tokens": 919,
+          "total_tokens": 1026,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 256,
+            "text_tokens": 919
+          }
+        }
+      },
+      "message_count": 7,
+      "prompt_sha256": "d443e739efccae1f0f565e451f1dff81c62f259bc29d7bfc5656f76df33e2618",
+      "iteration": 2,
+      "request_messages": [
+        {
+          "role": "system",
+          "content": "你是文件分析 Agent。你只能通过 find、read_file、grep 检索受限测试目录。完成全部三个检索步骤后给出简短总结；不要虚构文件内容。工具失败时根据返回的错误修正请求，不要无限重试。"
+        },
+        {
+          "role": "user",
+          "content": "[动态用户资料] 本轮调用额度=99; 序号=00000001"
+        },
+        {
+          "role": "user",
+          "content": "请检查这个实验工作区：先使用 find 找出所有 .md 文件，再用 read_file 阅读 README.md，使用 grep 找出文档里有关 KV Cache 的行，最后用不超过三句话总结。所有事实必须来自文件工具，不要臆测。"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call_6b1af2baa08e4c5c96d0b860",
+              "type": "function",
+              "function": {
+                "name": "find",
+                "arguments": "{\"pattern\": \"*.md\"}"
+              }
+            },
+            {
+              "id": "call_73c7a142fe7047439a6239ff",
+              "type": "function",
+              "function": {
+                "name": "read_file",
+                "arguments": "{\"file_path\": \"README.md\"}"
+              }
+            },
+            {
+              "id": "call_4af32abd63744fdab5a38c73",
+              "type": "function",
+              "function": {
+                "name": "grep",
+                "arguments": "{\"pattern\": \"KV Cache\"}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_6b1af2baa08e4c5c96d0b860",
+          "content": "{\"success\": true, \"files\": [\"README.md\", \"docs/guide.md\"]}"
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_73c7a142fe7047439a6239ff",
+          "content": "{\"success\": true, \"path\": \"README.md\", \"content\": \"# KV Cache 实验笔记\\n\\nKV Cache 是保存注意力 Key/Value 张量的机制。\\n跨请求复用要求已计算的 token 前缀保持稳定。\\nTTFT 表示首个输出 token 的延迟。\", \"total_lines\": 5}"
+        },
+        {
+          "role": "tool",
+          "tool_call_id": "call_4af32abd63744fdab5a38c73",
+          "content": "{\"success\": true, \"matches\": [{\"file\": \"README.md\", \"line\": 1, \"text\": \"# KV Cache 实验笔记\"}, {\"file\": \"README.md\", \"line\": 3, \"text\": \"KV Cache 是保存注意力 Key/Value 张量的机制。\"}, {\"file\": \"docs/guide.md\", \"line\": 2, \"text\": \"稳定系统提示、固定工具顺序适合 KV Cache。\"}]}"
+        }
+      ],
+      "request_tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "find",
+            "description": "在实验目录内递归查找文件名模式，返回相对路径。",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "pattern": {
+                  "type": "string",
+                  "description": "文件名通配符，如 *.md"
+                },
+                "directory": {
+                  "type": "string",
+                  "description": "相对目录，默认 ."
+                }
+              },
+              "required": [
+                "pattern"
+              ]
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "read_file",
+            "description": "读取实验目录内文件的内容。",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "file_path": {
+                  "type": "string",
+                  "description": "相对路径，如 README.md"
+                },
+                "offset": {
+                  "type": "integer",
+                  "description": "起始行，0起"
+                },
+                "size": {
+                  "type": "integer",
+                  "description": "最多读取行数"
+                }
+              },
+              "required": [
+                "file_path"
+              ]
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "grep",
+            "description": "按正则在实验目录中检索文件行。",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "pattern": {
+                  "type": "string",
+                  "description": "正则表达式"
+                },
+                "file_path": {
+                  "type": "string",
+                  "description": "指定文件；若省略则搜索所有测试文档"
+                }
+              },
+              "required": [
+                "pattern"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
