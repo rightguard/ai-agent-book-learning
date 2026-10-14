@@ -1,0 +1,20 @@
+{
+  "experiment": "2-9",
+  "status": "complete",
+  "credential_scan_passed": true,
+  "credential_findings": [],
+  "sha256_files": {
+    "cases/timestamps_guided__ts-01__disabled.json": "a29b61982be2b41e933e70d666a86d43c530bb5b92641e49ccf3f03650d70310",
+    "cases/timestamps_guided__ts-01__timestamps_guided.json": "ffb1f7a3458a02b9845fbaeecacb4030546301655b9686944cb5a46b2d216761",
+    "comparison.json": "3b949d4cdb5ef139b23b35bdfb71d39baf85f4f41065944e5c0f268c6546f4dc",
+    "protocol.json": "3692d32e314bc68a695534c322efbe62568d44c68ff064b77d9059b796218bc2",
+    "sandboxes/timestamps_guided__ts-01__disabled/initial_state.json": "be510c156c6b2584b1da62bf4aef3e7bf37816c221d4e613b9a8ce1f17dc0166",
+    "sandboxes/timestamps_guided__ts-01__disabled/records/cedar.txt": "0b5f731a68bd0456e0d99438ec8811d8822cf5372fe21b3a8409ce2505e0df88",
+    "sandboxes/timestamps_guided__ts-01__disabled/records/maple.txt": "5bc31d18b147892b54f8025aa2b78d1859f7671bad80318021b6dbaa562498b2",
+    "sandboxes/timestamps_guided__ts-01__timestamps_guided/initial_state.json": "be510c156c6b2584b1da62bf4aef3e7bf37816c221d4e613b9a8ce1f17dc0166",
+    "sandboxes/timestamps_guided__ts-01__timestamps_guided/records/cedar.txt": "0b5f731a68bd0456e0d99438ec8811d8822cf5372fe21b3a8409ce2505e0df88",
+    "sandboxes/timestamps_guided__ts-01__timestamps_guided/records/maple.txt": "5bc31d18b147892b54f8025aa2b78d1859f7671bad80318021b6dbaa562498b2",
+    "status_hint_pass_rates.png": "4e41f25be593d6128d6cfb70b46d418e0ff059d96660cdda114bd7e5da8e3261",
+    "summary.md": "ced2424fe00a45a1dffcaa8535e4c991ee7fcb32f477c8921bf2b39b0331e200"
+  }
+}

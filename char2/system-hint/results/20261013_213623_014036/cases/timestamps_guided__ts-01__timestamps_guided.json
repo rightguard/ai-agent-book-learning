@@ -1,0 +1,419 @@
+{
+  "experiment": "2-9",
+  "contrast": "timestamps_guided",
+  "suite": "timestamps",
+  "case_id": "ts-01",
+  "condition": "timestamps_guided",
+  "features": [
+    "timestamp_guidance",
+    "timestamps"
+  ],
+  "order": [
+    "timestamps_guided",
+    "disabled"
+  ],
+  "order_position": 0,
+  "protocol_hash": "818483bbc31153ca4bf56b0953c51c7179d980268e585578a1b9c26e12ce3047",
+  "model": "qwen3.7-flash",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an audited local-sandbox Agent. Only use the supplied simulated tools. Use actual tool results, never invent environment facts, and call submit_result once you have sufficient evidence. No real shell or external side effects exist."
+    },
+    {
+      "role": "user",
+      "content": "[2025-09-19 09:00:00] Read both records cedar and maple. Select the record with the later recorded timestamp and submit its name. Do not guess."
+    },
+    {
+      "content": "",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_6ca546d5e0b44a88b3500b3c",
+          "function": {
+            "arguments": "{\"name\": \"cedar\"}",
+            "name": "read_record"
+          },
+          "type": "function",
+          "index": 0
+        },
+        {
+          "id": "call_85b3bcc3bd2247e69cde9f29",
+          "function": {
+            "arguments": "{\"name\": \"maple\"}",
+            "name": "read_record"
+          },
+          "type": "function",
+          "index": 1
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_6ca546d5e0b44a88b3500b3c",
+      "name": "read_record",
+      "content": "[2025-09-13 22:10:00] payload-for-cedar"
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_85b3bcc3bd2247e69cde9f29",
+      "name": "read_record",
+      "content": "[2025-09-14 09:05:00] payload-for-maple"
+    },
+    {
+      "content": "The record `cedar` has a timestamp of `2025-09-13 22:10:00`.\nThe record `maple` has a timestamp of `2025-09-14 09:05:00`.\n\nComparing the two timestamps, `2025-09-14 09:05:00` is later than `2025-09-13 22:10:00`. Therefore, the record with the later timestamp is `maple`.\n\n",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "id": "call_cc55ec8c826e46b38e809858",
+          "function": {
+            "arguments": "{\"selected_record\": \"maple\"}",
+            "name": "submit_result"
+          },
+          "type": "function",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "tool_call_id": "call_cc55ec8c826e46b38e809858",
+      "name": "submit_result",
+      "content": "Submission recorded"
+    }
+  ],
+  "api_calls": [
+    {
+      "request": {
+        "model": "qwen3.7-flash",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are an audited local-sandbox Agent. Only use the supplied simulated tools. Use actual tool results, never invent environment facts, and call submit_result once you have sufficient evidence. No real shell or external side effects exist."
+          },
+          {
+            "role": "user",
+            "content": "[2025-09-19 09:00:00] Read both records cedar and maple. Select the record with the later recorded timestamp and submit its name. Do not guess."
+          },
+          {
+            "role": "user",
+            "content": "<agent_status>\nTIME GUIDANCE: Compare the timestamps in tool returns; do not guess which record is later.\n</agent_status>"
+          }
+        ],
+        "temperature": 0.3,
+        "max_tokens": 1024,
+        "tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "read_record",
+              "description": "Read a record by name",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Record name"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          {
+            "type": "function",
+            "function": {
+              "name": "submit_result",
+              "description": "Submit final result after checking evidence",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "selected_record": {
+                    "type": "string",
+                    "description": "Later record"
+                  }
+                },
+                "required": [
+                  "selected_record"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        ],
+        "tool_choice": "auto",
+        "extra_body": {
+          "enable_thinking": false
+        },
+        "timeout": 120
+      },
+      "response": {
+        "id": "chatcmpl-4c2f7ef7-c0e6-97ee-a86e-75666b210909",
+        "choices": [
+          {
+            "finish_reason": "tool_calls",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": [
+                {
+                  "id": "call_6ca546d5e0b44a88b3500b3c",
+                  "function": {
+                    "arguments": "{\"name\": \"cedar\"}",
+                    "name": "read_record"
+                  },
+                  "type": "function",
+                  "index": 0
+                },
+                {
+                  "id": "call_85b3bcc3bd2247e69cde9f29",
+                  "function": {
+                    "arguments": "{\"name\": \"maple\"}",
+                    "name": "read_record"
+                  },
+                  "type": "function",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "created": 1791898583,
+        "model": "qwen3.7-flash",
+        "object": "chat.completion",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 51,
+          "prompt_tokens": 474,
+          "total_tokens": 525,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "text_tokens": 474
+          }
+        }
+      },
+      "elapsed_s": 2.6191
+    },
+    {
+      "request": {
+        "model": "qwen3.7-flash",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are an audited local-sandbox Agent. Only use the supplied simulated tools. Use actual tool results, never invent environment facts, and call submit_result once you have sufficient evidence. No real shell or external side effects exist."
+          },
+          {
+            "role": "user",
+            "content": "[2025-09-19 09:00:00] Read both records cedar and maple. Select the record with the later recorded timestamp and submit its name. Do not guess."
+          },
+          {
+            "content": "",
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "id": "call_6ca546d5e0b44a88b3500b3c",
+                "function": {
+                  "arguments": "{\"name\": \"cedar\"}",
+                  "name": "read_record"
+                },
+                "type": "function",
+                "index": 0
+              },
+              {
+                "id": "call_85b3bcc3bd2247e69cde9f29",
+                "function": {
+                  "arguments": "{\"name\": \"maple\"}",
+                  "name": "read_record"
+                },
+                "type": "function",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "call_6ca546d5e0b44a88b3500b3c",
+            "name": "read_record",
+            "content": "[2025-09-13 22:10:00] payload-for-cedar"
+          },
+          {
+            "role": "tool",
+            "tool_call_id": "call_85b3bcc3bd2247e69cde9f29",
+            "name": "read_record",
+            "content": "[2025-09-14 09:05:00] payload-for-maple"
+          },
+          {
+            "role": "user",
+            "content": "<agent_status>\nTIME GUIDANCE: Compare the timestamps in tool returns; do not guess which record is later.\n</agent_status>"
+          }
+        ],
+        "temperature": 0.3,
+        "max_tokens": 1024,
+        "tools": [
+          {
+            "type": "function",
+            "function": {
+              "name": "read_record",
+              "description": "Read a record by name",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Record name"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          {
+            "type": "function",
+            "function": {
+              "name": "submit_result",
+              "description": "Submit final result after checking evidence",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "selected_record": {
+                    "type": "string",
+                    "description": "Later record"
+                  }
+                },
+                "required": [
+                  "selected_record"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        ],
+        "tool_choice": "auto",
+        "extra_body": {
+          "enable_thinking": false
+        },
+        "timeout": 120
+      },
+      "response": {
+        "id": "chatcmpl-23c05f43-6610-947f-b122-7648df2d3099",
+        "choices": [
+          {
+            "finish_reason": "tool_calls",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "The record `cedar` has a timestamp of `2025-09-13 22:10:00`.\nThe record `maple` has a timestamp of `2025-09-14 09:05:00`.\n\nComparing the two timestamps, `2025-09-14 09:05:00` is later than `2025-09-13 22:10:00`. Therefore, the record with the later timestamp is `maple`.\n\n",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": [
+                {
+                  "id": "call_cc55ec8c826e46b38e809858",
+                  "function": {
+                    "arguments": "{\"selected_record\": \"maple\"}",
+                    "name": "submit_result"
+                  },
+                  "type": "function",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "created": 1791898585,
+        "model": "qwen3.7-flash",
+        "object": "chat.completion",
+        "service_tier": null,
+        "system_fingerprint": null,
+        "usage": {
+          "completion_tokens": 157,
+          "prompt_tokens": 594,
+          "total_tokens": 751,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cached_tokens": 0,
+            "text_tokens": 594
+          }
+        }
+      },
+      "elapsed_s": 2.315
+    }
+  ],
+  "tool_events": [
+    {
+      "step": 1,
+      "name": "read_record",
+      "args": {
+        "name": "cedar"
+      },
+      "ok": true,
+      "result": "[2025-09-13 22:10:00] payload-for-cedar",
+      "call_id": "call_6ca546d5e0b44a88b3500b3c"
+    },
+    {
+      "step": 1,
+      "name": "read_record",
+      "args": {
+        "name": "maple"
+      },
+      "ok": true,
+      "result": "[2025-09-14 09:05:00] payload-for-maple",
+      "call_id": "call_85b3bcc3bd2247e69cde9f29"
+    },
+    {
+      "step": 2,
+      "name": "submit_result",
+      "args": {
+        "selected_record": "maple"
+      },
+      "ok": true,
+      "result": "Submission recorded",
+      "call_id": "call_cc55ec8c826e46b38e809858"
+    }
+  ],
+  "tool_counter": {
+    "read_record": 2,
+    "submit_result": 1
+  },
+  "todo": {},
+  "objective_scores": {
+    "timestamps": true
+  },
+  "objective_pass": true,
+  "steps": 2,
+  "termination": "submitted",
+  "usage": {
+    "prompt_tokens": 1068,
+    "completion_tokens": 208,
+    "total_tokens": 1276,
+    "cached_tokens_reported": 0,
+    "api_calls": 2,
+    "valid_api_calls": 2
+  },
+  "tool_protocol_valid": true,
+  "sandbox_inventory": {
+    "initial_state.json": "be510c156c6b2584b1da62bf4aef3e7bf37816c221d4e613b9a8ce1f17dc0166",
+    "records/cedar.txt": "0b5f731a68bd0456e0d99438ec8811d8822cf5372fe21b3a8409ce2505e0df88",
+    "records/maple.txt": "5bc31d18b147892b54f8025aa2b78d1859f7671bad80318021b6dbaa562498b2"
+  },
+  "trace_complete": true,
+  "submission_recorded": true
+}

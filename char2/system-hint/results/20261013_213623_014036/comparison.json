@@ -1,0 +1,46 @@
+{
+  "experiment": "2-9",
+  "status": "complete",
+  "provider_model": "qwen3.7-flash",
+  "expected_runs": 2,
+  "observed_runs": 2,
+  "actual_api": true,
+  "all_case_traces_complete": true,
+  "usage": {
+    "prompt_tokens": 3974,
+    "completion_tokens": 621,
+    "total_tokens": 4595,
+    "cached_tokens_reported": 768,
+    "api_calls": 7,
+    "valid_api_calls": 7
+  },
+  "contrasts": [
+    {
+      "contrast": "timestamps_guided",
+      "enabled": {
+        "pass_count": 1,
+        "n": 1,
+        "mean_steps": 2.0,
+        "mean_tools": 3.0,
+        "tool_errors": 0,
+        "tokens": 1276,
+        "trace_complete": 1
+      },
+      "disabled": {
+        "pass_count": 1,
+        "n": 1,
+        "mean_steps": 5.0,
+        "mean_tools": 7.0,
+        "tool_errors": 0,
+        "tokens": 3319,
+        "trace_complete": 1
+      },
+      "delta_pass_rate": 0.0,
+      "qualifier": "observed only; a loss or tie is a valid result"
+    }
+  ],
+  "source": "Adapted fixed cases from bojieli/ai-agent-book chapter2/system-hint; non-frozen Qwen run",
+  "objective_scoring": "tool receipts + isolated filesystem + exact submitted values",
+  "historical_claims_reproduced": false,
+  "protocol_hash": "818483bbc31153ca4bf56b0953c51c7179d980268e585578a1b9c26e12ce3047"
+}
