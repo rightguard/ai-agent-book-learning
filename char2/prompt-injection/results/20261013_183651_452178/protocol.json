@@ -1,0 +1,22 @@
+{
+  "experiment": "2-5",
+  "provider": "dashscope",
+  "model": "qwen3.7-flash",
+  "endpoint": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "trials_per_cell": 5,
+  "attacks": [
+    "direct",
+    "indirect",
+    "memory"
+  ],
+  "defenses": [
+    "D1",
+    "D2",
+    "D3",
+    "D4"
+  ],
+  "expected_cells": 60,
+  "max_tokens": 2048,
+  "all_writes_and_emails_isolated": true,
+  "output_dir": "/mnt/e/ai-agent-book/char2/prompt-injection/results/20261013_183651_452178"
+}
