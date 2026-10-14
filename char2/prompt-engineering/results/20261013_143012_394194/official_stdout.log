@@ -1,0 +1,174 @@
+14:30:16 - LiteLLM:WARNING: get_model_cost_map.py:315 - LiteLLM: model cost map fetch attempt 1/3 failed (ConnectError fetching https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [Errno 104] Connection reset by peer); retrying in 2.1s
+14:30:16 - LiteLLM:WARNING: get_model_cost_map.py:672 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: ConnectError fetching https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [Errno 104] Connection reset by peer. Falling back to local backup.
+14:30:19 - LiteLLM:WARNING: get_model_cost_map.py:315 - LiteLLM: model cost map fetch attempt 2/3 failed (ConnectError fetching https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [Errno 104] Connection reset by peer); retrying in 4.4s
+
+================================================================================
+▶️  Running experiment: baseline
+================================================================================
+🔬 Running Ablation Study: baseline
+  - Tone Style: default
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-baseline_1013143023.json
+
+14:30:23 - LiteLLM:WARNING: get_model_cost_map.py:593 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json after 3 attempts; keeping local backup
+Running tasks [0]
+Running task 0
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+❌ task_id=0 {'reward': 0.0, 'metrics': {}, 'error': 'litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.'}
+-----
+🏆 Average reward: 0.0
+📈 Pass^k
+  k=1: 0.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-baseline_1013143023.json
+
+
+================================================================================
+▶️  Running experiment: tone_trump
+================================================================================
+🔬 Running Ablation Study: tone_trump
+  - Tone Style: trump
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_trump_1013143026.json
+
+🎭 Applying trump tone style to system prompt...
+Running tasks [0]
+Running task 0
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+❌ task_id=0 {'reward': 0.0, 'metrics': {}, 'error': 'litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.'}
+-----
+🏆 Average reward: 0.0
+📈 Pass^k
+  k=1: 0.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_trump_1013143026.json
+
+
+================================================================================
+▶️  Running experiment: tone_casual
+================================================================================
+🔬 Running Ablation Study: tone_casual
+  - Tone Style: casual
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_1013143027.json
+
+🎭 Applying casual tone style to system prompt...
+Running tasks [0]
+Running task 0
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+❌ task_id=0 {'reward': 0.0, 'metrics': {}, 'error': 'litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.'}
+-----
+🏆 Average reward: 0.0
+📈 Pass^k
+  k=1: 0.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_1013143027.json
+
+
+================================================================================
+▶️  Running experiment: wiki_random
+================================================================================
+🔬 Running Ablation Study: wiki_random
+  - Tone Style: default
+  - Randomize Wiki: True
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-wiki_random_1013143028.json
+
+📝 Using pre-randomized wiki rules...
+Running tasks [0]
+Running task 0
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+❌ task_id=0 {'reward': 0.0, 'metrics': {}, 'error': 'litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.'}
+-----
+🏆 Average reward: 0.0
+📈 Pass^k
+  k=1: 0.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-wiki_random_1013143028.json
+
+
+================================================================================
+▶️  Running experiment: no_tool_desc
+================================================================================
+🔬 Running Ablation Study: no_tool_desc
+  - Tone Style: default
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: True
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-no_tool_desc_1013143028.json
+
+🔧 Removing tool descriptions...
+Running tasks [0]
+Running task 0
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+❌ task_id=0 {'reward': 0.0, 'metrics': {}, 'error': 'litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.'}
+-----
+🏆 Average reward: 0.0
+📈 Pass^k
+  k=1: 0.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-no_tool_desc_1013143028.json
+
+
+================================================================================
+▶️  Running experiment: all_ablations
+================================================================================
+🔬 Running Ablation Study: tone_casual_wiki_random_no_tool_desc
+  - Tone Style: casual
+  - Randomize Wiki: True
+  - Remove Tool Descriptions: True
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_wiki_random_no_tool_desc_1013143029.json
+
+📝 Using pre-randomized wiki rules...
+🎭 Applying casual tone style to system prompt...
+🔧 Removing tool descriptions...
+Running tasks [0]
+Running task 0
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+❌ task_id=0 {'reward': 0.0, 'metrics': {}, 'error': 'litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.'}
+-----
+🏆 Average reward: 0.0
+📈 Pass^k
+  k=1: 0.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_wiki_random_no_tool_desc_1013143029.json
+
+
+================================================================================
+                         ABLATION STUDY RESULTS
+================================================================================
+
+Experiment                        Success Rate      Tasks        Relative
+----------------------------------------------------------------------
+baseline                          0.0%         0/  1      100.0%  ⭐
+tone_trump                        0.0%         0/  1      100.0% 
+tone_casual                       0.0%         0/  1      100.0% 
+wiki_random                       0.0%         0/  1      100.0% 
+no_tool_desc                      0.0%         0/  1      100.0% 
+all_ablations                     0.0%         0/  1      100.0% 
+----------------------------------------------------------------------
+
+⚠️  No baseline found for comparison
+
+📄 Suite summary saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/comparison.json
+

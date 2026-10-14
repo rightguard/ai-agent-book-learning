@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/run_ablation.py", line 26, in <module>
+    from tau_bench.types import RunConfig
+  File "/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/tau_bench/__init__.py", line 3, in <module>
+    from tau_bench.envs.base import Env as Env
+  File "/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/tau_bench/envs/__init__.py", line 4, in <module>
+    from tau_bench.envs.base import Env
+  File "/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/tau_bench/envs/base.py", line 8, in <module>
+    from tau_bench.envs.user import load_user, UserStrategy
+  File "/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/tau_bench/envs/user.py", line 8, in <module>
+    from litellm import completion
+ModuleNotFoundError: No module named 'litellm'

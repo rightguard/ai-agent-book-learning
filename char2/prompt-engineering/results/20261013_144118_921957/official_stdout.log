@@ -1,0 +1,166 @@
+14:41:22 - LiteLLM:WARNING: get_model_cost_map.py:315 - LiteLLM: model cost map fetch attempt 1/3 failed (ConnectError fetching https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [Errno 104] Connection reset by peer); retrying in 2.8s
+14:41:22 - LiteLLM:WARNING: get_model_cost_map.py:672 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: ConnectError fetching https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [Errno 104] Connection reset by peer. Falling back to local backup.
+14:41:25 - LiteLLM:WARNING: get_model_cost_map.py:315 - LiteLLM: model cost map fetch attempt 2/3 failed (ConnectError fetching https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json: [Errno 104] Connection reset by peer); retrying in 4.2s
+
+================================================================================
+▶️  Running experiment: baseline
+================================================================================
+🔬 Running Ablation Study: baseline
+  - Tone Style: default
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-baseline_1013144127.json
+
+Running tasks [0]
+Running task 0
+14:41:29 - LiteLLM:WARNING: get_model_cost_map.py:593 - LiteLLM: Failed to fetch remote model cost map from https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json after 3 attempts; keeping local backup
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 10, 'agent_model_calls': 10, 'tool_calls': 5, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-baseline_1013144127.json
+
+
+================================================================================
+▶️  Running experiment: tone_trump
+================================================================================
+🔬 Running Ablation Study: tone_trump
+  - Tone Style: trump
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-tone_trump_1013145359.json
+
+🎭 Applying trump tone style to system prompt...
+Running tasks [0]
+Running task 0
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 10, 'agent_model_calls': 10, 'tool_calls': 4, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-tone_trump_1013145359.json
+
+
+================================================================================
+▶️  Running experiment: tone_casual
+================================================================================
+🔬 Running Ablation Study: tone_casual
+  - Tone Style: casual
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-tone_casual_1013151700.json
+
+🎭 Applying casual tone style to system prompt...
+Running tasks [0]
+Running task 0
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 10, 'agent_model_calls': 10, 'tool_calls': 4, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-tone_casual_1013151700.json
+
+
+================================================================================
+▶️  Running experiment: wiki_random
+================================================================================
+🔬 Running Ablation Study: wiki_random
+  - Tone Style: default
+  - Randomize Wiki: True
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-wiki_random_1013153108.json
+
+📝 Using pre-randomized wiki rules...
+Running tasks [0]
+Running task 0
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 10, 'agent_model_calls': 10, 'tool_calls': 4, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-wiki_random_1013153108.json
+
+
+================================================================================
+▶️  Running experiment: no_tool_desc
+================================================================================
+🔬 Running Ablation Study: no_tool_desc
+  - Tone Style: default
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: True
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-no_tool_desc_1013153447.json
+
+🔧 Removing tool descriptions...
+Running tasks [0]
+Running task 0
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 12, 'agent_model_calls': 12, 'tool_calls': 7, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-no_tool_desc_1013153447.json
+
+
+================================================================================
+▶️  Running experiment: all_ablations
+================================================================================
+🔬 Running Ablation Study: tone_casual_wiki_random_no_tool_desc
+  - Tone Style: casual
+  - Randomize Wiki: True
+  - Remove Tool Descriptions: True
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-tone_casual_wiki_random_no_tool_desc_1013155739.json
+
+📝 Using pre-randomized wiki rules...
+🎭 Applying casual tone style to system prompt...
+🔧 Removing tool descriptions...
+Running tasks [0]
+Running task 0
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 16, 'agent_model_calls': 16, 'tool_calls': 10, 'tool_errors': 1}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-tone_casual_wiki_random_no_tool_desc_1013155739.json
+
+
+================================================================================
+                         ABLATION STUDY RESULTS
+================================================================================
+
+Experiment                        Success Rate      Tasks        Relative
+----------------------------------------------------------------------
+baseline                        100.0%         1/  1      100.0%  ⭐
+tone_trump                      100.0%         1/  1      100.0% 
+tone_casual                     100.0%         1/  1      100.0% 
+wiki_random                     100.0%         1/  1      100.0% 
+no_tool_desc                    100.0%         1/  1      100.0% 
+all_ablations                   100.0%         1/  1      100.0% 
+----------------------------------------------------------------------
+
+================================================================================
+                         ABLATION FACTOR ANALYSIS
+================================================================================
+
+Factor                             Impact on Performance        Severity
+----------------------------------------------------------------------
+Tone (Trump)                             -0.0% (0.0%)           🟢 Low
+Tone (Casual)                            -0.0% (0.0%)           🟢 Low
+Wiki Randomization                       -0.0% (0.0%)           🟢 Low
+No Tool Descriptions                     -0.0% (0.0%)           🟢 Low
+All Factors Combined                     -0.0% (0.0%)           🟢 Low
+----------------------------------------------------------------------
+
+📊 KEY INSIGHTS:
+----------------------------------------
+1. Most Critical Factor: Tone (Trump) (-0.0% performance)
+2. Least Critical Factor: All Factors Combined (-0.0% performance)
+
+📄 Suite summary saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/comparison.json
+

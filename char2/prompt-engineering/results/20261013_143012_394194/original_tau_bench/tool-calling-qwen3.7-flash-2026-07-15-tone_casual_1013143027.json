@@ -1,0 +1,67 @@
+{
+  "experiment_id": "2-4",
+  "created_at": "2026-10-13T14:30:28.197198+08:00",
+  "run_config": {
+    "model_provider": "openai",
+    "user_model_provider": "openai",
+    "model": "qwen3.7-flash-2026-07-15",
+    "user_model": "qwen3.7-flash-2026-07-15",
+    "num_trials": 1,
+    "env": "airline",
+    "agent_strategy": "tool-calling",
+    "temperature": 1.0,
+    "task_split": "test",
+    "start_index": 0,
+    "end_index": -1,
+    "task_ids": [
+      0
+    ],
+    "log_dir": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench",
+    "max_concurrency": 1,
+    "seed": 20260730,
+    "shuffle": 0,
+    "user_strategy": "llm",
+    "few_shot_displays_path": null
+  },
+  "ablation_config": {
+    "tone_style": "casual",
+    "randomize_wiki": false,
+    "remove_tool_descriptions": false
+  },
+  "resume_receipt": null,
+  "results": [
+    {
+      "task_id": 0,
+      "reward": 0.0,
+      "info": {
+        "error": "litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console.",
+        "traceback": "Traceback (most recent call last):\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py\", line 871, in completion\n    raise e\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py\", line 807, in completion\n    ) = self.make_sync_openai_chat_completion_request(\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/litellm_core_utils/logging_utils.py\", line 387, in sync_wrapper\n    result: Final = func(*args, **kwargs)\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py\", line 545, in make_sync_openai_chat_completion_request\n    raise e\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py\", line 520, in make_sync_openai_chat_completion_request\n    raw_response = openai_client.chat.completions.with_raw_response.create(**data, timeout=timeout)\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/_legacy_response.py\", line 367, in wrapped\n    return cast(LegacyAPIResponse[R], func(*args, **kwargs))\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/_utils/_utils.py\", line 286, in wrapper\n    return func(*args, **kwargs)\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py\", line 1204, in create\n    return self._post(\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/_base_client.py\", line 1297, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/_base_client.py\", line 1070, in request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.PermissionDeniedError: Error code: 403 - {'error': {'message': 'Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console.', 'type': 'AllocationQuota.FreeTierOnly', 'param': None, 'code': 'AllocationQuota.FreeTierOnly'}, 'id': 'chatcmpl-839fbc83-c4d7-9a39-94b7-4064c84efadd', 'request_id': '839fbc83-c4d7-9a39-94b7-4064c84efadd'}\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/main.py\", line 5956, in completion\n    response = _complete_custom_openai(_dispatch_ctx)\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/main.py\", line 2717, in _complete_custom_openai\n    raise e\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/main.py\", line 2689, in _complete_custom_openai\n    response = openai_chat_completions.completion(\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py\", line 882, in completion\n    raise OpenAIError(\nlitellm.llms.openai.common_utils.OpenAIError: Error code: 403 - {'error': {'message': 'Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console.', 'type': 'AllocationQuota.FreeTierOnly', 'param': None, 'code': 'AllocationQuota.FreeTierOnly'}, 'id': 'chatcmpl-839fbc83-c4d7-9a39-94b7-4064c84efadd', 'request_id': '839fbc83-c4d7-9a39-94b7-4064c84efadd'}\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/run_ablation.py\", line 465, in _run\n    res = agent.solve(\n  File \"/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/ablation_agent.py\", line 89, in solve\n    env_reset_res = env.reset(task_index=task_index)\n  File \"/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/tau_bench/envs/base.py\", line 87, in reset\n    initial_observation = self.user.reset(instruction=self.task.instruction)\n  File \"/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/tau_bench/envs/user.py\", line 167, in reset\n    return self.generate_next_message(self.messages)\n  File \"/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/tau_bench/envs/user.py\", line 120, in generate_next_message\n    res = self._completion(request_messages)\n  File \"/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/tau_bench/envs/user.py\", line 74, in _completion\n    res = completion(**kwargs)\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/chat_completions/dispatch.py\", line 103, in completion\n    return _DISPATCH.run(\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/rust_bridge/dispatch.py\", line 81, in run\n    return python(*args, **kwargs)\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/utils.py\", line 1970, in wrapper\n    raise e\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/utils.py\", line 1817, in wrapper\n    result = original_function(*args, **kwargs)\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/main.py\", line 6078, in completion\n    raise exception_type(\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 2730, in exception_type\n    raise e  # it's already mapped\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 2477, in exception_type\n    _map_openai_exception(\n  File \"/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py\", line 507, in _map_openai_exception\n    raise APIError(\nlitellm.exceptions.APIError: litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console.\n",
+        "user_api_records": [
+          {
+            "requested_at": "2026-10-13T06:30:28.069077+00:00",
+            "provider": "openai",
+            "model": "qwen3.7-flash-2026-07-15",
+            "requested_seed": 20260730,
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are a user interacting with an agent.\n\nInstruction: Your user id is mia_li_3668. You want to fly from New York to Seattle on May 20 (one way). You do not want to fly before 11am est. You want to fly in economy. You prefer direct flights but one stopover also fine. If there are multiple options, you prefer the one with the lowest price. You have 3 baggages. You do not want insurance. You want to use your two certificates to pay. If only one certificate can be used, you prefer using the larger one, and pay the rest with your 7447 card. You are reactive to the agent and will not say anything that is not asked. Your birthday is in your user profile so you do not prefer to provide it.\n\nRules:\n- Just generate one line at a time to simulate the user's message.\n- Do not give away all the instruction at once. Only provide the information that is necessary for the current step.\n- Do not hallucinate information that is not provided in the instruction. For example, if the agent asks for the order id but it is not mentioned in the instruction, do not make up an order id, just say you do not remember or have it.\n- If the instruction goal is satisified, generate '###STOP###' as a standalone message without anything else to end the conversation.\n- Do not repeat the exact instruction in the conversation. Instead, use your own words to convey the same information.\n- Try to make the conversation as natural as possible, and stick to the personalities in the instruction."
+              },
+              {
+                "role": "user",
+                "content": "Hi! How can I help you today?"
+              }
+            ],
+            "elapsed_ms": 107.666,
+            "error": {
+              "type": "APIError",
+              "message": "litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console."
+            }
+          }
+        ]
+      },
+      "traj": [],
+      "trial": 0
+    }
+  ]
+}

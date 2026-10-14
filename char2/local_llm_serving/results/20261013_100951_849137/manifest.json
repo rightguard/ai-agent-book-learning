@@ -1,0 +1,45 @@
+{
+  "experiment": "2-1",
+  "status": "complete",
+  "gates": {
+    "tools": true,
+    "raw": true,
+    "throughput": true,
+    "batching": true,
+    "cache": true
+  },
+  "files": {
+    "batching.json": {
+      "size_bytes": 1090447,
+      "sha256": "ac582b68939924dbc20a2039452086798f72af3c6627a3f2cf4f5bcc091eef45"
+    },
+    "batching_throughput.png": {
+      "size_bytes": 40041,
+      "sha256": "843314db1955575daaeca739ff419d039a32a51e8a27ef68e15b984b606ee190"
+    },
+    "cache.json": {
+      "size_bytes": 328962,
+      "sha256": "671e6767b7bce0bd8fbaf74ee629b3ea9965f12567af0acfb180625a8a046ec9"
+    },
+    "cache_ttft.png": {
+      "size_bytes": 77638,
+      "sha256": "64fe172940fbcc1dadfa069455e0d4eff5c6071ec9806b012b5252a945795d5f"
+    },
+    "experiment_results.json": {
+      "size_bytes": 3078478,
+      "sha256": "5b35e79e64d1c0ec7eeb6712a00fb639f366c3405868e91f628dfbd8b0ab4948"
+    },
+    "raw.json": {
+      "size_bytes": 274414,
+      "sha256": "b3982d5cd2f406cf2bfda775bbe220796b6ffc0396f2d1e40f1a70678af2461a"
+    },
+    "throughput.json": {
+      "size_bytes": 743038,
+      "sha256": "89f64f13a4c98a524152526e881192ecbbd39c9e4fe0f7601f981b50d9cb1892"
+    },
+    "tools.json": {
+      "size_bytes": 305405,
+      "sha256": "282e761e5d25132f98ce6882c629012a275f4fc89cb4b41e44fd8864eede0cf9"
+    }
+  }
+}

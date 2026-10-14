@@ -1,0 +1,276 @@
+{
+  "experiment_id": "2-4",
+  "created_at": "2026-10-13T14:30:30.184538+08:00",
+  "protocol_sha256": "d0fa737d7ec9299547c20c6fb58a5a8728326f121aa55b00a89303c8be48b772",
+  "protocol_copy": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/experiment_protocol.json",
+  "provider": "openai",
+  "model": "qwen3.7-flash-2026-07-15",
+  "user_model": "qwen3.7-flash-2026-07-15",
+  "objective_scoring": "vendored tau-bench environment reward",
+  "arms": {
+    "baseline": {
+      "artifact": {
+        "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-baseline_1013143023.json",
+        "sha256": "acb88c1e9b5bd33af3091fb7035f32a4e4717fd3f55d2b6c0544214a24df5b32"
+      },
+      "rewards": [
+        0.0
+      ],
+      "success_rate": 0.0,
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "tasks_completed": 1,
+      "expected_tasks": 1,
+      "task_errors": [
+        {
+          "task_id": 0,
+          "error": "litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console."
+        }
+      ],
+      "agent_steps": [
+        null
+      ],
+      "tool_calls": [
+        null
+      ],
+      "tool_errors": [
+        null
+      ],
+      "real_api_calls": 0,
+      "response_ids_present": false,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "observed_litellm_cost_usd": 0,
+      "all_calls_priced": true,
+      "native_cost_cny": null,
+      "arm_complete": false
+    },
+    "tone_trump": {
+      "artifact": {
+        "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_trump_1013143026.json",
+        "sha256": "02703397e84a840b6fb2002fcb0495800de33a4c8933554c764a2d366d1c4cff"
+      },
+      "rewards": [
+        0.0
+      ],
+      "success_rate": 0.0,
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "tasks_completed": 1,
+      "expected_tasks": 1,
+      "task_errors": [
+        {
+          "task_id": 0,
+          "error": "litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console."
+        }
+      ],
+      "agent_steps": [
+        null
+      ],
+      "tool_calls": [
+        null
+      ],
+      "tool_errors": [
+        null
+      ],
+      "real_api_calls": 0,
+      "response_ids_present": false,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "observed_litellm_cost_usd": 0,
+      "all_calls_priced": true,
+      "native_cost_cny": null,
+      "arm_complete": false
+    },
+    "tone_casual": {
+      "artifact": {
+        "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_1013143027.json",
+        "sha256": "f7f060c36db17bd76aaa7359cc7309e9c3e5153c7724acc117f272fc2f264bf6"
+      },
+      "rewards": [
+        0.0
+      ],
+      "success_rate": 0.0,
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "tasks_completed": 1,
+      "expected_tasks": 1,
+      "task_errors": [
+        {
+          "task_id": 0,
+          "error": "litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console."
+        }
+      ],
+      "agent_steps": [
+        null
+      ],
+      "tool_calls": [
+        null
+      ],
+      "tool_errors": [
+        null
+      ],
+      "real_api_calls": 0,
+      "response_ids_present": false,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "observed_litellm_cost_usd": 0,
+      "all_calls_priced": true,
+      "native_cost_cny": null,
+      "arm_complete": false
+    },
+    "wiki_random": {
+      "artifact": {
+        "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-wiki_random_1013143028.json",
+        "sha256": "bcf110098307484b8e62d550087034fa2a480db8625b3f408217503af3a73585"
+      },
+      "rewards": [
+        0.0
+      ],
+      "success_rate": 0.0,
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "tasks_completed": 1,
+      "expected_tasks": 1,
+      "task_errors": [
+        {
+          "task_id": 0,
+          "error": "litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console."
+        }
+      ],
+      "agent_steps": [
+        null
+      ],
+      "tool_calls": [
+        null
+      ],
+      "tool_errors": [
+        null
+      ],
+      "real_api_calls": 0,
+      "response_ids_present": false,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "observed_litellm_cost_usd": 0,
+      "all_calls_priced": true,
+      "native_cost_cny": null,
+      "arm_complete": false
+    },
+    "no_tool_desc": {
+      "artifact": {
+        "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-no_tool_desc_1013143028.json",
+        "sha256": "78b740cce8194a47eea26c7a0b06f2e3e84727db079831346eb73599cccf1df8"
+      },
+      "rewards": [
+        0.0
+      ],
+      "success_rate": 0.0,
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "tasks_completed": 1,
+      "expected_tasks": 1,
+      "task_errors": [
+        {
+          "task_id": 0,
+          "error": "litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console."
+        }
+      ],
+      "agent_steps": [
+        null
+      ],
+      "tool_calls": [
+        null
+      ],
+      "tool_errors": [
+        null
+      ],
+      "real_api_calls": 0,
+      "response_ids_present": false,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "observed_litellm_cost_usd": 0,
+      "all_calls_priced": true,
+      "native_cost_cny": null,
+      "arm_complete": false
+    },
+    "all_ablations": {
+      "artifact": {
+        "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_wiki_random_no_tool_desc_1013143029.json",
+        "sha256": "1296442870ac2eae769c2e1b26b363b0c4bcbde2a6b64311a149567f18872739"
+      },
+      "rewards": [
+        0.0
+      ],
+      "success_rate": 0.0,
+      "total": 1,
+      "successes": 0,
+      "failures": 1,
+      "tasks_completed": 1,
+      "expected_tasks": 1,
+      "task_errors": [
+        {
+          "task_id": 0,
+          "error": "litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the \"use free tier only\" mode in the management console."
+        }
+      ],
+      "agent_steps": [
+        null
+      ],
+      "tool_calls": [
+        null
+      ],
+      "tool_errors": [
+        null
+      ],
+      "real_api_calls": 0,
+      "response_ids_present": false,
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "observed_litellm_cost_usd": 0,
+      "all_calls_priced": true,
+      "native_cost_cny": null,
+      "arm_complete": false
+    }
+  },
+  "credential_scan_passed": true,
+  "credential_findings": [],
+  "usage_and_cost": {
+    "total_real_api_calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "observed_litellm_cost_usd": 0,
+    "all_calls_priced": true,
+    "native_cost_cny": 0,
+    "native_cost_complete": false,
+    "qualification": "Prompt cache detail is unavailable in these responses, so every prompt token is conservatively priced as uncached."
+  },
+  "campaign_complete": false,
+  "hypothesis_results": {
+    "historical_percentages_reproduced": false,
+    "qualification": "Current fixed ten-task campaign only; compare arm metrics directly."
+  }
+}

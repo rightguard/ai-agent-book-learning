@@ -1,0 +1,88 @@
+{
+  "experiment_id": "2-4",
+  "protocol_version": "1.0.0",
+  "frozen_on": "2026-07-30",
+  "authority": "book/chapter2.md:654",
+  "benchmark": "vendored tau-bench airline test split",
+  "provider": "DashScope OpenAI-compatible",
+  "model": "qwen3.7-flash",
+  "user_model": "qwen3.7-flash",
+  "temperature": 1.0,
+  "user_temperature": 1.0,
+  "seed": 20260730,
+  "task_ids": [
+    0
+  ],
+  "trials_per_task": 1,
+  "max_agent_steps": 30,
+  "arms": {
+    "baseline": {
+      "tone": "professional neutral",
+      "wiki": "original structured rules",
+      "tool_descriptions": "complete"
+    },
+    "tone_trump": {
+      "tone": "exaggerated Trump-style",
+      "wiki": "original structured rules",
+      "tool_descriptions": "complete"
+    },
+    "tone_casual": {
+      "tone": "casual with emoji/slang",
+      "wiki": "original structured rules",
+      "tool_descriptions": "complete"
+    },
+    "wiki_random": {
+      "tone": "professional neutral",
+      "wiki": "same rules flattened and pre-shuffled",
+      "tool_descriptions": "complete"
+    },
+    "no_tool_desc": {
+      "tone": "professional neutral",
+      "wiki": "original structured rules",
+      "tool_descriptions": "all description fields blank"
+    },
+    "all_ablations": {
+      "tone": "casual with emoji/slang",
+      "wiki": "same rules flattened and pre-shuffled",
+      "tool_descriptions": "all description fields blank"
+    }
+  },
+  "metrics": [
+    "tau-bench objective reward/pass rate",
+    "agent steps and model calls",
+    "tool calls and environment tool errors",
+    "provider prompt/completion/total tokens",
+    "provider response IDs",
+    "LiteLLM native cost estimate"
+  ],
+  "acceptance_gates": [
+    "all six arms run the same ten task IDs with the same seed and user simulator",
+    "each task is scored only by the vendored tau-bench objective environment",
+    "every agent and simulated-user model call is a real provider response with ID and usage",
+    "raw request messages, tools, response content/tool calls, usage, timings, and trajectories are retained",
+    "the randomized wiki contains the same experimental rule material in the frozen pre-generated order",
+    "the no-description arm preserves schemas while blanking every nested description",
+    "campaign completion is independent of whether the manuscript hypotheses win",
+    "historical percentage claims are not treated as reproduced unless this fixed campaign independently yields them",
+    "credential scan passes"
+  ],
+  "hypotheses": {
+    "tone": "tone variants have limited effect on objective task success",
+    "organization": "randomizing instruction organization reduces success",
+    "tool_descriptions": "removing descriptions increases tool errors and reduces success"
+  },
+  "transport_amendment": {
+    "purpose": "independent task/ablation replication, NOT frozen Kimi-k3 result",
+    "observed_provider": "dashscope",
+    "model": "qwen3.7-flash",
+    "original_protocol_sha256": "ec1ec36d5a6ee21b5185295a7a4447f4e0173f1681a9fe471b240dda1e7cf32a",
+    "changes": "model, user_model, temperature, optionally tasks/trials/steps"
+  },
+  "pricing": {
+    "currency": "CNY",
+    "uncached_input_per_million_tokens": 20,
+    "cached_input_per_million_tokens": 2,
+    "output_per_million_tokens": 100,
+    "qualification": "Prompt cache detail is unavailable in these responses, so every prompt token is conservatively priced as uncached."
+  }
+}

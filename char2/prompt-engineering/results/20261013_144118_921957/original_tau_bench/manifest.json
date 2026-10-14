@@ -1,0 +1,33 @@
+{
+  "experiment_id": "2-4",
+  "campaign_complete": true,
+  "protocol_sha256": "f2f9479ab02bc2a5d2af3e921f340fefc88ed4cff99852b43c9f7c55ff32ad9d",
+  "summary_path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/comparison.json",
+  "summary_sha256": "fcd42e9f4abf8bbf13a77cee5dd06576a62ec2d67b7baf555d27306e69715925",
+  "arm_artifacts": {
+    "baseline": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-baseline_1013144127.json",
+      "sha256": "e6a0b1109a2d0570b5ec9b99f3d170cde1b5bcd36fe0f21c0d86b92f609bc10f"
+    },
+    "tone_trump": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-tone_trump_1013145359.json",
+      "sha256": "0fd560de9567fa1d4415130c063a85c15faf1b2dff658ab8493f620393b5b900"
+    },
+    "tone_casual": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-tone_casual_1013151700.json",
+      "sha256": "7d36ec40b42d6daa7b452d009289d83b732f4a7403fc93abe851b0ad0e7b0a79"
+    },
+    "wiki_random": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-wiki_random_1013153108.json",
+      "sha256": "9722ef7e9152af89737477e0636b21a8883f0398d0f520db7dd2d818f3f533a5"
+    },
+    "no_tool_desc": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-no_tool_desc_1013153447.json",
+      "sha256": "d5d6235007fb0c5e4ecb3b94e6166b1db6458bfe026b7e9e8463c385518158f6"
+    },
+    "all_ablations": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_144118_921957/original_tau_bench/tool-calling-qwen3.7-flash-tone_casual_wiki_random_no_tool_desc_1013155739.json",
+      "sha256": "610e85c50a96480ddd9b655cfd015907edf1bad3b889df1e9b12a161a760e252"
+    }
+  }
+}

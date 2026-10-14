@@ -1,0 +1,216 @@
+
+================================================================================
+▶️  Running experiment: baseline
+================================================================================
+🔬 Running Ablation Study: baseline
+  - Tone Style: default
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-baseline_1013125031.json
+
+Running tasks [0]
+Running task 0
+❌ task_id=0 {'reward': 0.0, 'metrics': {'agent_steps': 10, 'agent_model_calls': 10, 'tool_calls': 4, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 0.0
+📈 Pass^k
+  k=1: 0.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-baseline_1013125031.json
+
+
+================================================================================
+▶️  Running experiment: tone_trump
+================================================================================
+🔬 Running Ablation Study: tone_trump
+  - Tone Style: trump
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_trump_1013125304.json
+
+🎭 Applying trump tone style to system prompt...
+Running tasks [0]
+Running task 0
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 9, 'agent_model_calls': 9, 'tool_calls': 4, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_trump_1013125304.json
+
+
+================================================================================
+▶️  Running experiment: tone_casual
+================================================================================
+🔬 Running Ablation Study: tone_casual
+  - Tone Style: casual
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_1013125537.json
+
+🎭 Applying casual tone style to system prompt...
+Running tasks [0]
+Running task 0
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 9, 'agent_model_calls': 9, 'tool_calls': 4, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_1013125537.json
+
+
+================================================================================
+▶️  Running experiment: wiki_random
+================================================================================
+🔬 Running Ablation Study: wiki_random
+  - Tone Style: default
+  - Randomize Wiki: True
+  - Remove Tool Descriptions: False
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-wiki_random_1013130833.json
+
+📝 Using pre-randomized wiki rules...
+Running tasks [0]
+Running task 0
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 11, 'agent_model_calls': 11, 'tool_calls': 6, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-wiki_random_1013130833.json
+
+
+================================================================================
+▶️  Running experiment: no_tool_desc
+================================================================================
+🔬 Running Ablation Study: no_tool_desc
+  - Tone Style: default
+  - Randomize Wiki: False
+  - Remove Tool Descriptions: True
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-no_tool_desc_1013132101.json
+
+🔧 Removing tool descriptions...
+Running tasks [0]
+Running task 0
+✅ task_id=0 {'reward': 1.0, 'metrics': {'agent_steps': 13, 'agent_model_calls': 13, 'tool_calls': 7, 'tool_errors': 0}, 'error': None}
+-----
+🏆 Average reward: 1.0
+📈 Pass^k
+  k=1: 1.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-no_tool_desc_1013132101.json
+
+
+================================================================================
+▶️  Running experiment: all_ablations
+================================================================================
+🔬 Running Ablation Study: tone_casual_wiki_random_no_tool_desc
+  - Tone Style: casual
+  - Randomize Wiki: True
+  - Remove Tool Descriptions: True
+  - Checkpoint: /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_wiki_random_no_tool_desc_1013133424.json
+
+📝 Using pre-randomized wiki rules...
+🎭 Applying casual tone style to system prompt...
+🔧 Removing tool descriptions...
+Running tasks [0]
+Running task 0
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+
+❌ ERROR calling API:
+  Provider: openai
+  Model: qwen3.7-flash-2026-07-15
+  Error: litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.
+  Error type: APIError
+  Traceback:
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 871, in completion
+    raise e
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 807, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/litellm_core_utils/logging_utils.py", line 387, in sync_wrapper
+    result: Final = func(*args, **kwargs)
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 545, in make_sync_openai_chat_completion_request
+    raise e
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 520, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(**data, timeout=timeout)
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py", line 1204, in create
+    return self._post(
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/openai/_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.PermissionDeniedError: Error code: 403 - {'error': {'message': 'Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.', 'type': 'AllocationQuota.FreeTierOnly', 'param': None, 'code': 'AllocationQuota.FreeTierOnly'}, 'id': 'chatcmpl-1ab09119-317d-9f2b-8380-d366fb7edf65', 'request_id': '1ab09119-317d-9f2b-8380-d366fb7edf65'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/main.py", line 5956, in completion
+    response = _complete_custom_openai(_dispatch_ctx)
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/main.py", line 2717, in _complete_custom_openai
+    raise e
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/main.py", line 2689, in _complete_custom_openai
+    response = openai_chat_completions.completion(
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/llms/openai/openai.py", line 882, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 403 - {'error': {'message': 'Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.', 'type': 'AllocationQuota.FreeTierOnly', 'param': None, 'code': 'AllocationQuota.FreeTierOnly'}, 'id': 'chatcmpl-1ab09119-317d-9f2b-8380-d366fb7edf65', 'request_id': '1ab09119-317d-9f2b-8380-d366fb7edf65'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/e/ai-agent-book/official_ai_agent_book/chapter2/prompt-engineering/ablation_agent.py", line 186, in solve
+    res = completion(**completion_kwargs)
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/chat_completions/dispatch.py", line 103, in completion
+    return _DISPATCH.run(
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/rust_bridge/dispatch.py", line 81, in run
+    return python(*args, **kwargs)
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/utils.py", line 1970, in wrapper
+    raise e
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/utils.py", line 1817, in wrapper
+    result = original_function(*args, **kwargs)
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/main.py", line 6078, in completion
+    raise exception_type(
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2730, in exception_type
+    raise e  # it's already mapped
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2477, in exception_type
+    _map_openai_exception(
+  File "/root/anaconda3/envs/vllm_wsl/lib/python3.10/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 507, in _map_openai_exception
+    raise APIError(
+litellm.exceptions.APIError: litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.
+
+❌ task_id=0 {'reward': 0.0, 'metrics': {'agent_steps': 10, 'agent_model_calls': 10, 'tool_calls': 4, 'tool_errors': 0}, 'error': 'litellm.APIError: APIError: OpenAIException - Free quota exhausted. To continue accessing the model on a paid basis, please add funds or disable the "use free tier only" mode in the management console.'}
+-----
+🏆 Average reward: 0.0
+📈 Pass^k
+  k=1: 0.0
+
+📄 Results saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_wiki_random_no_tool_desc_1013133424.json
+
+
+================================================================================
+                         ABLATION STUDY RESULTS
+================================================================================
+
+Experiment                        Success Rate      Tasks        Relative
+----------------------------------------------------------------------
+tone_trump                      100.0%         1/  1      100.0% 
+tone_casual                     100.0%         1/  1      100.0% 
+wiki_random                     100.0%         1/  1      100.0% 
+no_tool_desc                    100.0%         1/  1      100.0% 
+baseline                          0.0%         0/  1        0.0%  ⭐
+all_ablations                     0.0%         0/  1        0.0% 
+----------------------------------------------------------------------
+
+⚠️  No baseline found for comparison
+
+📄 Suite summary saved to /mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_125021_291969/original_tau_bench/comparison.json
+

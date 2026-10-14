@@ -1,0 +1,33 @@
+{
+  "experiment_id": "2-4",
+  "campaign_complete": false,
+  "protocol_sha256": "d0fa737d7ec9299547c20c6fb58a5a8728326f121aa55b00a89303c8be48b772",
+  "summary_path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/comparison.json",
+  "summary_sha256": "d30434b5c307c50cd57b34228212fff85e1badec1633b880a8379e42df79d892",
+  "arm_artifacts": {
+    "baseline": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-baseline_1013143023.json",
+      "sha256": "acb88c1e9b5bd33af3091fb7035f32a4e4717fd3f55d2b6c0544214a24df5b32"
+    },
+    "tone_trump": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_trump_1013143026.json",
+      "sha256": "02703397e84a840b6fb2002fcb0495800de33a4c8933554c764a2d366d1c4cff"
+    },
+    "tone_casual": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_1013143027.json",
+      "sha256": "f7f060c36db17bd76aaa7359cc7309e9c3e5153c7724acc117f272fc2f264bf6"
+    },
+    "wiki_random": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-wiki_random_1013143028.json",
+      "sha256": "bcf110098307484b8e62d550087034fa2a480db8625b3f408217503af3a73585"
+    },
+    "no_tool_desc": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-no_tool_desc_1013143028.json",
+      "sha256": "78b740cce8194a47eea26c7a0b06f2e3e84727db079831346eb73599cccf1df8"
+    },
+    "all_ablations": {
+      "path": "/mnt/e/ai-agent-book/char2/prompt-engineering/results/20261013_143012_394194/original_tau_bench/tool-calling-qwen3.7-flash-2026-07-15-tone_casual_wiki_random_no_tool_desc_1013143029.json",
+      "sha256": "1296442870ac2eae769c2e1b26b363b0c4bcbde2a6b64311a149567f18872739"
+    }
+  }
+}
