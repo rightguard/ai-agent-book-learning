@@ -1,0 +1,1867 @@
+{
+  "experiment": "3-10",
+  "created_at": "2026-10-16T02:32:03.796230+00:00",
+  "data_origin": "LIVE_QWEN_PREFIX_GENERATION_FULL",
+  "settings": {
+    "env_loaded": true,
+    "key_present": true,
+    "chat_model": "qwen3.8-27b",
+    "chat_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "embed_model": "qwen3.7-text-embedding-flash",
+    "embed_dimension": 1024,
+    "embed_instruction": "Given a search query, retrieve relevant passages that answer the query.",
+    "rerank_model": "qwen3.7-text-rerank",
+    "rerank_instruction": "Given a web search query, retrieve relevant passages that answer the query.",
+    "embed_url": "https://ws-l84cq4l68pzgx8fq.cn-beijing.maas.aliyuncs.com/api/v1/services/embeddings/text-embedding/text-embedding",
+    "rerank_url": "https://ws-l84cq4l68pzgx8fq.cn-beijing.maas.aliyuncs.com/api/v1/services/rerank/text-rerank/text-rerank",
+    "native_base": "https://ws-l84cq4l68pzgx8fq.cn-beijing.maas.aliyuncs.com/api/v1"
+  },
+  "corpus_sha256": "6c2b29119706d6d63474d2d3fd1f0919ae140428d909cf1a65b87e65bceae18e",
+  "scope": {
+    "chunks": 22,
+    "queries": 15
+  },
+  "run_metadata": {
+    "bm25_engine": "rank_bm25",
+    "chunk_count": 22,
+    "query_count": 15,
+    "ks": [
+      1,
+      3,
+      5
+    ],
+    "method": "all",
+    "source_scope": "full",
+    "prefix_cache_hits": 0,
+    "prefix_new_count": 22,
+    "source_hash_override": false,
+    "official_gold_ids_validated": true,
+    "is_published_fixture": false,
+    "prefix_prompt_version": "ctx3-10-qwen-full-v3",
+    "prefix_model": "qwen3.8-27b",
+    "source_documents": {
+      "宪法": {
+        "sha256": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+        "path": "/mnt/e/ai-agent-book/char3/agentic-rag/laws/1-宪法/宪法.md"
+      },
+      "检察官法（2019-04-23）": {
+        "sha256": "16285739d98e9661208bf8b1f334d40d902af794dcef322605bc93ffbfb7c530",
+        "path": "/mnt/e/ai-agent-book/char3/agentic-rag/laws/2-宪法相关法/检察官法（2019-04-23）.md"
+      }
+    }
+  },
+  "metrics": {
+    "plain_bm25": {
+      "recall@1": 0.6,
+      "recall@3": 0.8666666666666667,
+      "recall@5": 0.9333333333333333,
+      "mrr": 0.7508333333333334,
+      "count": 15
+    },
+    "contextual_bm25": {
+      "recall@1": 0.7333333333333333,
+      "recall@3": 0.8666666666666667,
+      "recall@5": 0.9333333333333333,
+      "mrr": 0.8138888888888889,
+      "count": 15
+    },
+    "plain_dense": {
+      "recall@1": 0.8666666666666667,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mrr": 0.9333333333333333,
+      "count": 15
+    },
+    "contextual_dense": {
+      "recall@1": 0.9333333333333333,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mrr": 0.9666666666666667,
+      "count": 15
+    },
+    "plain_hybrid": {
+      "recall@1": 0.6666666666666666,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 1.0,
+      "mrr": 0.8133333333333334,
+      "count": 15
+    },
+    "contextual_hybrid": {
+      "recall@1": 0.7333333333333333,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 1.0,
+      "mrr": 0.85,
+      "count": 15
+    }
+  },
+  "per_method": {
+    "plain_bm25": {
+      "metrics": {
+        "recall@1": 0.6,
+        "recall@3": 0.8666666666666667,
+        "recall@5": 0.9333333333333333,
+        "mrr": 0.7508333333333334,
+        "count": 15
+      },
+      "per_query": [
+        {
+          "id": "q01",
+          "query": "宪法是哪一年通过的？后来经过了几次修正？",
+          "gold_chunk_id": "宪法_chunk_0",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_1",
+            "宪法_chunk_0",
+            "宪法_chunk_2",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_8"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q02",
+          "query": "国家的根本任务是什么？",
+          "gold_chunk_id": "宪法_chunk_1",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_2",
+            "宪法_chunk_1",
+            "宪法_chunk_17",
+            "宪法_chunk_8",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q03",
+          "query": "我国处理民族关系的基本原则和对外政策中的五项原则是什么？",
+          "gold_chunk_id": "宪法_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_2",
+            "宪法_chunk_1",
+            "宪法_chunk_16",
+            "宪法_chunk_13",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q04",
+          "query": "少数民族聚居的地方如何实行区域自治？",
+          "gold_chunk_id": "宪法_chunk_3",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_3",
+            "宪法_chunk_16",
+            "宪法_chunk_13",
+            "宪法_chunk_15",
+            "宪法_chunk_2"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q05",
+          "query": "宪法如何保护个体经济、私营经济等非公有制经济？",
+          "gold_chunk_id": "宪法_chunk_4",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_4",
+            "宪法_chunk_3",
+            "宪法_chunk_16",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_13"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q06",
+          "query": "宪法关于设立特别行政区以及在华外国人权利的规定是什么？",
+          "gold_chunk_id": "宪法_chunk_6",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_6",
+            "宪法_chunk_8",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_11",
+            "检察官法_2019_04_23_chunk_3"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q07",
+          "query": "公民对国家机关工作人员的违法失职行为享有哪些监督权利？",
+          "gold_chunk_id": "宪法_chunk_7",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_7",
+            "宪法_chunk_6",
+            "宪法_chunk_4",
+            "宪法_chunk_8",
+            "检察官法_2019_04_23_chunk_1"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q08",
+          "query": "全国人民代表大会常务委员会有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_10",
+          "gold_rank": 16,
+          "rr": 0.0625,
+          "top_ids": [
+            "宪法_chunk_8",
+            "宪法_chunk_7",
+            "宪法_chunk_16",
+            "宪法_chunk_6",
+            "检察官法_2019_04_23_chunk_1"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 0.0,
+          "recall@5": 0.0
+        },
+        {
+          "id": "q09",
+          "query": "国家主席有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_12",
+          "gold_rank": 5,
+          "rr": 0.2,
+          "top_ids": [
+            "宪法_chunk_8",
+            "宪法_chunk_9",
+            "宪法_chunk_11",
+            "宪法_chunk_16",
+            "宪法_chunk_12"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 0.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q10",
+          "query": "地方各级人民代表大会的任期和代表选举方式是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_14",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_15",
+            "宪法_chunk_17",
+            "宪法_chunk_13",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q11",
+          "query": "县级以上地方各级人民代表大会常务委员会组成人员有什么兼职限制？",
+          "gold_chunk_id": "宪法_chunk_15",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_15",
+            "检察官法_2019_04_23_chunk_2",
+            "宪法_chunk_13",
+            "宪法_chunk_6"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q12",
+          "query": "监察委员会的性质、组成和任期是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_17",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_17",
+            "宪法_chunk_15",
+            "宪法_chunk_10",
+            "宪法_chunk_12",
+            "宪法_chunk_13"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q13",
+          "query": "检察官法是什么时候修订的？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_8",
+            "宪法_chunk_12",
+            "宪法_chunk_16",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q14",
+          "query": "检察官遴选委员会由哪些人员组成？律师参加公开选拔需要什么条件？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q15",
+          "query": "检察官在哪些情形下应当予以免职？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_3",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        }
+      ]
+    },
+    "contextual_bm25": {
+      "metrics": {
+        "recall@1": 0.7333333333333333,
+        "recall@3": 0.8666666666666667,
+        "recall@5": 0.9333333333333333,
+        "mrr": 0.8138888888888889,
+        "count": 15
+      },
+      "per_query": [
+        {
+          "id": "q01",
+          "query": "宪法是哪一年通过的？后来经过了几次修正？",
+          "gold_chunk_id": "宪法_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_0",
+            "宪法_chunk_1",
+            "宪法_chunk_2",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_8"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q02",
+          "query": "国家的根本任务是什么？",
+          "gold_chunk_id": "宪法_chunk_1",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_1",
+            "宪法_chunk_2",
+            "宪法_chunk_17",
+            "宪法_chunk_8",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q03",
+          "query": "我国处理民族关系的基本原则和对外政策中的五项原则是什么？",
+          "gold_chunk_id": "宪法_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_2",
+            "宪法_chunk_1",
+            "宪法_chunk_16",
+            "宪法_chunk_3",
+            "宪法_chunk_13"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q04",
+          "query": "少数民族聚居的地方如何实行区域自治？",
+          "gold_chunk_id": "宪法_chunk_3",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_3",
+            "宪法_chunk_16",
+            "宪法_chunk_13",
+            "宪法_chunk_15",
+            "宪法_chunk_2"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q05",
+          "query": "宪法如何保护个体经济、私营经济等非公有制经济？",
+          "gold_chunk_id": "宪法_chunk_4",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_4",
+            "宪法_chunk_3",
+            "宪法_chunk_16",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_10"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q06",
+          "query": "宪法关于设立特别行政区以及在华外国人权利的规定是什么？",
+          "gold_chunk_id": "宪法_chunk_6",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_6",
+            "宪法_chunk_8",
+            "宪法_chunk_9",
+            "宪法_chunk_3",
+            "宪法_chunk_2"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q07",
+          "query": "公民对国家机关工作人员的违法失职行为享有哪些监督权利？",
+          "gold_chunk_id": "宪法_chunk_7",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_7",
+            "宪法_chunk_6",
+            "宪法_chunk_4",
+            "宪法_chunk_8",
+            "检察官法_2019_04_23_chunk_1"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q08",
+          "query": "全国人民代表大会常务委员会有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_10",
+          "gold_rank": 8,
+          "rr": 0.125,
+          "top_ids": [
+            "宪法_chunk_8",
+            "宪法_chunk_9",
+            "宪法_chunk_16",
+            "宪法_chunk_11",
+            "检察官法_2019_04_23_chunk_1"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 0.0,
+          "recall@5": 0.0
+        },
+        {
+          "id": "q09",
+          "query": "国家主席有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_12",
+          "gold_rank": 4,
+          "rr": 0.25,
+          "top_ids": [
+            "宪法_chunk_8",
+            "宪法_chunk_9",
+            "宪法_chunk_11",
+            "宪法_chunk_12",
+            "宪法_chunk_16"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 0.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q10",
+          "query": "地方各级人民代表大会的任期和代表选举方式是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_14",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_15",
+            "宪法_chunk_17",
+            "宪法_chunk_13",
+            "宪法_chunk_16"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q11",
+          "query": "县级以上地方各级人民代表大会常务委员会组成人员有什么兼职限制？",
+          "gold_chunk_id": "宪法_chunk_15",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_15",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_3",
+            "宪法_chunk_13"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q12",
+          "query": "监察委员会的性质、组成和任期是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_17",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_17",
+            "宪法_chunk_15",
+            "宪法_chunk_12",
+            "宪法_chunk_14",
+            "宪法_chunk_16"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q13",
+          "query": "检察官法是什么时候修订的？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_8",
+            "宪法_chunk_12",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_1"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q14",
+          "query": "检察官遴选委员会由哪些人员组成？律师参加公开选拔需要什么条件？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q15",
+          "query": "检察官在哪些情形下应当予以免职？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_3",
+          "gold_rank": 3,
+          "rr": 0.3333333333333333,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        }
+      ]
+    },
+    "plain_dense": {
+      "metrics": {
+        "recall@1": 0.8666666666666667,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 0.9333333333333333,
+        "count": 15
+      },
+      "per_query": [
+        {
+          "id": "q01",
+          "query": "宪法是哪一年通过的？后来经过了几次修正？",
+          "gold_chunk_id": "宪法_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_0",
+            "宪法_chunk_2",
+            "宪法_chunk_9",
+            "宪法_chunk_8",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q02",
+          "query": "国家的根本任务是什么？",
+          "gold_chunk_id": "宪法_chunk_1",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_2",
+            "宪法_chunk_1",
+            "宪法_chunk_5",
+            "宪法_chunk_8",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q03",
+          "query": "我国处理民族关系的基本原则和对外政策中的五项原则是什么？",
+          "gold_chunk_id": "宪法_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_2",
+            "宪法_chunk_3",
+            "宪法_chunk_6",
+            "宪法_chunk_8",
+            "宪法_chunk_5"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q04",
+          "query": "少数民族聚居的地方如何实行区域自治？",
+          "gold_chunk_id": "宪法_chunk_3",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_16",
+            "宪法_chunk_3",
+            "宪法_chunk_6",
+            "宪法_chunk_13",
+            "宪法_chunk_14"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q05",
+          "query": "宪法如何保护个体经济、私营经济等非公有制经济？",
+          "gold_chunk_id": "宪法_chunk_4",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_4",
+            "宪法_chunk_3",
+            "宪法_chunk_2",
+            "宪法_chunk_8",
+            "宪法_chunk_6"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q06",
+          "query": "宪法关于设立特别行政区以及在华外国人权利的规定是什么？",
+          "gold_chunk_id": "宪法_chunk_6",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_6",
+            "宪法_chunk_8",
+            "宪法_chunk_2",
+            "宪法_chunk_3",
+            "宪法_chunk_0"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q07",
+          "query": "公民对国家机关工作人员的违法失职行为享有哪些监督权利？",
+          "gold_chunk_id": "宪法_chunk_7",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_7",
+            "宪法_chunk_6",
+            "宪法_chunk_8",
+            "宪法_chunk_17",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q08",
+          "query": "全国人民代表大会常务委员会有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_10",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_10",
+            "宪法_chunk_9",
+            "宪法_chunk_11",
+            "宪法_chunk_8",
+            "宪法_chunk_13"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q09",
+          "query": "国家主席有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_12",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_12",
+            "宪法_chunk_9",
+            "宪法_chunk_11",
+            "宪法_chunk_13",
+            "宪法_chunk_10"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q10",
+          "query": "地方各级人民代表大会的任期和代表选举方式是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_14",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_11",
+            "宪法_chunk_15",
+            "宪法_chunk_8",
+            "宪法_chunk_9"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q11",
+          "query": "县级以上地方各级人民代表大会常务委员会组成人员有什么兼职限制？",
+          "gold_chunk_id": "宪法_chunk_15",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_15",
+            "宪法_chunk_14",
+            "检察官法_2019_04_23_chunk_3",
+            "宪法_chunk_10",
+            "宪法_chunk_9"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q12",
+          "query": "监察委员会的性质、组成和任期是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_17",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_17",
+            "宪法_chunk_15",
+            "宪法_chunk_11",
+            "宪法_chunk_16",
+            "宪法_chunk_14"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q13",
+          "query": "检察官法是什么时候修订的？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_0",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_1",
+            "宪法_chunk_17"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q14",
+          "query": "检察官遴选委员会由哪些人员组成？律师参加公开选拔需要什么条件？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_17"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q15",
+          "query": "检察官在哪些情形下应当予以免职？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_3",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_10"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        }
+      ]
+    },
+    "contextual_dense": {
+      "metrics": {
+        "recall@1": 0.9333333333333333,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 0.9666666666666667,
+        "count": 15
+      },
+      "per_query": [
+        {
+          "id": "q01",
+          "query": "宪法是哪一年通过的？后来经过了几次修正？",
+          "gold_chunk_id": "宪法_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_0",
+            "宪法_chunk_2",
+            "宪法_chunk_9",
+            "宪法_chunk_8",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q02",
+          "query": "国家的根本任务是什么？",
+          "gold_chunk_id": "宪法_chunk_1",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_1",
+            "宪法_chunk_2",
+            "宪法_chunk_8",
+            "宪法_chunk_5",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q03",
+          "query": "我国处理民族关系的基本原则和对外政策中的五项原则是什么？",
+          "gold_chunk_id": "宪法_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_2",
+            "宪法_chunk_3",
+            "宪法_chunk_16",
+            "宪法_chunk_1",
+            "宪法_chunk_8"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q04",
+          "query": "少数民族聚居的地方如何实行区域自治？",
+          "gold_chunk_id": "宪法_chunk_3",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_16",
+            "宪法_chunk_3",
+            "宪法_chunk_6",
+            "宪法_chunk_15",
+            "宪法_chunk_5"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q05",
+          "query": "宪法如何保护个体经济、私营经济等非公有制经济？",
+          "gold_chunk_id": "宪法_chunk_4",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_4",
+            "宪法_chunk_3",
+            "宪法_chunk_2",
+            "宪法_chunk_7",
+            "宪法_chunk_5"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q06",
+          "query": "宪法关于设立特别行政区以及在华外国人权利的规定是什么？",
+          "gold_chunk_id": "宪法_chunk_6",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_6",
+            "宪法_chunk_7",
+            "宪法_chunk_3",
+            "宪法_chunk_2",
+            "宪法_chunk_8"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q07",
+          "query": "公民对国家机关工作人员的违法失职行为享有哪些监督权利？",
+          "gold_chunk_id": "宪法_chunk_7",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_7",
+            "宪法_chunk_6",
+            "宪法_chunk_17",
+            "宪法_chunk_15",
+            "宪法_chunk_8"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q08",
+          "query": "全国人民代表大会常务委员会有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_10",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_10",
+            "宪法_chunk_9",
+            "宪法_chunk_8",
+            "宪法_chunk_11",
+            "宪法_chunk_15"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q09",
+          "query": "国家主席有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_12",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_12",
+            "宪法_chunk_11",
+            "宪法_chunk_9",
+            "宪法_chunk_10",
+            "宪法_chunk_13"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q10",
+          "query": "地方各级人民代表大会的任期和代表选举方式是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_14",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_15",
+            "宪法_chunk_8",
+            "宪法_chunk_11",
+            "宪法_chunk_9"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q11",
+          "query": "县级以上地方各级人民代表大会常务委员会组成人员有什么兼职限制？",
+          "gold_chunk_id": "宪法_chunk_15",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_15",
+            "宪法_chunk_14",
+            "检察官法_2019_04_23_chunk_3",
+            "宪法_chunk_11",
+            "宪法_chunk_17"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q12",
+          "query": "监察委员会的性质、组成和任期是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_17",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_17",
+            "宪法_chunk_15",
+            "宪法_chunk_16",
+            "宪法_chunk_14",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q13",
+          "query": "检察官法是什么时候修订的？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_0",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_1",
+            "宪法_chunk_17"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q14",
+          "query": "检察官遴选委员会由哪些人员组成？律师参加公开选拔需要什么条件？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_17"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q15",
+          "query": "检察官在哪些情形下应当予以免职？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_3",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_17"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        }
+      ]
+    },
+    "plain_hybrid": {
+      "metrics": {
+        "recall@1": 0.6666666666666666,
+        "recall@3": 0.9333333333333333,
+        "recall@5": 1.0,
+        "mrr": 0.8133333333333334,
+        "count": 15
+      },
+      "per_query": [
+        {
+          "id": "q01",
+          "query": "宪法是哪一年通过的？后来经过了几次修正？",
+          "gold_chunk_id": "宪法_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_0",
+            "宪法_chunk_2",
+            "宪法_chunk_8",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_3"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q02",
+          "query": "国家的根本任务是什么？",
+          "gold_chunk_id": "宪法_chunk_1",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_2",
+            "宪法_chunk_1",
+            "宪法_chunk_8",
+            "宪法_chunk_3",
+            "宪法_chunk_5"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q03",
+          "query": "我国处理民族关系的基本原则和对外政策中的五项原则是什么？",
+          "gold_chunk_id": "宪法_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_2",
+            "宪法_chunk_3",
+            "宪法_chunk_1",
+            "宪法_chunk_16",
+            "宪法_chunk_5"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q04",
+          "query": "少数民族聚居的地方如何实行区域自治？",
+          "gold_chunk_id": "宪法_chunk_3",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_16",
+            "宪法_chunk_3",
+            "宪法_chunk_13",
+            "宪法_chunk_15",
+            "宪法_chunk_14"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q05",
+          "query": "宪法如何保护个体经济、私营经济等非公有制经济？",
+          "gold_chunk_id": "宪法_chunk_4",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_4",
+            "宪法_chunk_3",
+            "宪法_chunk_2",
+            "宪法_chunk_8",
+            "宪法_chunk_7"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q06",
+          "query": "宪法关于设立特别行政区以及在华外国人权利的规定是什么？",
+          "gold_chunk_id": "宪法_chunk_6",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_6",
+            "宪法_chunk_8",
+            "宪法_chunk_2",
+            "宪法_chunk_3",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q07",
+          "query": "公民对国家机关工作人员的违法失职行为享有哪些监督权利？",
+          "gold_chunk_id": "宪法_chunk_7",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_7",
+            "宪法_chunk_6",
+            "宪法_chunk_8",
+            "宪法_chunk_17",
+            "检察官法_2019_04_23_chunk_1"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q08",
+          "query": "全国人民代表大会常务委员会有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_10",
+          "gold_rank": 5,
+          "rr": 0.2,
+          "top_ids": [
+            "宪法_chunk_8",
+            "宪法_chunk_11",
+            "宪法_chunk_9",
+            "宪法_chunk_16",
+            "宪法_chunk_10"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 0.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q09",
+          "query": "国家主席有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_12",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_9",
+            "宪法_chunk_12",
+            "宪法_chunk_11",
+            "宪法_chunk_8",
+            "宪法_chunk_13"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q10",
+          "query": "地方各级人民代表大会的任期和代表选举方式是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_14",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_15",
+            "宪法_chunk_17",
+            "宪法_chunk_8",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q11",
+          "query": "县级以上地方各级人民代表大会常务委员会组成人员有什么兼职限制？",
+          "gold_chunk_id": "宪法_chunk_15",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_15",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_3",
+            "宪法_chunk_9"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q12",
+          "query": "监察委员会的性质、组成和任期是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_17",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_17",
+            "宪法_chunk_15",
+            "宪法_chunk_16",
+            "宪法_chunk_10",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q13",
+          "query": "检察官法是什么时候修订的？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_11",
+            "宪法_chunk_17",
+            "宪法_chunk_8",
+            "宪法_chunk_12"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q14",
+          "query": "检察官遴选委员会由哪些人员组成？律师参加公开选拔需要什么条件？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q15",
+          "query": "检察官在哪些情形下应当予以免职？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_3",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_10"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        }
+      ]
+    },
+    "contextual_hybrid": {
+      "metrics": {
+        "recall@1": 0.7333333333333333,
+        "recall@3": 0.9333333333333333,
+        "recall@5": 1.0,
+        "mrr": 0.85,
+        "count": 15
+      },
+      "per_query": [
+        {
+          "id": "q01",
+          "query": "宪法是哪一年通过的？后来经过了几次修正？",
+          "gold_chunk_id": "宪法_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_0",
+            "宪法_chunk_2",
+            "宪法_chunk_1",
+            "宪法_chunk_8",
+            "宪法_chunk_9"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q02",
+          "query": "国家的根本任务是什么？",
+          "gold_chunk_id": "宪法_chunk_1",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_1",
+            "宪法_chunk_2",
+            "宪法_chunk_8",
+            "宪法_chunk_3",
+            "宪法_chunk_5"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q03",
+          "query": "我国处理民族关系的基本原则和对外政策中的五项原则是什么？",
+          "gold_chunk_id": "宪法_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_2",
+            "宪法_chunk_1",
+            "宪法_chunk_3",
+            "宪法_chunk_16",
+            "宪法_chunk_8"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q04",
+          "query": "少数民族聚居的地方如何实行区域自治？",
+          "gold_chunk_id": "宪法_chunk_3",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_16",
+            "宪法_chunk_3",
+            "宪法_chunk_15",
+            "宪法_chunk_2",
+            "宪法_chunk_13"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q05",
+          "query": "宪法如何保护个体经济、私营经济等非公有制经济？",
+          "gold_chunk_id": "宪法_chunk_4",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_4",
+            "宪法_chunk_3",
+            "宪法_chunk_2",
+            "宪法_chunk_5",
+            "宪法_chunk_7"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q06",
+          "query": "宪法关于设立特别行政区以及在华外国人权利的规定是什么？",
+          "gold_chunk_id": "宪法_chunk_6",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_6",
+            "宪法_chunk_8",
+            "宪法_chunk_3",
+            "宪法_chunk_2",
+            "宪法_chunk_7"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q07",
+          "query": "公民对国家机关工作人员的违法失职行为享有哪些监督权利？",
+          "gold_chunk_id": "宪法_chunk_7",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_7",
+            "宪法_chunk_6",
+            "宪法_chunk_8",
+            "宪法_chunk_15",
+            "宪法_chunk_17"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q08",
+          "query": "全国人民代表大会常务委员会有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_10",
+          "gold_rank": 4,
+          "rr": 0.25,
+          "top_ids": [
+            "宪法_chunk_8",
+            "宪法_chunk_9",
+            "宪法_chunk_11",
+            "宪法_chunk_10",
+            "宪法_chunk_16"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 0.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q09",
+          "query": "国家主席有哪些职权？",
+          "gold_chunk_id": "宪法_chunk_12",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_12",
+            "宪法_chunk_11",
+            "宪法_chunk_9",
+            "宪法_chunk_8",
+            "宪法_chunk_10"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q10",
+          "query": "地方各级人民代表大会的任期和代表选举方式是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_14",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_15",
+            "宪法_chunk_17",
+            "宪法_chunk_8",
+            "宪法_chunk_16"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q11",
+          "query": "县级以上地方各级人民代表大会常务委员会组成人员有什么兼职限制？",
+          "gold_chunk_id": "宪法_chunk_15",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "宪法_chunk_14",
+            "宪法_chunk_15",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_2",
+            "宪法_chunk_16"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q12",
+          "query": "监察委员会的性质、组成和任期是怎样规定的？",
+          "gold_chunk_id": "宪法_chunk_17",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "宪法_chunk_17",
+            "宪法_chunk_15",
+            "宪法_chunk_16",
+            "宪法_chunk_14",
+            "宪法_chunk_12"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q13",
+          "query": "检察官法是什么时候修订的？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_0",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_0",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_2",
+            "宪法_chunk_8"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q14",
+          "query": "检察官遴选委员会由哪些人员组成？律师参加公开选拔需要什么条件？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_2",
+          "gold_rank": 1,
+          "rr": 1.0,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_11"
+          ],
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        },
+        {
+          "id": "q15",
+          "query": "检察官在哪些情形下应当予以免职？",
+          "gold_chunk_id": "检察官法_2019_04_23_chunk_3",
+          "gold_rank": 2,
+          "rr": 0.5,
+          "top_ids": [
+            "检察官法_2019_04_23_chunk_1",
+            "检察官法_2019_04_23_chunk_3",
+            "检察官法_2019_04_23_chunk_2",
+            "检察官法_2019_04_23_chunk_0",
+            "宪法_chunk_10"
+          ],
+          "recall@1": 0.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0
+        }
+      ]
+    }
+  },
+  "prefixes": [
+    {
+      "chunk_id": "宪法_chunk_0",
+      "doc_title": "宪法",
+      "prefix": "该文本块为《中华人民共和国宪法》开头部分，列明1982年通过、公布及历次宪法修正案信息，并进入序言。序言起始段叙述中国近代革命历程、1949年建立中华人民共和国，以及新中国成立后向社会主义过渡的初期背景，位于第一章总纲之前。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_1",
+      "doc_title": "宪法",
+      "prefix": "该片段出自《中华人民共和国宪法》序言，位于“中华人民共和国成立以后”段之后、“中国革命、建设、改革的成就”段之前。它承接建国后社会主义制度确立的叙述，说明国家根本任务、统一战线和民族关系，为第一章总纲提供背景。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_10",
+      "doc_title": "宪法",
+      "prefix": "该文本块出自《中华人民共和国宪法》第三章“国家机构”第一节“全国人民代表大会”，主要承接第六十七条全国人大常委会职权事项，继续列举其解释法律、监督国家机关、人事任免、对外条约及动员和紧急状态等职权。随后转入第六十八条委员长会议、第六十九条常委会对全国人大负责并报告工作，以及第七十条专门委员会的设置与职权。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_11",
+      "doc_title": "宪法",
+      "prefix": "该块位于《中华人民共和国宪法》第三章国家机构第一节全国人民代表大会末尾，承接第七十条专门委员会规定，并开启第二节中华人民共和国主席。内容涉及全国人大及其常委会的特定问题调查、议案提出、质询案、代表特别保护、发言表决免责、代表义务监督罢免及组织工作程序，随后转入国家主席和副主席的选举与职权。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_12",
+      "doc_title": "宪法",
+      "prefix": "该片段出自《中华人民共和国宪法》第三章“国家机构”，承接第二节“中华人民共和国主席”第八十条至第八十四条，并转入第三节“国务院”第八十五条至第八十九条部分。其规范对象包括国家主席公布法律、任免人员、发布命令及副主席协助、继任和代理规则，以及国务院的性质、组成、任期、总理负责制和国务院职权前八项。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_13",
+      "doc_title": "宪法",
+      "prefix": "该块出自《中华人民共和国宪法》第三章“国家机构”第三节“国务院”，承接第八十九条国务院职权列举的第（八）项至第（十八）项，并延伸至第九十条至第九十二条关于国务院部委、审计机关及向全国人大负责的规定。随后进入第四节“中央军事委员会”和第五节“地方各级人民代表大会和地方各级人民政府”的起始条文。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_14",
+      "doc_title": "宪法",
+      "prefix": "该文本出自《中华人民共和国宪法》第三章国家机构第五节“地方各级人民代表大会和地方各级人民政府”，承接第九十六条关于地方各级人民代表大会性质及县级以上人大设立常务委员会的规定。内容涵盖第九十七条至第一百零三条，规定地方各级人大代表选举方式、任期、职权、罢免以及县级以上人大常委会组成和职务限制。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_15",
+      "doc_title": "宪法",
+      "prefix": "该片段出自《中华人民共和国宪法》第三章国家机构第五节“地方各级人民代表大会和地方各级人民政府”，接续第一百零三条关于县级以上地方各级人大常委会组成人员的规定。内容涵盖第一百零四条至第一百一十一条，规范县级以上地方人大常委会职权、地方各级人民政府性质与任期、行政职权、审计监督、负责报告以及基层群众性自治组织。其后进入第六节“民族自治地方的自治机关”。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_16",
+      "doc_title": "宪法",
+      "prefix": "《中华人民共和国宪法》第三章国家机构第五节末尾至第六节民族自治地方的自治机关，涵盖第一百一十一条后段及第一百一十二条至第一百二十二条。该块承接地方各级人民代表大会和人民政府规定，转入民族自治地方自治机关，并衔接第七节监察委员会。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_17",
+      "doc_title": "宪法",
+      "prefix": "本段出自《中华人民共和国宪法》第三章“国家机构”第七节“监察委员会”，并延伸至第八节“人民法院和人民检察院”，涵盖第一百二十三条至第一百三十七条。其前接第六节民族自治地方的自治机关，后接人民法院和人民检察院的后续条款。内容主要规范监察委员会的设立、组成、任期、负责关系和独立行使监察权，以及人民法院、人民检察院的设立、任期和独立行使审判权、检察权。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_2",
+      "doc_title": "宪法",
+      "prefix": "该片段出自《中华人民共和国宪法》序言末尾至第一章总纲开头，承接序言关于国家性质、民族关系和对外政策的表述，转入总纲第一条至第四条第一款。内容主要规定国家根本制度、人民行使国家权力的机关、国家机构民主集中制原则以及各民族平等和少数民族权益保障。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_3",
+      "doc_title": "宪法",
+      "prefix": "该段出自《中华人民共和国宪法》第一章“总纲”，位于第四条后段并延续至第十条。内容承接第四条关于民族平等、禁止歧视和压迫的规定，规定少数民族地区发展、区域自治、语言文字和风俗习惯自由，以及依法治国、公有制经济、国有经济、集体经济、自然资源与土地制度。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_4",
+      "doc_title": "宪法",
+      "prefix": "该片段出自《中华人民共和国宪法》第一章“总纲”，覆盖第十条末句至第十九条，前接土地合理利用规定，后接科学事业发展条款。内容规范社会主义市场经济、公有制与非公有制经济、公共和私有财产保护、国有企业与集体经济组织，以及国家发展教育事业。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_5",
+      "doc_title": "宪法",
+      "prefix": "该块出自《中华人民共和国宪法》第一章总纲，覆盖第十九条末款至第三十条第一款，位于国家发展教育、科学、文化、卫生、体育等总纲条款之间。内容承接第十九条关于普及教育和推广普通话，并引出第三十条关于行政区域划分。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_6",
+      "doc_title": "宪法",
+      "prefix": "该片段位于《中华人民共和国宪法》第一章总纲末尾，承接第三十条关于行政区域划分的规定，过渡至第三十一条特别行政区和第三十二条外国人权利保护，并进入第二章公民的基本权利和义务，涉及第三十三条至第四十一条。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_7",
+      "doc_title": "宪法",
+      "prefix": "本段出自《中华人民共和国宪法》第二章“公民的基本权利和义务”，位于第四十一条至第五十条，前接第四十条通信自由与通信秘密保护，后接第五十一条至第五十六条关于权利行使界限和公民义务。其规范对象为公民对国家机关的批评建议、申诉控告检举及获得赔偿，以及劳动、休息、退休、物质帮助、受教育、文化活动、妇女平等、婚姻家庭和华侨归侨侨眷保护等权利义务。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_8",
+      "doc_title": "宪法",
+      "prefix": "该片段出自《中华人民共和国宪法》第二章末尾至第三章第一节开头，覆盖第五十条至第五十六条及第五十七条至第六十二条，前接公民基本义务条款，后启全国人民代表大会的性质、组成、任期和职权。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "宪法_chunk_9",
+      "doc_title": "宪法",
+      "prefix": "该文本出自《中华人民共和国宪法》第三章“国家机构”第一节“全国人民代表大会”，位于第六十二条全国人民代表大会职权列举的中段，并延伸至第六十三条至第六十七条。内容规范全国人民代表大会的选举、决定、审查批准、罢免、宪法修改通过程序，以及全国人大常委会组成、任期和职权起始部分。其前接第六十二条关于修改宪法、监督宪法实施和制定修改基本法律的职权，后接第六十七条全国人大常委会职权的后续列举。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "检察官法_2019_04_23_chunk_0",
+      "doc_title": "检察官法（2019-04-23）",
+      "prefix": "本段为《中华人民共和国检察官法》（2019年4月23日修订）开篇部分，列明通过修订信息后进入第一章总则和第二章检察官的职责、义务和权利。内容覆盖第一条至第十条第五项，界定检察官范围、履职原则、职责及保密等义务。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "检察官法_2019_04_23_chunk_1",
+      "doc_title": "检察官法（2019-04-23）",
+      "prefix": "该块出自《中华人民共和国检察官法》（2019年修订）第二章“检察官的职责、义务和权利”末尾至第三章“检察官的条件和遴选”开头，涵盖第十条义务尾项、第十一条权利以及第十二至十五条。它从检察官义务和权利转入检察官任职条件、禁止任职情形及初任检察官遴选、公开选拔规则。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "检察官法_2019_04_23_chunk_2",
+      "doc_title": "检察官法（2019-04-23）",
+      "prefix": "该片段位于《中华人民共和国检察官法》（2019-04-23）第三章“检察官的条件和遴选”第十五条后半段至第四章“检察官的任免”第二十条开头。内容承接检察官公开选拔的任职条件，规定省级和最高人民检察院检察官遴选委员会、初任及上级检察官遴选，并转入检察官任免权限、宪法宣誓和免职情形。",
+      "prefix_origin": "Qwen_live"
+    },
+    {
+      "chunk_id": "检察官法_2019_04_23_chunk_3",
+      "doc_title": "检察官法（2019-04-23）",
+      "prefix": "该文本块位于《中华人民共和国检察官法》（2019年4月23日修订）第四章“检察官的任免”末尾至第五章“检察官的管理”开头，承接第二十条免除检察官职务情形，涵盖第二十一至二十五条关于检察长不批准、违法任命撤销、兼职禁止和任职回避的规定，并转入第二十六至二十九条检察官员额制、单独职务序列和等级晋升内容。",
+      "prefix_origin": "Qwen_live"
+    }
+  ],
+  "api": {
+    "attempts": 81,
+    "successes": 81,
+    "failures": 0,
+    "by_stage": {
+      "context_prefix": 22,
+      "embedding_document": 44,
+      "embedding_query": 15
+    },
+    "stage_times": {
+      "context_prefix": {
+        "calls": 22,
+        "total_ms": 309713.51,
+        "mean_ms": 14077.89
+      },
+      "embedding_document": {
+        "calls": 44,
+        "total_ms": 14740.18,
+        "mean_ms": 335.0
+      },
+      "embedding_query": {
+        "calls": 15,
+        "total_ms": 4473.74,
+        "mean_ms": 298.25
+      }
+    },
+    "usage": {
+      "completion_tokens": 12070,
+      "prompt_tokens": 212908,
+      "total_tokens": 224978
+    }
+  },
+  "errors": [],
+  "prefix_cache": {
+    "cached_chunks": 0,
+    "fresh_chunks": 22,
+    "note": "API/Token 为本次进程实际调用量；缓存生成产生的历史开销不计入本次用量，不能据此声称索引总成本为零。"
+  }
+}
