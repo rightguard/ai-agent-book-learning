@@ -1,9 +1,9 @@
 # 文本模型配置
 model:
-  name: qwen3.7-flash-2026-07-15
+  name: qwen3.8-27b
   temperature: 0.3
   top_p: 0.9
-  max_tokens: 8192
+  max_tokens: 10240
   max_iterations: 10
   max_tool_calls: 20
 
@@ -42,3 +42,55 @@ experiment_1_4:
     - id: agi_programmer
       category: broad
       prompt: "帮我画一个 AGI 实现以后程序员的工作场景"
+
+# ============================================================================
+# Public RAG / Agentic RAG settings, reusable by other experiments.
+# API KEY and API URL are read from the root .env; do not put secrets here.
+# The experiment script uses its own results/ directory based on __file__.
+# ============================================================================
+api:
+  env_file: ".env"                 # relative to this config.yaml
+  api_key_env: DASHSCOPE_API_KEY
+  base_url_env: DASHSCOPE_HTTP_BASE_URL
+  workspace_id_env: DASHSCOPE_WORKSPACE_ID
+  region_env: DASHSCOPE_REGION
+  embedding_url_env: DASHSCOPE_EMBEDDING_URL
+  rerank_url_env: DASHSCOPE_RERANK_URL
+  region: cn-beijing              # fallback region when .env has no URL or workspace ID
+  timeout_sec: 90
+  max_retries: 3
+  retry_base_sec: 1.5
+  max_http_requests: 100          # includes retries
+
+# 通用文本向量模型
+embedding:
+  model: qwen3.7-text-embedding-flash
+  dimension: 1024
+  batch_size: 20             # 官方支持单次最多20条；query/document 分别调用
+  query_instruction: "Given a search query, retrieve relevant passages that answer the query."
+
+# 通用重排序模型
+reranker:
+  model: qwen3.7-text-rerank
+  instruction: "Given a web search query, retrieve relevant passages that answer the query."
+
+# 通用检索与融合参数
+retrieval:
+  chunk_size: 280           # 每块字符数（对齐官方 evaluate.py 默认配置）
+  chunk_overlap: 40
+  top_k: 10                 # 每路召回 chunk 数
+  eval_k: 3                 # Recall@3、Hit@3、nDCG@3
+  rrf_k: 60
+  sparse_weight: 1.0
+  dense_weight: 1.0
+  rerank_pool: 10           # 只重排 RRF 融合池中已有候选文档
+  rerank_top_k: 10
+  parallel: true            # 本地 BM25 与远程 query Embedding 并行
+
+# 默认实验数据（其他实验可通过各自 CLI 覆盖）
+dataset:
+  corpus: ""                # 留空使用官方 20 篇示例文档；也可填 JSON 路径
+  queries: ""               # 留空使用官方 12 条标注查询
+  limit_queries: 0          # 0=全部；首次推荐 CLI --limit-queries 2
+
+# 输出目录由各实验脚本基于 __file__ 独立决定；公共 YAML 不设置路径。
