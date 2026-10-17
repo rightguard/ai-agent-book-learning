@@ -1,0 +1,28 @@
+{
+  "cache_key": "9c6e663e314014ab6d88ca1d3b53505e19664941b66bd85d26ff3534426f8620",
+  "chunk_id": "宪法_chunk_9",
+  "sha": "a337775a435a4515ec397ddeb14336bb98519df61cb3cfeabdb32fb20e07a26a",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该文本出自《中华人民共和国宪法》第三章“国家机构”第一节“全国人民代表大会”，位于第六十二条全国人民代表大会职权列举的中段，并延伸至第六十三条至第六十七条。内容规范全国人民代表大会的选举、决定、审查批准、罢免、宪法修改通过程序，以及全国人大常委会组成、任期和职权起始部分。其前接第六十二条关于修改宪法、监督宪法实施和制定修改基本法律的职权，后接第六十七条全国人大常委会职权的后续列举。",
+  "created_at": "2026-10-16T02:30:48.148583+00:00",
+  "usage": {
+    "completion_tokens": 524,
+    "prompt_tokens": 9481,
+    "total_tokens": 10005,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 426,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424,
+      "text_tokens": 9481
+    }
+  },
+  "prompt_sha256": "405a64d99bb6655737fbe1bb7b9691fe36d9d2a2c8f23303608d6b19635c3ea0"
+}

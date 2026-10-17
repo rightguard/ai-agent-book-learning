@@ -1,0 +1,29 @@
+{
+  "cache_key": "d96f54cb64bf12675037363729f0cc20a73329ba9a97e0b44ccc46f3c8585618",
+  "chunk_id": "宪法_chunk_13",
+  "sha": "637d59d335e2d90a43c19a2fda9e9a26dee9bbd41c8b9f5dceea99f563688800",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》第三章第三节至第五节（第八十九条至第九十六条）集中规范了国务院的行政职权划分、部委工作责任制、审计机关独立监督权及其对全国人大的负责机制。该段落承接国务院总理负责制与部门规章发布权限，随后过渡至中央军事委员会的领导体制与任期规定，并进一步引出地方各级人民代表大会和人民政府的设立原则与组织法定要求。",
+  "created_at": "2026-10-16T02:17:40.541774+00:00",
+  "usage": {
+    "completion_tokens": 1707,
+    "prompt_tokens": 9447,
+    "total_tokens": 11154,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1622,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1707
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9447
+    }
+  },
+  "prompt_sha256": "5a27922a6d74011f7bb4b1d176770b6b27657dc5bb1cbd34d4181b39a6c608f0"
+}

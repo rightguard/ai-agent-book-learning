@@ -1,0 +1,28 @@
+{
+  "cache_key": "5098f6bee6f15bcf1c388cefc85b751f58ca0da489d605f1ece5ea49c060e679",
+  "chunk_id": "宪法_chunk_10",
+  "sha": "5244e4443eb1dc9c156557acced161b20942b20e5a21c9fc1b85c6fc1a0f0327",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该文本块出自《中华人民共和国宪法》第三章“国家机构”第一节“全国人民代表大会”，主要承接第六十七条全国人大常委会职权事项，继续列举其解释法律、监督国家机关、人事任免、对外条约及动员和紧急状态等职权。随后转入第六十八条委员长会议、第六十九条常委会对全国人大负责并报告工作，以及第七十条专门委员会的设置与职权。",
+  "created_at": "2026-10-16T02:27:07.725484+00:00",
+  "usage": {
+    "completion_tokens": 465,
+    "prompt_tokens": 9465,
+    "total_tokens": 9930,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 385,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424,
+      "text_tokens": 9465
+    }
+  },
+  "prompt_sha256": "8b9730d57a54cace101027eb6599f3b8ee329dca114d3b2840fecac2c5740fe7"
+}

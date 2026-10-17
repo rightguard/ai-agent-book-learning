@@ -1,0 +1,28 @@
+{
+  "cache_key": "0553d848a523b9bf1590f887d091d7d6209641474be2b138ba70890316e11ef1",
+  "chunk_id": "检察官法_2019_04_23_chunk_0",
+  "sha": "b2187008f6d62cbf89945dbb03f7f9ae174b079b84bbcfc3f7a9c96e3100cc5f",
+  "source_sha": "16285739d98e9661208bf8b1f334d40d902af794dcef322605bc93ffbfb7c530",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "本段为《中华人民共和国检察官法》（2019年4月23日修订）开篇部分，列明通过修订信息后进入第一章总则和第二章检察官的职责、义务和权利。内容覆盖第一条至第十条第五项，界定检察官范围、履职原则、职责及保密等义务。",
+  "created_at": "2026-10-16T02:30:57.010478+00:00",
+  "usage": {
+    "completion_tokens": 387,
+    "prompt_tokens": 4445,
+    "total_tokens": 4832,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 319,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": 4445
+    }
+  },
+  "prompt_sha256": "98a447cb616982cfcd09b77edb968258e33752387566c4c496ee579d0f61dc42"
+}

@@ -1,0 +1,29 @@
+{
+  "cache_key": "a26412bbdb2171c413e2d8810613f1bd8b4dcd6b0f54e083090563e517621bc4",
+  "chunk_id": "宪法_chunk_1",
+  "sha": "c279ff7803cbb36313ae421c7f6e0ace64e8b699b530afbb627b56547f6e304b",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》序言在叙述新中国成立与社会主义制度确立的历史进程后，明确了我国将长期处于社会主义初级阶段及集中力量进行社会主义现代化建设的根本任务。该文本块进一步规定了坚持中国共产党领导与各项指导思想的政治原则，阐明了阶级斗争、完成祖国统一大业、巩固爱国统一战线及实行多党合作制度的基本方针。同时，序言确立了平等团结互助和谐的社会主义民族关系，强调反对大民族主义与地方民族主义以促进各民族共同繁荣，为后续第一章总纲的国家机构与经济制度规范提供宏观政治前提。",
+  "created_at": "2026-10-16T02:16:18.286954+00:00",
+  "usage": {
+    "completion_tokens": 1633,
+    "prompt_tokens": 9365,
+    "total_tokens": 10998,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1518,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1633
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9365
+    }
+  },
+  "prompt_sha256": "89b23c7628e5f363e3f05f45d2db9f980adfdb9e114d2f8a5c3635f69d7a37e8"
+}

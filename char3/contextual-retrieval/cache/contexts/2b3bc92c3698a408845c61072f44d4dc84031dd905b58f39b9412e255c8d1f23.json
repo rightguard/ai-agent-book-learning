@@ -1,0 +1,28 @@
+{
+  "cache_key": "2b3bc92c3698a408845c61072f44d4dc84031dd905b58f39b9412e255c8d1f23",
+  "chunk_id": "宪法_chunk_16",
+  "sha": "00b2f31535dea2d7a56dab04143da82ead1b58595605634d38b4d08514a01414",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》第三章国家机构第五节末尾至第六节民族自治地方的自治机关，涵盖第一百一十一条后段及第一百一十二条至第一百二十二条。该块承接地方各级人民代表大会和人民政府规定，转入民族自治地方自治机关，并衔接第七节监察委员会。",
+  "created_at": "2026-10-16T02:28:42.147532+00:00",
+  "usage": {
+    "completion_tokens": 693,
+    "prompt_tokens": 9463,
+    "total_tokens": 10156,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 633,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424,
+      "text_tokens": 9463
+    }
+  },
+  "prompt_sha256": "29b8b953ff723fa59d67ff4ad152bf24e13ffdf075d7ff280b7d34a780de2e6f"
+}

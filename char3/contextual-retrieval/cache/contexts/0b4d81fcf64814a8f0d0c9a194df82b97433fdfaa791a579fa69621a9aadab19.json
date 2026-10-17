@@ -1,0 +1,28 @@
+{
+  "cache_key": "0b4d81fcf64814a8f0d0c9a194df82b97433fdfaa791a579fa69621a9aadab19",
+  "chunk_id": "宪法_chunk_14",
+  "sha": "1455118711ca48ff6f1491461bf66fe4c9c5c770c47c5bb3d50bbe17be823d97",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该文本出自《中华人民共和国宪法》第三章国家机构第五节“地方各级人民代表大会和地方各级人民政府”，承接第九十六条关于地方各级人民代表大会性质及县级以上人大设立常务委员会的规定。内容涵盖第九十七条至第一百零三条，规定地方各级人大代表选举方式、任期、职权、罢免以及县级以上人大常委会组成和职务限制。",
+  "created_at": "2026-10-16T02:28:07.053086+00:00",
+  "usage": {
+    "completion_tokens": 514,
+    "prompt_tokens": 9419,
+    "total_tokens": 9933,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 445,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424,
+      "text_tokens": 9419
+    }
+  },
+  "prompt_sha256": "b72ec7b88b645c9bb79060159131504de268fbe94ddd5c281bc8bc109f3e2280"
+}

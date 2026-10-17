@@ -1,0 +1,29 @@
+{
+  "cache_key": "0af1d5647a3ba887146fd24273159fb084b61bbf16704b4abad93e3c05e812c9",
+  "chunk_id": "宪法_chunk_2",
+  "sha": "cf1ff7ac5da66c90ba5573b997b02fdcb68e76770cd52dfc06414293d4b3f659",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》序言末尾确认根本法效力后，正式进入第一章总纲。该章第一条至第四条依次规范国家性质与社会主义根本制度、一切权力属于人民的原则、国家机构民主集中制原则，以及各民族一律平等的政策。此内容承接序言对多民族国家与对外关系的论述，为后续经济、文化等具体制度奠定根本法基础。",
+  "created_at": "2026-10-16T02:19:40.167546+00:00",
+  "usage": {
+    "completion_tokens": 1786,
+    "prompt_tokens": 9413,
+    "total_tokens": 11199,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1704,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1786
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9413
+    }
+  },
+  "prompt_sha256": "75e262e42c4e628ddf70f088f7d1566bd033c40d64fc7e7859d4d5e8456f9665"
+}

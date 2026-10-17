@@ -1,0 +1,28 @@
+{
+  "cache_key": "d039fd78b4619a185dce50aafb406fd7e05089c316a13646e6e727405fadef7b",
+  "chunk_id": "检察官法_2019_04_23_chunk_1",
+  "sha": "261ef7160011275e816a14ae3291789a904e5ceb0a3ff43a30335f4f9a4b5853",
+  "source_sha": "16285739d98e9661208bf8b1f334d40d902af794dcef322605bc93ffbfb7c530",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该块出自《中华人民共和国检察官法》（2019年修订）第二章“检察官的职责、义务和权利”末尾至第三章“检察官的条件和遴选”开头，涵盖第十条义务尾项、第十一条权利以及第十二至十五条。它从检察官义务和权利转入检察官任职条件、禁止任职情形及初任检察官遴选、公开选拔规则。",
+  "created_at": "2026-10-16T02:31:10.545599+00:00",
+  "usage": {
+    "completion_tokens": 604,
+    "prompt_tokens": 4457,
+    "total_tokens": 5061,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 527,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": 4457
+    }
+  },
+  "prompt_sha256": "087060b95cb5f4259743c174055265262ac615d909021aa01350ac23e4a9728c"
+}

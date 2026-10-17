@@ -1,0 +1,29 @@
+{
+  "cache_key": "7c503515d48688777be71f2e0cae56e86a596d18e7c5c6d65acfd6bd02a4da51",
+  "chunk_id": "宪法_chunk_0",
+  "sha": "9c88336915c31f8c2328a27f87ba426e64f37479ef1d1243ec271c365fe886a2",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》序言开篇阐述了近代革命历程、社会主义制度确立及建国初期的经济与文化建设成就。该部分内容位于宪法文本最前端，作为国家根本法的历史前提与政治基础，直接引出并支撑后续第一章总纲关于国家性质与经济制度的具体规范。",
+  "created_at": "2026-10-16T02:15:56.086371+00:00",
+  "usage": {
+    "completion_tokens": 1660,
+    "prompt_tokens": 9385,
+    "total_tokens": 11045,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1601,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1660
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": 9385
+    }
+  },
+  "prompt_sha256": "32dc8389a3a5789a94da71a7fab08293f3ade8497d0d30cb9f3739525ead7942"
+}

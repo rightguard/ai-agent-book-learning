@@ -1,0 +1,29 @@
+{
+  "cache_key": "e0b85e890bbabbc419687ae11a25d2ab0a54922b80ff7ddf35bff9076225b837",
+  "chunk_id": "宪法_chunk_15",
+  "sha": "7b4c8ed7f62f9469e58e568fd71fbf503f9dab3538b06238134a6e239e9cbe91",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》第三章第五节“地方各级人民代表大会和地方各级人民政府”第一百零三条至第一百一十一条规定了地方国家机关的组织架构与职权划分。本段内容承接中央国家机构章节，具体明确县级以上地方人大常委会组成人员的任职限制及其重大事项决定、监督与人事任免权，并系统阐述地方各级人民政府的执行机关性质、任期、行政管理权限、垂直领导关系及审计监督机制，最后界定居（村）民委员会的基层群众性自治组织地位。",
+  "created_at": "2026-10-16T02:18:27.414713+00:00",
+  "usage": {
+    "completion_tokens": 1723,
+    "prompt_tokens": 9422,
+    "total_tokens": 11145,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1623,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1723
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9422
+    }
+  },
+  "prompt_sha256": "d196d36b6175193a5a0ce2be737b7ad40707d546c35f14a2f25035b6115dee8b"
+}

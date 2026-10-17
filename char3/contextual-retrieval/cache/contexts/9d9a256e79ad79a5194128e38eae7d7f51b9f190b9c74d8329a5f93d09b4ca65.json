@@ -1,0 +1,29 @@
+{
+  "cache_key": "9d9a256e79ad79a5194128e38eae7d7f51b9f190b9c74d8329a5f93d09b4ca65",
+  "chunk_id": "宪法_chunk_5",
+  "sha": "ab3c0a3c678a8259c75efc2ba69d90a1c8da279871f52d6f496000a146293e1b",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》第一章“总纲”第十九条至第三十条规范了国家在教育、科学、文化、卫生、体育及精神文明建设领域的政策，明确了国家机关工作原则、社会秩序维护职责、武装力量任务及行政区域划分标准。本段内容承接前文关于社会主义基本经济制度的规定，进一步确立了国家在公共服务、行政管理、国防建设与地方建制方面的根本任务。",
+  "created_at": "2026-10-16T02:20:44.480172+00:00",
+  "usage": {
+    "completion_tokens": 1271,
+    "prompt_tokens": 9426,
+    "total_tokens": 10697,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1189,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1271
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9426
+    }
+  },
+  "prompt_sha256": "ee8af6fbf213f0e39b37dcc00d2690d81e33e908d30fca8e0a7aa7857b7a92ae"
+}

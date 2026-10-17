@@ -1,0 +1,28 @@
+{
+  "cache_key": "4a6e332e1491b6a73cbecb67ac57a63ff34510f1fbf5131a9743d31112b13891",
+  "chunk_id": "宪法_chunk_13",
+  "sha": "637d59d335e2d90a43c19a2fda9e9a26dee9bbd41c8b9f5dceea99f563688800",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该块出自《中华人民共和国宪法》第三章“国家机构”第三节“国务院”，承接第八十九条国务院职权列举的第（八）项至第（十八）项，并延伸至第九十条至第九十二条关于国务院部委、审计机关及向全国人大负责的规定。随后进入第四节“中央军事委员会”和第五节“地方各级人民代表大会和地方各级人民政府”的起始条文。",
+  "created_at": "2026-10-16T02:27:54.496110+00:00",
+  "usage": {
+    "completion_tokens": 463,
+    "prompt_tokens": 9485,
+    "total_tokens": 9948,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 382,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424,
+      "text_tokens": 9485
+    }
+  },
+  "prompt_sha256": "5a27922a6d74011f7bb4b1d176770b6b27657dc5bb1cbd34d4181b39a6c608f0"
+}

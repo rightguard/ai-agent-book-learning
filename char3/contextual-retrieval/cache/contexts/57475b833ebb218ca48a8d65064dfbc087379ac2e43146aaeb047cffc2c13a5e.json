@@ -1,0 +1,29 @@
+{
+  "cache_key": "57475b833ebb218ca48a8d65064dfbc087379ac2e43146aaeb047cffc2c13a5e",
+  "chunk_id": "宪法_chunk_11",
+  "sha": "ba21931e5c23b3e718e31409bfe4f9293a8a0c94d0135e2696d9a63dc952c861",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "本段出自《中华人民共和国宪法》第三章“国家机构”第一节末尾至第二节开头（第七十条至第八十条），主要规范全国人大专门委员会工作、代表履职权利与保障机制，以及国家主席的产生与职权。内容承接全国人大常委会职权规定，明确代表议案、质询、人身特别保护及言论免责等制度，并为后续国务院等行政机关章节作铺垫。",
+  "created_at": "2026-10-16T02:16:59.645416+00:00",
+  "usage": {
+    "completion_tokens": 1454,
+    "prompt_tokens": 9339,
+    "total_tokens": 10793,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1374,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1454
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9339
+    }
+  },
+  "prompt_sha256": "5f3fe9892458fc9fc749d84f2de6e8d55f3ff97a89fee57560fc83d9cbc7cf9f"
+}

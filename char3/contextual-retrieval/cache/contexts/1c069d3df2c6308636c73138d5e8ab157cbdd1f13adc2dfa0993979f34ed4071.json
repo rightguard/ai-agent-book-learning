@@ -1,0 +1,28 @@
+{
+  "cache_key": "1c069d3df2c6308636c73138d5e8ab157cbdd1f13adc2dfa0993979f34ed4071",
+  "chunk_id": "检察官法_2019_04_23_chunk_2",
+  "sha": "2cfde983dbbe0790ac211f9c857ee1185e06e9d289d2af834620e276683552c9",
+  "source_sha": "16285739d98e9661208bf8b1f334d40d902af794dcef322605bc93ffbfb7c530",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该片段位于《中华人民共和国检察官法》（2019-04-23）第三章“检察官的条件和遴选”第十五条后半段至第四章“检察官的任免”第二十条开头。内容承接检察官公开选拔的任职条件，规定省级和最高人民检察院检察官遴选委员会、初任及上级检察官遴选，并转入检察官任免权限、宪法宣誓和免职情形。",
+  "created_at": "2026-10-16T02:31:19.444796+00:00",
+  "usage": {
+    "completion_tokens": 439,
+    "prompt_tokens": 4388,
+    "total_tokens": 4827,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 355,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": 4388
+    }
+  },
+  "prompt_sha256": "569a8ba252294059056789cbf9d0ceed0b3780460cc6a73798f4861dc39404d6"
+}

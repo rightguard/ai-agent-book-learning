@@ -1,0 +1,28 @@
+{
+  "cache_key": "419cf7f38c05e055a872c84d2d04544da923bbd66a5b2ca2fd56a261cc612f5f",
+  "chunk_id": "宪法_chunk_6",
+  "sha": "daa94d5566307d22b466f01a028f819d2f19ae11da6ad7cc142d83ed77c7c3ef",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该片段位于《中华人民共和国宪法》第一章总纲末尾，承接第三十条关于行政区域划分的规定，过渡至第三十一条特别行政区和第三十二条外国人权利保护，并进入第二章公民的基本权利和义务，涉及第三十三条至第四十一条。",
+  "created_at": "2026-10-16T02:30:03.266329+00:00",
+  "usage": {
+    "completion_tokens": 438,
+    "prompt_tokens": 9474,
+    "total_tokens": 9912,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 386,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424,
+      "text_tokens": 9474
+    }
+  },
+  "prompt_sha256": "02d7627e0ffe2a78e05c3fd14fc35b373fb4bafd87d037d54a151c79fcd5a960"
+}

@@ -1,0 +1,29 @@
+{
+  "cache_key": "2fdff376c859814e7c6486dad59a70bc75bc6b0b706c354b7f61b015488dffed",
+  "chunk_id": "宪法_chunk_6",
+  "sha": "daa94d5566307d22b466f01a028f819d2f19ae11da6ad7cc142d83ed77c7c3ef",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》第一章总纲末尾至第二章起始部分，涵盖第三十条至第三十二条关于行政区域划分、特别行政区设立及境内外国人权益的规定。随后进入第二章“公民的基本权利和义务”，确立公民身份与平等原则，并系统列举选举权、政治表达自由、宗教信仰自由、人身与人格尊严、住宅通信安全，以及对国家机关的监督申诉权利。",
+  "created_at": "2026-10-16T02:21:03.999958+00:00",
+  "usage": {
+    "completion_tokens": 1327,
+    "prompt_tokens": 9436,
+    "total_tokens": 10763,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1248,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1327
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9436
+    }
+  },
+  "prompt_sha256": "02d7627e0ffe2a78e05c3fd14fc35b373fb4bafd87d037d54a151c79fcd5a960"
+}

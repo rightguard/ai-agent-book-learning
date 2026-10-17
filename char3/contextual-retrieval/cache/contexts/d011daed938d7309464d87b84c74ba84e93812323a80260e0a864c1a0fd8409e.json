@@ -1,0 +1,28 @@
+{
+  "cache_key": "d011daed938d7309464d87b84c74ba84e93812323a80260e0a864c1a0fd8409e",
+  "chunk_id": "检察官法_2019_04_23_chunk_3",
+  "sha": "4861feac4b88457f637a774652eb564e0365aa278f6a4b75f5c9385552fa92e4",
+  "source_sha": "16285739d98e9661208bf8b1f334d40d902af794dcef322605bc93ffbfb7c530",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该文本块位于《中华人民共和国检察官法》（2019年4月23日修订）第四章“检察官的任免”末尾至第五章“检察官的管理”开头，承接第二十条免除检察官职务情形，涵盖第二十一至二十五条关于检察长不批准、违法任命撤销、兼职禁止和任职回避的规定，并转入第二十六至二十九条检察官员额制、单独职务序列和等级晋升内容。",
+  "created_at": "2026-10-16T02:31:40.123385+00:00",
+  "usage": {
+    "completion_tokens": 856,
+    "prompt_tokens": 4445,
+    "total_tokens": 5301,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 765,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": 4445
+    }
+  },
+  "prompt_sha256": "eb012350f07f3171125b3be1a3318419906476808677226ca89d292c24802fd1"
+}

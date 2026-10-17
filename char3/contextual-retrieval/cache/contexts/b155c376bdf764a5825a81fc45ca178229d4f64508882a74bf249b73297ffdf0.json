@@ -1,0 +1,29 @@
+{
+  "cache_key": "b155c376bdf764a5825a81fc45ca178229d4f64508882a74bf249b73297ffdf0",
+  "chunk_id": "宪法_chunk_8",
+  "sha": "345022374c2d26ac79489c74fd22ae864dc1aff860947f49e732dd6a3d113678",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》第二章第五十条至第五十六条规定了华侨归侨侨眷权益保护及公民维护国家统一、安全和依法纳税等基本义务。紧接着第三章第一节第五十七条至第六十二条确立了全国人民代表大会的最高国家权力机关地位，明确其代表产生、任期、会议制度及修改宪法、制定法律等职权。该段落由公民基本义务规范自然过渡至国家最高权力机关的组织架构与法定权限，为后续国家机构章节的展开提供宪制依据。",
+  "created_at": "2026-10-16T02:21:44.930169+00:00",
+  "usage": {
+    "completion_tokens": 1358,
+    "prompt_tokens": 9365,
+    "total_tokens": 10723,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1258,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1358
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9365
+    }
+  },
+  "prompt_sha256": "6561830e49da6f19eed0f70628739395ed2515a208a0fa3f63f57755b86e8687"
+}

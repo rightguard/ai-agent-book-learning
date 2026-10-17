@@ -1,0 +1,28 @@
+{
+  "cache_key": "e6aa7857ccc59cee9453ae68ab480f0f02502ed8cb502da8d4808ebceef9fa43",
+  "chunk_id": "宪法_chunk_8",
+  "sha": "345022374c2d26ac79489c74fd22ae864dc1aff860947f49e732dd6a3d113678",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该片段出自《中华人民共和国宪法》第二章末尾至第三章第一节开头，覆盖第五十条至第五十六条及第五十七条至第六十二条，前接公民基本义务条款，后启全国人民代表大会的性质、组成、任期和职权。",
+  "created_at": "2026-10-16T02:30:33.133424+00:00",
+  "usage": {
+    "completion_tokens": 469,
+    "prompt_tokens": 9403,
+    "total_tokens": 9872,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 419,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424,
+      "text_tokens": 9403
+    }
+  },
+  "prompt_sha256": "6561830e49da6f19eed0f70628739395ed2515a208a0fa3f63f57755b86e8687"
+}

@@ -1,0 +1,29 @@
+{
+  "cache_key": "4ed754cf617f7a79c828783b5ba303bc9677d342efadba881cdb9b399eae9566",
+  "chunk_id": "宪法_chunk_7",
+  "sha": "d395d649df601bfec915fdb37941b6e9b181aa282151c21afb317c7b7e52fc3c",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "本检索片段定位至《中华人民共和国宪法》第二章“公民的基本权利和义务”第四十一条至第五十条。条文依次规范了公民对国家机关的批评建议与申诉控告检举权、劳动与休息权、退休与物质帮助制度、受教育与文化自由、男女平等、婚姻家庭保护及华侨侨眷权益。该内容作为公民社会经济文化权利的具体展开，与前文国家机构章节相衔接，完整呈现宪法第二章的权利保障体系。",
+  "created_at": "2026-10-16T02:21:24.689505+00:00",
+  "usage": {
+    "completion_tokens": 1351,
+    "prompt_tokens": 9438,
+    "total_tokens": 10789,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1258,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1351
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9438
+    }
+  },
+  "prompt_sha256": "79aaa7103b49b071dcf97f7816df7b8489be6213f4abe69022aca94e99d1b030"
+}

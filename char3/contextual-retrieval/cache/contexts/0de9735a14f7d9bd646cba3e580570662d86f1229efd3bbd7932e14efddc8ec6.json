@@ -1,0 +1,29 @@
+{
+  "cache_key": "0de9735a14f7d9bd646cba3e580570662d86f1229efd3bbd7932e14efddc8ec6",
+  "chunk_id": "宪法_chunk_14",
+  "sha": "1455118711ca48ff6f1491461bf66fe4c9c5c770c47c5bb3d50bbe17be823d97",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.7-flash",
+  "source_scope": "full",
+  "prefix": "《中华人民共和国宪法》第三章第五节规定了地方各级人民代表大会和地方各级人民政府的相关制度。本片段对应第九十六条至第一百零三条，重点阐述县级以上地方人大设立常务委员会的架构，并系统规范了地方人大代表选举与任期、人大职权与监督机制、地方性法规制定权限，以及人大常委会的组成与兼职禁止。该部分在篇章结构上承接中央国家机构章节，为后续民族自治地方自治机关的规定提供制度铺垫。",
+  "created_at": "2026-10-16T02:18:03.672446+00:00",
+  "usage": {
+    "completion_tokens": 1766,
+    "prompt_tokens": 9381,
+    "total_tokens": 11147,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1672,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1766
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7936,
+      "text_tokens": 9381
+    }
+  },
+  "prompt_sha256": "b72ec7b88b645c9bb79060159131504de268fbe94ddd5c281bc8bc109f3e2280"
+}

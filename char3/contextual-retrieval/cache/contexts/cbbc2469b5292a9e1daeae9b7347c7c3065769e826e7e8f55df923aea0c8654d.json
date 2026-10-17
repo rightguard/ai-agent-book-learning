@@ -1,0 +1,28 @@
+{
+  "cache_key": "cbbc2469b5292a9e1daeae9b7347c7c3065769e826e7e8f55df923aea0c8654d",
+  "chunk_id": "宪法_chunk_1",
+  "sha": "c279ff7803cbb36313ae421c7f6e0ace64e8b699b530afbb627b56547f6e304b",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该片段出自《中华人民共和国宪法》序言，位于“中华人民共和国成立以后”段之后、“中国革命、建设、改革的成就”段之前。它承接建国后社会主义制度确立的叙述，说明国家根本任务、统一战线和民族关系，为第一章总纲提供背景。",
+  "created_at": "2026-10-16T02:26:58.928659+00:00",
+  "usage": {
+    "completion_tokens": 678,
+    "prompt_tokens": 9403,
+    "total_tokens": 10081,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 617,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424,
+      "text_tokens": 9403
+    }
+  },
+  "prompt_sha256": "89b23c7628e5f363e3f05f45d2db9f980adfdb9e114d2f8a5c3635f69d7a37e8"
+}

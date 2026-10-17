@@ -1,0 +1,28 @@
+{
+  "cache_key": "b789736a35952236022916f29a077836eebdc6df0ff45be1f9bdaa76fcb9a144",
+  "chunk_id": "宪法_chunk_11",
+  "sha": "ba21931e5c23b3e718e31409bfe4f9293a8a0c94d0135e2696d9a63dc952c861",
+  "source_sha": "4cbc5d5d8a4632eb5587ab6377ae5251ce21a149716690864db0b0ab6cd4b386",
+  "prompt_version": "ctx3-10-qwen-full-v3",
+  "model": "qwen3.8-27b",
+  "source_scope": "full",
+  "prefix": "该块位于《中华人民共和国宪法》第三章国家机构第一节全国人民代表大会末尾，承接第七十条专门委员会规定，并开启第二节中华人民共和国主席。内容涉及全国人大及其常委会的特定问题调查、议案提出、质询案、代表特别保护、发言表决免责、代表义务监督罢免及组织工作程序，随后转入国家主席和副主席的选举与职权。",
+  "created_at": "2026-10-16T02:27:22.328213+00:00",
+  "usage": {
+    "completion_tokens": 562,
+    "prompt_tokens": 9377,
+    "total_tokens": 9939,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 483,
+      "rejected_prediction_tokens": null
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 7424,
+      "text_tokens": 9377
+    }
+  },
+  "prompt_sha256": "5f3fe9892458fc9fc749d84f2de6e8d55f3ff97a89fee57560fc83d9cbc7cf9f"
+}
