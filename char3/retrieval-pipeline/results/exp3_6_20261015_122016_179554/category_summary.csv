@@ -1,0 +1,6 @@
+﻿category,method,n_queries,recall,hit,mrr,ndcg
+technical-code,BM25,2,1.0,1.0,1.0,1.0
+technical-code,Dense,2,1.0,1.0,1.0,1.0
+technical-code,Hybrid-RRF,2,1.0,1.0,1.0,1.0
+technical-code,Hybrid-Weighted,2,1.0,1.0,1.0,1.0
+technical-code,Hybrid-RRF+Rerank,2,1.0,1.0,1.0,1.0

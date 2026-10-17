@@ -1,0 +1,61 @@
+﻿query,category,expected,method,first_gold_rank,top_doc,recall@3,hit@3,mrr,ndcg@3
+XR-7003,technical-code,xr_7003,BM25,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7003,technical-code,xr_7003,Dense,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7003,technical-code,xr_7003,Hybrid-RRF,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7003,technical-code,xr_7003,Hybrid-Weighted,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7003,technical-code,xr_7003,Hybrid-RRF+Rerank,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,BM25,1,xr_7005,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,Dense,1,xr_7005,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,Hybrid-RRF,1,xr_7005,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,Hybrid-Weighted,1,xr_7005,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,Hybrid-RRF+Rerank,1,xr_7005,1.0,1.0,1.0,1.0
+HTTP-403,technical-code,http_403,BM25,1,http_403,1.0,1.0,1.0,1.0
+HTTP-403,technical-code,http_403,Dense,1,http_403,1.0,1.0,1.0,1.0
+HTTP-403,technical-code,http_403,Hybrid-RRF,1,http_403,1.0,1.0,1.0,1.0
+HTTP-403,technical-code,http_403,Hybrid-Weighted,1,http_403,1.0,1.0,1.0,1.0
+HTTP-403,technical-code,http_403,Hybrid-RRF+Rerank,1,http_403,1.0,1.0,1.0,1.0
+HTTP-400,technical-code,http_400,BM25,1,http_400,1.0,1.0,1.0,1.0
+HTTP-400,technical-code,http_400,Dense,1,http_400,1.0,1.0,1.0,1.0
+HTTP-400,technical-code,http_400,Hybrid-RRF,1,http_400,1.0,1.0,1.0,1.0
+HTTP-400,technical-code,http_400,Hybrid-Weighted,1,http_400,1.0,1.0,1.0,1.0
+HTTP-400,technical-code,http_400,Hybrid-RRF+Rerank,1,http_400,1.0,1.0,1.0,1.0
+Alexander Humphrey,exact-name,name_alexander_humphrey,BM25,1,name_alexander_humphrey,1.0,1.0,1.0,1.0
+Alexander Humphrey,exact-name,name_alexander_humphrey,Dense,1,name_alexander_humphrey,1.0,1.0,1.0,1.0
+Alexander Humphrey,exact-name,name_alexander_humphrey,Hybrid-RRF,1,name_alexander_humphrey,1.0,1.0,1.0,1.0
+Alexander Humphrey,exact-name,name_alexander_humphrey,Hybrid-Weighted,1,name_alexander_humphrey,1.0,1.0,1.0,1.0
+Alexander Humphrey,exact-name,name_alexander_humphrey,Hybrid-RRF+Rerank,1,name_alexander_humphrey,1.0,1.0,1.0,1.0
+a beginner friendly language with tidy syntax,semantic,sem_readable,BM25,1,sem_readable,1.0,1.0,1.0,1.0
+a beginner friendly language with tidy syntax,semantic,sem_readable,Dense,1,sem_readable,1.0,1.0,1.0,1.0
+a beginner friendly language with tidy syntax,semantic,sem_readable,Hybrid-RRF,1,sem_readable,1.0,1.0,1.0,1.0
+a beginner friendly language with tidy syntax,semantic,sem_readable,Hybrid-Weighted,1,sem_readable,1.0,1.0,1.0,1.0
+a beginner friendly language with tidy syntax,semantic,sem_readable,Hybrid-RRF+Rerank,1,sem_readable,1.0,1.0,1.0,1.0
+reclaiming unused heap space without programmer effort,semantic,sem_gc,BM25,,,0.0,0.0,0.0,0.0
+reclaiming unused heap space without programmer effort,semantic,sem_gc,Dense,1,sem_gc,1.0,1.0,1.0,1.0
+reclaiming unused heap space without programmer effort,semantic,sem_gc,Hybrid-RRF,1,sem_gc,1.0,1.0,1.0,1.0
+reclaiming unused heap space without programmer effort,semantic,sem_gc,Hybrid-Weighted,1,sem_gc,1.0,1.0,1.0,1.0
+reclaiming unused heap space without programmer effort,semantic,sem_gc,Hybrid-RRF+Rerank,1,sem_gc,1.0,1.0,1.0,1.0
+how vegetation turns light into food,semantic,sem_photo,BM25,2,doc_watercycle,1.0,1.0,0.5,0.63093
+how vegetation turns light into food,semantic,sem_photo,Dense,1,sem_photo,1.0,1.0,1.0,1.0
+how vegetation turns light into food,semantic,sem_photo,Hybrid-RRF,2,doc_watercycle,1.0,1.0,0.5,0.63093
+how vegetation turns light into food,semantic,sem_photo,Hybrid-Weighted,2,doc_watercycle,1.0,1.0,0.5,0.63093
+how vegetation turns light into food,semantic,sem_photo,Hybrid-RRF+Rerank,1,sem_photo,1.0,1.0,1.0,1.0
+hiding a note so eavesdroppers cannot understand it,semantic,sem_crypto,BM25,1,sem_crypto,1.0,1.0,1.0,1.0
+hiding a note so eavesdroppers cannot understand it,semantic,sem_crypto,Dense,1,sem_crypto,1.0,1.0,1.0,1.0
+hiding a note so eavesdroppers cannot understand it,semantic,sem_crypto,Hybrid-RRF,1,sem_crypto,1.0,1.0,1.0,1.0
+hiding a note so eavesdroppers cannot understand it,semantic,sem_crypto,Hybrid-Weighted,1,sem_crypto,1.0,1.0,1.0,1.0
+hiding a note so eavesdroppers cannot understand it,semantic,sem_crypto,Hybrid-RRF+Rerank,1,sem_crypto,1.0,1.0,1.0,1.0
+植物如何把阳光转化为食物,multilingual,sem_photo,BM25,,,0.0,0.0,0.0,0.0
+植物如何把阳光转化为食物,multilingual,sem_photo,Dense,1,sem_photo,1.0,1.0,1.0,1.0
+植物如何把阳光转化为食物,multilingual,sem_photo,Hybrid-RRF,1,sem_photo,1.0,1.0,1.0,1.0
+植物如何把阳光转化为食物,multilingual,sem_photo,Hybrid-Weighted,1,sem_photo,1.0,1.0,1.0,1.0
+植物如何把阳光转化为食物,multilingual,sem_photo,Hybrid-RRF+Rerank,1,sem_photo,1.0,1.0,1.0,1.0
+how does water move between the ocean and the sky,semantic,doc_watercycle,BM25,1,doc_watercycle,1.0,1.0,1.0,1.0
+how does water move between the ocean and the sky,semantic,doc_watercycle,Dense,1,doc_watercycle,1.0,1.0,1.0,1.0
+how does water move between the ocean and the sky,semantic,doc_watercycle,Hybrid-RRF,1,doc_watercycle,1.0,1.0,1.0,1.0
+how does water move between the ocean and the sky,semantic,doc_watercycle,Hybrid-Weighted,1,doc_watercycle,1.0,1.0,1.0,1.0
+how does water move between the ocean and the sky,semantic,doc_watercycle,Hybrid-RRF+Rerank,1,doc_watercycle,1.0,1.0,1.0,1.0
+how are volcanoes formed from molten rock,semantic,doc_volcano,BM25,1,doc_volcano,1.0,1.0,1.0,1.0
+how are volcanoes formed from molten rock,semantic,doc_volcano,Dense,1,doc_volcano,1.0,1.0,1.0,1.0
+how are volcanoes formed from molten rock,semantic,doc_volcano,Hybrid-RRF,1,doc_volcano,1.0,1.0,1.0,1.0
+how are volcanoes formed from molten rock,semantic,doc_volcano,Hybrid-Weighted,1,doc_volcano,1.0,1.0,1.0,1.0
+how are volcanoes formed from molten rock,semantic,doc_volcano,Hybrid-RRF+Rerank,1,doc_volcano,1.0,1.0,1.0,1.0

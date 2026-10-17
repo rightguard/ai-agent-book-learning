@@ -1,0 +1,28 @@
+{
+  "status": "failed_during_indexing",
+  "error": "Embedding response missing text_index",
+  "api": {
+    "http_requests_attempted": 1,
+    "successful_calls": 1,
+    "calls_by_stage": {
+      "embedding": 1
+    },
+    "total_tokens_reported": 671,
+    "receipts": [
+      {
+        "stage": "embedding",
+        "model": "qwen3.7-text-embedding-flash",
+        "items": 20,
+        "request_id": "2aa883d4-e823-9cd9-b48f-4a3951c2e007",
+        "usage": {
+          "prompt_tokens": 671,
+          "total_tokens": 671
+        },
+        "elapsed_ms": 1620.78,
+        "attempts": 1
+      }
+    ]
+  },
+  "corpus_sha256": "32b6e50fc159d8252843a07c5487dba01f34489919969eea717a5d98054c467b",
+  "note": "No fallback to synthetic or fake embeddings occurred."
+}

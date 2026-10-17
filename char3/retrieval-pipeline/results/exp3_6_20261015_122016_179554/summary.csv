@@ -1,0 +1,6 @@
+﻿method,n_queries,recall,hit,mrr,ndcg,mean_latency_ms,p95_latency_ms
+BM25,2,1.0,1.0,1.0,1.0,0.073,0.077
+Dense,2,1.0,1.0,1.0,1.0,366.954,408.448
+Hybrid-RRF,2,1.0,1.0,1.0,1.0,369.291,410.178
+Hybrid-Weighted,2,1.0,1.0,1.0,1.0,369.29,410.179
+Hybrid-RRF+Rerank,2,1.0,1.0,1.0,1.0,679.238,719.982

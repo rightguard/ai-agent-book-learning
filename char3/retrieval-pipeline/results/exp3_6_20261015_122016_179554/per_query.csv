@@ -1,0 +1,11 @@
+﻿query,category,expected,method,first_gold_rank,top_doc,recall@3,hit@3,mrr,ndcg@3
+XR-7003,technical-code,xr_7003,BM25,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7003,technical-code,xr_7003,Dense,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7003,technical-code,xr_7003,Hybrid-RRF,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7003,technical-code,xr_7003,Hybrid-Weighted,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7003,technical-code,xr_7003,Hybrid-RRF+Rerank,1,xr_7003,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,BM25,1,xr_7005,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,Dense,1,xr_7005,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,Hybrid-RRF,1,xr_7005,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,Hybrid-Weighted,1,xr_7005,1.0,1.0,1.0,1.0
+XR-7005,technical-code,xr_7005,Hybrid-RRF+Rerank,1,xr_7005,1.0,1.0,1.0,1.0

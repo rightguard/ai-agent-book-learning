@@ -1,0 +1,1386 @@
+{
+  "config": {
+    "version": "2.4.0-embedding-index-compat",
+    "mode": "evaluation",
+    "timestamp_utc": "2026-10-15T04:20:28.434041+00:00",
+    "upstream": "https://github.com/bojieli/ai-agent-book/tree/main/chapter3/retrieval-pipeline",
+    "upstream_evaluate_blob_sha": "67de7dfcca766b7dff3bd31c506ee894344fc7cf",
+    "upstream_fusion_blob_sha": "1b2fba65b3780d79a33e9058a4fe4d03c1b37a09",
+    "python": "3.10.20",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "corpus_sha256": "32b6e50fc159d8252843a07c5487dba01f34489919969eea717a5d98054c467b",
+    "queries_sha256": "bea715d672c225f2dd82ae12f1af50208d282dc4d87930170c1de5b0f02fd641",
+    "corpus_size": 20,
+    "chunks": 22,
+    "embedding_model": "qwen3.7-text-embedding-flash",
+    "reranker_model": "qwen3.7-text-rerank",
+    "backend": "DashScope native HTTP API",
+    "api_host": "ws-l84cq4l68pzgx8fq.cn-beijing.maas.aliyuncs.com",
+    "api_receipts": {
+      "http_requests_attempted": 26,
+      "successful_calls": 26,
+      "calls_by_stage": {
+        "embedding": 24,
+        "rerank": 2
+      },
+      "total_tokens_reported": 2756,
+      "receipts": [
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "0d2559ed-4b96-9fcd-8a44-975f70957e7f",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 1365.73,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "510d3a42-0f04-95a9-af3b-9829448d119c",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 361.25,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "2e2895f7-4183-9abf-8fba-b48094121ec8",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 639.62,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "6160eb02-d08a-9aaa-8260-880c550a5291",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 368.66,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "89b9618d-fb4e-979c-8eac-0411279a65dc",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 313.91,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "9f89ffe4-393f-934a-86b7-4f0f16ad0641",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 333.44,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "518cc5a2-9556-9f71-a49d-4a05cf181ee4",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 362.8,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "759838b4-ba65-9ef8-9957-dd6725380d9a",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 343.03,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "e5166a2a-34fa-9459-85f4-099e6d9fa28e",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 391.23,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "619e6441-427e-9f04-8d8a-8988c761e00c",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 490.46,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "971e6a4b-1549-9cea-a59b-76b4132c48a2",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 355.08,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "47a791d7-3164-959f-bf7e-d31d0326c867",
+          "usage": {
+            "prompt_tokens": 30,
+            "total_tokens": 30
+          },
+          "elapsed_ms": 304.63,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "03167a2c-4f23-9b7c-8d3e-5c4f8457d574",
+          "usage": {
+            "prompt_tokens": 26,
+            "total_tokens": 26
+          },
+          "elapsed_ms": 657.79,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "29849c06-87d2-9178-9559-0756303f2d94",
+          "usage": {
+            "prompt_tokens": 27,
+            "total_tokens": 27
+          },
+          "elapsed_ms": 684.59,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "1353a710-b0d0-9fcb-bceb-ba85fc45b120",
+          "usage": {
+            "prompt_tokens": 31,
+            "total_tokens": 31
+          },
+          "elapsed_ms": 538.25,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "899e320c-88e8-9ba7-bb92-d832d3d8288f",
+          "usage": {
+            "prompt_tokens": 31,
+            "total_tokens": 31
+          },
+          "elapsed_ms": 298.31,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "6eca2c6c-96e5-9e27-aebb-9c5e948d1b6f",
+          "usage": {
+            "prompt_tokens": 32,
+            "total_tokens": 32
+          },
+          "elapsed_ms": 525.06,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "929a1501-9b59-9594-abe0-6f54ad4456ca",
+          "usage": {
+            "prompt_tokens": 33,
+            "total_tokens": 33
+          },
+          "elapsed_ms": 842.79,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "bc91253e-9387-9f48-9294-ace14ad54688",
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 73
+          },
+          "elapsed_ms": 781.5,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "db478d22-f8f9-9e63-92d4-12048686d0ee",
+          "usage": {
+            "prompt_tokens": 58,
+            "total_tokens": 58
+          },
+          "elapsed_ms": 298.48,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "eac53740-eaf5-90a0-b548-9f34cff9c613",
+          "usage": {
+            "prompt_tokens": 72,
+            "total_tokens": 72
+          },
+          "elapsed_ms": 286.25,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "4ce87044-85c0-9dfc-947c-5822d523d6d5",
+          "usage": {
+            "prompt_tokens": 49,
+            "total_tokens": 49
+          },
+          "elapsed_ms": 330.88,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "42b091e7-c530-9600-bc82-9946427b0d71",
+          "usage": {
+            "prompt_tokens": 51,
+            "total_tokens": 51
+          },
+          "elapsed_ms": 405.59,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "480d8708-bc57-95f1-af1c-03de3df90424",
+          "usage": {
+            "prompt_tokens": 931,
+            "total_tokens": 931
+          },
+          "elapsed_ms": 309.62,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "e8bc0342-a2b9-9495-b2c8-6055b86d1e6f",
+          "usage": {
+            "prompt_tokens": 51,
+            "total_tokens": 51
+          },
+          "elapsed_ms": 323.24,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "71d8d6ef-dd44-99d3-9658-a04a80614f11",
+          "usage": {
+            "prompt_tokens": 931,
+            "total_tokens": 931
+          },
+          "elapsed_ms": 309.9,
+          "attempts": 1
+        }
+      ]
+    },
+    "dependencies": {
+      "PyYAML": "6.0.3",
+      "jieba": "0.42.1"
+    },
+    "parameters": {
+      "top_k": 10,
+      "eval_k": 3,
+      "chunk_size": 280,
+      "chunk_overlap": 40,
+      "k_rrf": 60,
+      "sparse_weight": 1.0,
+      "dense_weight": 1.0,
+      "rerank_pool": 10,
+      "rerank_top_k": 10,
+      "embedding_batch_size": 1,
+      "embedding_dimension": 1024,
+      "parallel": true,
+      "query_instruction": "Given a search query, retrieve relevant passages that answer the query.",
+      "rerank_instruction": "Given a web search query, retrieve relevant passages that answer the query."
+    },
+    "initialization_ms": {
+      "bm25_build": 1.0269319992512465,
+      "document_embedding_api": 10883.916793999262,
+      "rerank_setup": 0.0
+    }
+  },
+  "corpus": [
+    {
+      "doc_id": "xr_7001",
+      "text": "Product model XR-7001 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7002",
+      "text": "Product model XR-7002 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7003",
+      "text": "Product model XR-7003 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7004",
+      "text": "Product model XR-7004 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7005",
+      "text": "Product model XR-7005 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7006",
+      "text": "Product model XR-7006 is a smartphone available now."
+    },
+    {
+      "doc_id": "http_400",
+      "text": "The HTTP-400 response is a client error status code."
+    },
+    {
+      "doc_id": "http_401",
+      "text": "The HTTP-401 response is a client error status code."
+    },
+    {
+      "doc_id": "http_403",
+      "text": "The HTTP-403 response is a client error status code."
+    },
+    {
+      "doc_id": "http_404",
+      "text": "The HTTP-404 response is a client error status code."
+    },
+    {
+      "doc_id": "http_500",
+      "text": "The HTTP-500 response is a server error status code."
+    },
+    {
+      "doc_id": "sem_readable",
+      "text": "The language emphasizes clean, readable code that newcomers can pick up quickly."
+    },
+    {
+      "doc_id": "sem_gc",
+      "text": "Automatic memory management frees developers from manually releasing objects."
+    },
+    {
+      "doc_id": "sem_photo",
+      "text": "Green plants convert sunlight into chemical energy stored as sugars."
+    },
+    {
+      "doc_id": "sem_crypto",
+      "text": "Encryption scrambles a message so that only the intended recipient can read it."
+    },
+    {
+      "doc_id": "name_alexander_humphrey",
+      "text": "Alexander Humphrey designed the Aurora scheduling protocol in 2019."
+    },
+    {
+      "doc_id": "name_alexander_hughes",
+      "text": "Alexander Hughes designed the Borealis scheduling protocol in 2019."
+    },
+    {
+      "doc_id": "name_amelia_humphrey",
+      "text": "Amelia Humphrey designed the Celeste scheduling protocol in 2020."
+    },
+    {
+      "doc_id": "doc_watercycle",
+      "text": "The water cycle describes how water moves continuously between the ocean, the atmosphere and the land. Heat from the sun evaporates water from the sea surface into vapor that rises high into the sky. As the vapor cools it condenses into tiny droplets that gather to form clouds. When the droplets grow heavy enough they fall back to the ground as rain or snow, and rivers eventually carry that water back to the ocean, closing the loop."
+    },
+    {
+      "doc_id": "doc_volcano",
+      "text": "A volcano forms where molten rock called magma rises from deep inside the planet toward the surface. Magma collects in a chamber beneath the crust, and mounting pressure forces it upward through cracks. During an eruption the magma bursts out as lava, ash and gas, which pile up around the vent. Layer after layer of cooled lava slowly builds the cone-shaped mountain we recognize as a volcano."
+    }
+  ],
+  "queries": [
+    {
+      "query": "XR-7003",
+      "expected": [
+        "xr_7003"
+      ],
+      "category": "technical-code"
+    },
+    {
+      "query": "XR-7005",
+      "expected": [
+        "xr_7005"
+      ],
+      "category": "technical-code"
+    }
+  ],
+  "summary": {
+    "sparse": {
+      "n_queries": 2,
+      "recall@3": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "ndcg@3": 1.0,
+      "latency_ms": {
+        "mean": 0.073,
+        "p50": 0.073,
+        "p95": 0.077
+      }
+    },
+    "dense": {
+      "n_queries": 2,
+      "recall@3": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "ndcg@3": 1.0,
+      "latency_ms": {
+        "mean": 366.954,
+        "p50": 366.954,
+        "p95": 408.448
+      }
+    },
+    "rrf": {
+      "n_queries": 2,
+      "recall@3": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "ndcg@3": 1.0,
+      "latency_ms": {
+        "mean": 369.291,
+        "p50": 369.291,
+        "p95": 410.178
+      }
+    },
+    "weighted": {
+      "n_queries": 2,
+      "recall@3": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "ndcg@3": 1.0,
+      "latency_ms": {
+        "mean": 369.29,
+        "p50": 369.29,
+        "p95": 410.179
+      }
+    },
+    "rerank": {
+      "n_queries": 2,
+      "recall@3": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "ndcg@3": 1.0,
+      "latency_ms": {
+        "mean": 679.238,
+        "p50": 679.238,
+        "p95": 719.982
+      }
+    }
+  },
+  "by_category": {
+    "technical-code": {
+      "sparse": {
+        "n_queries": 2,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 0.073,
+          "p50": 0.073,
+          "p95": 0.077
+        }
+      },
+      "dense": {
+        "n_queries": 2,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 366.954,
+          "p50": 366.954,
+          "p95": 408.448
+        }
+      },
+      "rrf": {
+        "n_queries": 2,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 369.291,
+          "p50": 369.291,
+          "p95": 410.178
+        }
+      },
+      "weighted": {
+        "n_queries": 2,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 369.29,
+          "p50": 369.29,
+          "p95": 410.179
+        }
+      },
+      "rerank": {
+        "n_queries": 2,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 679.238,
+          "p50": 679.238,
+          "p95": 719.982
+        }
+      }
+    }
+  },
+  "per_query": [
+    {
+      "query_index": 1,
+      "query": "XR-7003",
+      "category": "technical-code",
+      "expected": [
+        "xr_7003"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 3.3578477,
+              "rank": 1
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 0.63271088,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.53471308,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.52811227,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.51722274,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.51612341,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.50557191,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.25596985,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.22713073,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.20671751,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.1791021,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.01612903,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.01587302,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.01470588,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.01449275,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.01428571,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.78395966,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.76940787,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.74540146,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.74297792,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.71971669,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.16945825,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.10588117,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.06087935,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.0,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 0.96778924,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.54205994,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.52063324,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.49872852,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.49305107,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.48338978,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.28162487,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.17850384,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.1382004,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.09513918,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.07687599956989288,
+          "dense": 408.448040000163,
+          "rrf_fusion": 0.02680099941790104,
+          "weighted_fusion": 0.028173000551760197,
+          "rerank": 309.7362800007686
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.07687599956989288,
+          "dense": 408.448040000163,
+          "rrf": 410.17800799943507,
+          "weighted": 410.1793800005689,
+          "rerank": 719.9818759998307
+        },
+        "total_pipeline_latency_ms": 719.9963239999488,
+        "retrieval_wall_ms": 410.15120700001717,
+        "candidate_overlap": 1,
+        "candidate_union": 10,
+        "rrf_rerank_pool_ids": [
+          "xr_7003",
+          "xr_7001",
+          "xr_7006",
+          "xr_7002",
+          "xr_7005",
+          "xr_7004",
+          "http_500",
+          "http_403",
+          "http_400",
+          "name_alexander_humphrey"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 2,
+            "rerank_rank": 6,
+            "rank_delta": -4
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 3,
+            "rerank_rank": 4,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 4,
+            "rerank_rank": 2,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 6,
+            "rerank_rank": 3,
+            "rank_delta": 3
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 7,
+            "rerank_rank": 9,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 8,
+            "rerank_rank": 7,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 9,
+            "rerank_rank": 8,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 10,
+            "rerank_rank": 10,
+            "rank_delta": 0
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "42b091e7-c530-9600-bc82-9946427b0d71",
+            "usage": {
+              "prompt_tokens": 51,
+              "total_tokens": 51
+            },
+            "elapsed_ms": 405.59,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "480d8708-bc57-95f1-af1c-03de3df90424",
+            "usage": {
+              "prompt_tokens": 931,
+              "total_tokens": 931
+            },
+            "elapsed_ms": 309.62,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 2,
+      "query": "XR-7005",
+      "category": "technical-code",
+      "expected": [
+        "xr_7005"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 3.3578477,
+              "rank": 1
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 0.63243259,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.51713675,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.51690914,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.5149358,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.51005075,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.49728357,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.37430552,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.23819963,
+              "rank": 8
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.21814799,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.18026125,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.01612903,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.01587302,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.01470588,
+              "rank": 8
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.01449275,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.01428571,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.74501736,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.74451398,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.74014984,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.72934631,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.70111102,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.4291388,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.12813368,
+              "rank": 8
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.08378845,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.0,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 0.96721662,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.55559054,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.53672971,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.49421785,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.48948146,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.48934123,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.29389218,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.17011135,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.16686623,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.10926661,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.06948199961334467,
+          "dense": 325.45965100079775,
+          "rrf_fusion": 0.027432999573647976,
+          "weighted_fusion": 0.02286399994045496,
+          "rerank": 310.0342769995332
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.06948199961334467,
+          "dense": 325.45965100079775,
+          "rrf": 328.4048409992829,
+          "weighted": 328.4002719996497,
+          "rerank": 638.4944119993597
+        },
+        "total_pipeline_latency_ms": 638.5115749994293,
+        "retrieval_wall_ms": 328.37740799970925,
+        "candidate_overlap": 1,
+        "candidate_union": 10,
+        "rrf_rerank_pool_ids": [
+          "xr_7005",
+          "xr_7006",
+          "xr_7003",
+          "xr_7001",
+          "xr_7002",
+          "xr_7004",
+          "http_500",
+          "http_400",
+          "name_alexander_humphrey",
+          "http_404"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 2,
+            "rerank_rank": 3,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 3,
+            "rerank_rank": 4,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 4,
+            "rerank_rank": 6,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 6,
+            "rerank_rank": 2,
+            "rank_delta": 4
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 7,
+            "rerank_rank": 8,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 8,
+            "rerank_rank": 9,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 9,
+            "rerank_rank": 10,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 10,
+            "rerank_rank": 7,
+            "rank_delta": 3
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "e8bc0342-a2b9-9495-b2c8-6055b86d1e6f",
+            "usage": {
+              "prompt_tokens": 51,
+              "total_tokens": 51
+            },
+            "elapsed_ms": 323.24,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "71d8d6ef-dd44-99d3-9658-a04a80614f11",
+            "usage": {
+              "prompt_tokens": 931,
+              "total_tokens": 931
+            },
+            "elapsed_ms": 309.9,
+            "attempts": 1
+          }
+        ]
+      }
+    }
+  ],
+  "eval_k": 3,
+  "evaluation_elapsed_ms": 1360.83
+}

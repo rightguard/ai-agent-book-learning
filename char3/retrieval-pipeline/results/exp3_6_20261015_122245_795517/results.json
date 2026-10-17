@@ -1,0 +1,5708 @@
+{
+  "config": {
+    "version": "2.4.0-embedding-index-compat",
+    "mode": "evaluation",
+    "timestamp_utc": "2026-10-15T04:22:56.696541+00:00",
+    "upstream": "https://github.com/bojieli/ai-agent-book/tree/main/chapter3/retrieval-pipeline",
+    "upstream_evaluate_blob_sha": "67de7dfcca766b7dff3bd31c506ee894344fc7cf",
+    "upstream_fusion_blob_sha": "1b2fba65b3780d79a33e9058a4fe4d03c1b37a09",
+    "python": "3.10.20",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "corpus_sha256": "32b6e50fc159d8252843a07c5487dba01f34489919969eea717a5d98054c467b",
+    "queries_sha256": "cc61f2b7e5192c5cc27de496780db5e2f44842750b6c73547b9f901c548c5186",
+    "corpus_size": 20,
+    "chunks": 22,
+    "embedding_model": "qwen3.7-text-embedding-flash",
+    "reranker_model": "qwen3.7-text-rerank",
+    "backend": "DashScope native HTTP API",
+    "api_host": "ws-l84cq4l68pzgx8fq.cn-beijing.maas.aliyuncs.com",
+    "api_receipts": {
+      "http_requests_attempted": 26,
+      "successful_calls": 26,
+      "calls_by_stage": {
+        "embedding": 14,
+        "rerank": 12
+      },
+      "total_tokens_reported": 12890,
+      "receipts": [
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 20,
+          "request_id": "dc6da258-4f6e-90f0-8152-5b88de6542b5",
+          "usage": {
+            "prompt_tokens": 671,
+            "total_tokens": 671
+          },
+          "elapsed_ms": 762.94,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 2,
+          "request_id": "4e48e64b-3c25-981b-9af2-d1e191bb4051",
+          "usage": {
+            "prompt_tokens": 121,
+            "total_tokens": 121
+          },
+          "elapsed_ms": 493.62,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "0cb6cf17-2a77-9c79-a31a-3e4a3fe4aa28",
+          "usage": {
+            "prompt_tokens": 51,
+            "total_tokens": 51
+          },
+          "elapsed_ms": 301.51,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "84c05fca-bc5a-9581-98ba-cb0012a0aeeb",
+          "usage": {
+            "prompt_tokens": 931,
+            "total_tokens": 931
+          },
+          "elapsed_ms": 295.72,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "8784cb71-317c-9f3f-ab11-a1ecea7de8ab",
+          "usage": {
+            "prompt_tokens": 51,
+            "total_tokens": 51
+          },
+          "elapsed_ms": 338.43,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "354f7efe-b511-91bf-96c9-627b6de019bf",
+          "usage": {
+            "prompt_tokens": 931,
+            "total_tokens": 931
+          },
+          "elapsed_ms": 413.47,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "a562d9b9-b50b-910c-8779-5c0013e027bb",
+          "usage": {
+            "prompt_tokens": 50,
+            "total_tokens": 50
+          },
+          "elapsed_ms": 429.34,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "ae552e76-4570-91b0-846d-5020b649d9c6",
+          "usage": {
+            "prompt_tokens": 997,
+            "total_tokens": 997
+          },
+          "elapsed_ms": 277.7,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "c6b9d968-33ac-93fd-b471-b92e89cc1b98",
+          "usage": {
+            "prompt_tokens": 50,
+            "total_tokens": 50
+          },
+          "elapsed_ms": 286.81,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "6b25982d-8e30-9f03-990a-50bd401a3266",
+          "usage": {
+            "prompt_tokens": 920,
+            "total_tokens": 920
+          },
+          "elapsed_ms": 275.01,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "ea253b32-3fe9-92a0-8e48-54cf6bc31ad1",
+          "usage": {
+            "prompt_tokens": 48,
+            "total_tokens": 48
+          },
+          "elapsed_ms": 370.85,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "67480ca3-0225-9659-a019-e642dc69c6cc",
+          "usage": {
+            "prompt_tokens": 905,
+            "total_tokens": 905
+          },
+          "elapsed_ms": 325.19,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "bb58f17c-08d9-9502-a6a0-683c5c92f763",
+          "usage": {
+            "prompt_tokens": 52,
+            "total_tokens": 52
+          },
+          "elapsed_ms": 329.37,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "befd4b52-9f9f-9268-a17a-b527cf698c6b",
+          "usage": {
+            "prompt_tokens": 940,
+            "total_tokens": 940
+          },
+          "elapsed_ms": 445.3,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "2879f688-1fa5-9313-82c2-a0f616c04dad",
+          "usage": {
+            "prompt_tokens": 54,
+            "total_tokens": 54
+          },
+          "elapsed_ms": 365.37,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "25f2874c-b1b7-9c34-96a3-ff76095fa25d",
+          "usage": {
+            "prompt_tokens": 949,
+            "total_tokens": 949
+          },
+          "elapsed_ms": 272.79,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "13ccb0e0-12e5-9954-8e50-f4480fc34a39",
+          "usage": {
+            "prompt_tokens": 51,
+            "total_tokens": 51
+          },
+          "elapsed_ms": 322.85,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 8,
+          "request_id": "91c6f8c2-2348-9d50-93ae-957990189b78",
+          "usage": {
+            "prompt_tokens": 882,
+            "total_tokens": 882
+          },
+          "elapsed_ms": 418.53,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "52369cdd-d6df-9caf-b63c-2b76c1431406",
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 57
+          },
+          "elapsed_ms": 326.04,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "5b65467c-5980-95ff-aebc-ba3f59886dda",
+          "usage": {
+            "prompt_tokens": 1116,
+            "total_tokens": 1116
+          },
+          "elapsed_ms": 249.29,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "93d009ce-7519-9f21-a946-5bba2f68e16b",
+          "usage": {
+            "prompt_tokens": 51,
+            "total_tokens": 51
+          },
+          "elapsed_ms": 390.34,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 8,
+          "request_id": "5a86721a-fdf6-9cad-b021-4a37d965ee19",
+          "usage": {
+            "prompt_tokens": 890,
+            "total_tokens": 890
+          },
+          "elapsed_ms": 269.73,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "93e2a375-5380-9ed2-baaa-280c38d689f8",
+          "usage": {
+            "prompt_tokens": 55,
+            "total_tokens": 55
+          },
+          "elapsed_ms": 362.09,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 10,
+          "request_id": "2b286f9c-7e91-9441-ba2e-9ecd7a7b22ad",
+          "usage": {
+            "prompt_tokens": 1110,
+            "total_tokens": 1110
+          },
+          "elapsed_ms": 946.8,
+          "attempts": 1
+        },
+        {
+          "stage": "embedding",
+          "model": "qwen3.7-text-embedding-flash",
+          "items": 1,
+          "request_id": "924c878a-0402-91e3-9d5a-2167703f9e84",
+          "usage": {
+            "prompt_tokens": 54,
+            "total_tokens": 54
+          },
+          "elapsed_ms": 303.98,
+          "attempts": 1
+        },
+        {
+          "stage": "rerank",
+          "model": "qwen3.7-text-rerank",
+          "items": 8,
+          "request_id": "745f8111-84ad-93bb-9b13-194805efd85a",
+          "usage": {
+            "prompt_tokens": 903,
+            "total_tokens": 903
+          },
+          "elapsed_ms": 268.77,
+          "attempts": 1
+        }
+      ]
+    },
+    "dependencies": {
+      "PyYAML": "6.0.3",
+      "jieba": "0.42.1"
+    },
+    "parameters": {
+      "top_k": 10,
+      "eval_k": 3,
+      "chunk_size": 280,
+      "chunk_overlap": 40,
+      "k_rrf": 60,
+      "sparse_weight": 1.0,
+      "dense_weight": 1.0,
+      "rerank_pool": 10,
+      "rerank_top_k": 10,
+      "embedding_batch_size": 20,
+      "embedding_dimension": 1024,
+      "parallel": true,
+      "query_instruction": "Given a search query, retrieve relevant passages that answer the query.",
+      "rerank_instruction": "Given a web search query, retrieve relevant passages that answer the query."
+    },
+    "initialization_ms": {
+      "bm25_build": 0.7740010004490614,
+      "document_embedding_api": 1266.2881789999083,
+      "rerank_setup": 0.0
+    }
+  },
+  "corpus": [
+    {
+      "doc_id": "xr_7001",
+      "text": "Product model XR-7001 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7002",
+      "text": "Product model XR-7002 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7003",
+      "text": "Product model XR-7003 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7004",
+      "text": "Product model XR-7004 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7005",
+      "text": "Product model XR-7005 is a smartphone available now."
+    },
+    {
+      "doc_id": "xr_7006",
+      "text": "Product model XR-7006 is a smartphone available now."
+    },
+    {
+      "doc_id": "http_400",
+      "text": "The HTTP-400 response is a client error status code."
+    },
+    {
+      "doc_id": "http_401",
+      "text": "The HTTP-401 response is a client error status code."
+    },
+    {
+      "doc_id": "http_403",
+      "text": "The HTTP-403 response is a client error status code."
+    },
+    {
+      "doc_id": "http_404",
+      "text": "The HTTP-404 response is a client error status code."
+    },
+    {
+      "doc_id": "http_500",
+      "text": "The HTTP-500 response is a server error status code."
+    },
+    {
+      "doc_id": "sem_readable",
+      "text": "The language emphasizes clean, readable code that newcomers can pick up quickly."
+    },
+    {
+      "doc_id": "sem_gc",
+      "text": "Automatic memory management frees developers from manually releasing objects."
+    },
+    {
+      "doc_id": "sem_photo",
+      "text": "Green plants convert sunlight into chemical energy stored as sugars."
+    },
+    {
+      "doc_id": "sem_crypto",
+      "text": "Encryption scrambles a message so that only the intended recipient can read it."
+    },
+    {
+      "doc_id": "name_alexander_humphrey",
+      "text": "Alexander Humphrey designed the Aurora scheduling protocol in 2019."
+    },
+    {
+      "doc_id": "name_alexander_hughes",
+      "text": "Alexander Hughes designed the Borealis scheduling protocol in 2019."
+    },
+    {
+      "doc_id": "name_amelia_humphrey",
+      "text": "Amelia Humphrey designed the Celeste scheduling protocol in 2020."
+    },
+    {
+      "doc_id": "doc_watercycle",
+      "text": "The water cycle describes how water moves continuously between the ocean, the atmosphere and the land. Heat from the sun evaporates water from the sea surface into vapor that rises high into the sky. As the vapor cools it condenses into tiny droplets that gather to form clouds. When the droplets grow heavy enough they fall back to the ground as rain or snow, and rivers eventually carry that water back to the ocean, closing the loop."
+    },
+    {
+      "doc_id": "doc_volcano",
+      "text": "A volcano forms where molten rock called magma rises from deep inside the planet toward the surface. Magma collects in a chamber beneath the crust, and mounting pressure forces it upward through cracks. During an eruption the magma bursts out as lava, ash and gas, which pile up around the vent. Layer after layer of cooled lava slowly builds the cone-shaped mountain we recognize as a volcano."
+    }
+  ],
+  "queries": [
+    {
+      "query": "XR-7003",
+      "expected": [
+        "xr_7003"
+      ],
+      "category": "technical-code"
+    },
+    {
+      "query": "XR-7005",
+      "expected": [
+        "xr_7005"
+      ],
+      "category": "technical-code"
+    },
+    {
+      "query": "HTTP-403",
+      "expected": [
+        "http_403"
+      ],
+      "category": "technical-code"
+    },
+    {
+      "query": "HTTP-400",
+      "expected": [
+        "http_400"
+      ],
+      "category": "technical-code"
+    },
+    {
+      "query": "Alexander Humphrey",
+      "expected": [
+        "name_alexander_humphrey"
+      ],
+      "category": "exact-name"
+    },
+    {
+      "query": "a beginner friendly language with tidy syntax",
+      "expected": [
+        "sem_readable"
+      ],
+      "category": "semantic"
+    },
+    {
+      "query": "reclaiming unused heap space without programmer effort",
+      "expected": [
+        "sem_gc"
+      ],
+      "category": "semantic"
+    },
+    {
+      "query": "how vegetation turns light into food",
+      "expected": [
+        "sem_photo"
+      ],
+      "category": "semantic"
+    },
+    {
+      "query": "hiding a note so eavesdroppers cannot understand it",
+      "expected": [
+        "sem_crypto"
+      ],
+      "category": "semantic"
+    },
+    {
+      "query": "植物如何把阳光转化为食物",
+      "expected": [
+        "sem_photo"
+      ],
+      "category": "multilingual"
+    },
+    {
+      "query": "how does water move between the ocean and the sky",
+      "expected": [
+        "doc_watercycle"
+      ],
+      "category": "semantic"
+    },
+    {
+      "query": "how are volcanoes formed from molten rock",
+      "expected": [
+        "doc_volcano"
+      ],
+      "category": "semantic"
+    }
+  ],
+  "summary": {
+    "sparse": {
+      "n_queries": 12,
+      "recall@3": 0.833333,
+      "hit@3": 0.833333,
+      "mrr": 0.791667,
+      "ndcg@3": 0.802577,
+      "latency_ms": {
+        "mean": 113.806,
+        "p50": 0.086,
+        "p95": 1364.738
+      }
+    },
+    "dense": {
+      "n_queries": 12,
+      "recall@3": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "ndcg@3": 1.0,
+      "latency_ms": {
+        "mean": 346.405,
+        "p50": 336.422,
+        "p95": 431.63
+      }
+    },
+    "rrf": {
+      "n_queries": 12,
+      "recall@3": 1.0,
+      "hit@3": 1.0,
+      "mrr": 0.958333,
+      "ndcg@3": 0.969244,
+      "latency_ms": {
+        "mean": 429.646,
+        "p50": 339.783,
+        "p95": 1365.873
+      }
+    },
+    "weighted": {
+      "n_queries": 12,
+      "recall@3": 1.0,
+      "hit@3": 1.0,
+      "mrr": 0.958333,
+      "ndcg@3": 0.969244,
+      "latency_ms": {
+        "mean": 429.646,
+        "p50": 339.818,
+        "p95": 1365.867
+      }
+    },
+    "rerank": {
+      "n_queries": 12,
+      "recall@3": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "ndcg@3": 1.0,
+      "latency_ms": {
+        "mean": 801.414,
+        "p50": 705.824,
+        "p95": 1635.806
+      }
+    }
+  },
+  "by_category": {
+    "exact-name": {
+      "sparse": {
+        "n_queries": 1,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 0.089,
+          "p50": 0.089,
+          "p95": 0.089
+        }
+      },
+      "dense": {
+        "n_queries": 1,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 373.524,
+          "p50": 373.524,
+          "p95": 373.524
+        }
+      },
+      "rrf": {
+        "n_queries": 1,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 375.243,
+          "p50": 375.243,
+          "p95": 375.243
+        }
+      },
+      "weighted": {
+        "n_queries": 1,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 375.238,
+          "p50": 375.238,
+          "p95": 375.238
+        }
+      },
+      "rerank": {
+        "n_queries": 1,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 700.975,
+          "p50": 700.975,
+          "p95": 700.975
+        }
+      }
+    },
+    "multilingual": {
+      "sparse": {
+        "n_queries": 1,
+        "recall@3": 0.0,
+        "hit@3": 0.0,
+        "mrr": 0.0,
+        "ndcg@3": 0.0,
+        "latency_ms": {
+          "mean": 1364.738,
+          "p50": 1364.738,
+          "p95": 1364.738
+        }
+      },
+      "dense": {
+        "n_queries": 1,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 393.271,
+          "p50": 393.271,
+          "p95": 393.271
+        }
+      },
+      "rrf": {
+        "n_queries": 1,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 1365.873,
+          "p50": 1365.873,
+          "p95": 1365.873
+        }
+      },
+      "weighted": {
+        "n_queries": 1,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 1365.867,
+          "p50": 1365.867,
+          "p95": 1365.867
+        }
+      },
+      "rerank": {
+        "n_queries": 1,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 1635.806,
+          "p50": 1635.806,
+          "p95": 1635.806
+        }
+      }
+    },
+    "semantic": {
+      "sparse": {
+        "n_queries": 6,
+        "recall@3": 0.833333,
+        "hit@3": 0.833333,
+        "mrr": 0.75,
+        "ndcg@3": 0.771822,
+        "latency_ms": {
+          "mean": 0.098,
+          "p50": 0.096,
+          "p95": 0.136
+        }
+      },
+      "dense": {
+        "n_queries": 6,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 337.328,
+          "p50": 330.127,
+          "p95": 367.752
+        }
+      },
+      "rrf": {
+        "n_queries": 6,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 0.916667,
+        "ndcg@3": 0.938488,
+        "latency_ms": {
+          "mean": 338.688,
+          "p50": 331.666,
+          "p95": 369.408
+        }
+      },
+      "weighted": {
+        "n_queries": 6,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 0.916667,
+        "ndcg@3": 0.938488,
+        "latency_ms": {
+          "mean": 338.683,
+          "p50": 331.662,
+          "p95": 369.4
+        }
+      },
+      "rerank": {
+        "n_queries": 6,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 772.483,
+          "p50": 693.662,
+          "p95": 1312.646
+        }
+      }
+    },
+    "technical-code": {
+      "sparse": {
+        "n_queries": 4,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 0.065,
+          "p50": 0.066,
+          "p95": 0.082
+        }
+      },
+      "dense": {
+        "n_queries": 4,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 341.524,
+          "p50": 322.494,
+          "p95": 431.63
+        }
+      },
+      "rrf": {
+        "n_queries": 4,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 345.629,
+          "p50": 327.708,
+          "p95": 432.74
+        }
+      },
+      "weighted": {
+        "n_queries": 4,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 345.636,
+          "p50": 327.722,
+          "p95": 432.748
+        }
+      },
+      "rerank": {
+        "n_queries": 4,
+        "recall@3": 1.0,
+        "hit@3": 1.0,
+        "mrr": 1.0,
+        "ndcg@3": 1.0,
+        "latency_ms": {
+          "mean": 661.322,
+          "p50": 658.099,
+          "p95": 759.56
+        }
+      }
+    }
+  },
+  "per_query": [
+    {
+      "query_index": 1,
+      "query": "XR-7003",
+      "category": "technical-code",
+      "expected": [
+        "xr_7003"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 3.3578477,
+              "rank": 1
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 0.62760016,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.52942535,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.52503533,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.52056136,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.51378555,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.49783833,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.25078802,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.23214577,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.2060111,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.18191535,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.01612903,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.01587302,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.01470588,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.01449275,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.01428571,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.77972144,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.76987137,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.75983296,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.74462981,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.70884843,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.15453223,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.11270392,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.05406456,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.0,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7003",
+              "score": 0.96778924,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.54205994,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.52063324,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.49872852,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.49305107,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.48338978,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.28162487,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.17850384,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.1382004,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.09513918,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7003"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.08223599940538406,
+          "dense": 304.01185200084,
+          "rrf_fusion": 0.0712059997022152,
+          "weighted_fusion": 0.02425600029528141,
+          "rerank": 295.84638699982315
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.08223599940538406,
+          "dense": 304.01185200084,
+          "rrf": 309.6110460003838,
+          "weighted": 309.56409600097686,
+          "rerank": 605.5247499998659
+        },
+        "total_pipeline_latency_ms": 605.5378049993888,
+        "retrieval_wall_ms": 309.5398400006816,
+        "candidate_overlap": 1,
+        "candidate_union": 10,
+        "rrf_rerank_pool_ids": [
+          "xr_7003",
+          "xr_7001",
+          "xr_7006",
+          "xr_7002",
+          "xr_7005",
+          "xr_7004",
+          "http_500",
+          "http_403",
+          "http_400",
+          "name_alexander_humphrey"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 2,
+            "rerank_rank": 6,
+            "rank_delta": -4
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 3,
+            "rerank_rank": 4,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 4,
+            "rerank_rank": 2,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 6,
+            "rerank_rank": 3,
+            "rank_delta": 3
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 7,
+            "rerank_rank": 9,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 8,
+            "rerank_rank": 7,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 9,
+            "rerank_rank": 8,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 10,
+            "rerank_rank": 10,
+            "rank_delta": 0
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "0cb6cf17-2a77-9c79-a31a-3e4a3fe4aa28",
+            "usage": {
+              "prompt_tokens": 51,
+              "total_tokens": 51
+            },
+            "elapsed_ms": 301.51,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "84c05fca-bc5a-9581-98ba-cb0012a0aeeb",
+            "usage": {
+              "prompt_tokens": 931,
+              "total_tokens": 931
+            },
+            "elapsed_ms": 295.72,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 2,
+      "query": "XR-7005",
+      "category": "technical-code",
+      "expected": [
+        "xr_7005"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 3.3578477,
+              "rank": 1
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 0.62902917,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.51379691,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.51312593,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.51022464,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.50737913,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.49164752,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.37375281,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.23625468,
+              "rank": 8
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.22093201,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.17768374,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.01612903,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.01587302,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.01470588,
+              "rank": 8
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.01449275,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.01428571,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.74469163,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.74320502,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.73677693,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.73047242,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.6956175,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.43441022,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.12976966,
+              "rank": 8
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.09582077,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.0,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "xr_7005",
+              "score": 0.96721662,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.55559054,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.53672971,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.49421785,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.48948146,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.48934123,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.29389218,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.17011135,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.16686623,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.10926661,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "xr_7005"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.047870999202132225,
+          "dense": 340.97595600038767,
+          "rrf_fusion": 0.024316000752151012,
+          "weighted_fusion": 0.0987780001014471,
+          "rerank": 413.6195330005139
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.047870999202132225,
+          "dense": 340.97595600038767,
+          "rrf": 345.80564200133085,
+          "weighted": 345.88010400068015,
+          "rerank": 759.5595420002937
+        },
+        "total_pipeline_latency_ms": 759.5817040000111,
+        "retrieval_wall_ms": 345.7813260005787,
+        "candidate_overlap": 1,
+        "candidate_union": 10,
+        "rrf_rerank_pool_ids": [
+          "xr_7005",
+          "xr_7006",
+          "xr_7002",
+          "xr_7003",
+          "xr_7001",
+          "xr_7004",
+          "http_500",
+          "http_400",
+          "name_alexander_humphrey",
+          "http_404"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 2,
+            "rerank_rank": 3,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 3,
+            "rerank_rank": 5,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 4,
+            "rerank_rank": 4,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 5,
+            "rerank_rank": 6,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 6,
+            "rerank_rank": 2,
+            "rank_delta": 4
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 7,
+            "rerank_rank": 8,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 8,
+            "rerank_rank": 9,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 9,
+            "rerank_rank": 10,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 10,
+            "rerank_rank": 7,
+            "rank_delta": 3
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "8784cb71-317c-9f3f-ab11-a1ecea7de8ab",
+            "usage": {
+              "prompt_tokens": 51,
+              "total_tokens": 51
+            },
+            "elapsed_ms": 338.43,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "354f7efe-b511-91bf-96c9-627b6de019bf",
+            "usage": {
+              "prompt_tokens": 931,
+              "total_tokens": 931
+            },
+            "elapsed_ms": 413.47,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 3,
+      "query": "HTTP-403",
+      "category": "technical-code",
+      "expected": [
+        "http_403"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_403",
+              "score": 3.23399267,
+              "rank": 1
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_403"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_403",
+              "score": 0.72651705,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.53717298,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.52573522,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.51299511,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.42346676,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.19506885,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.18230967,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.13090409,
+              "rank": 8
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.1260386,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.12173285,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_403"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_403",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.01612903,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.01587302,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.01470588,
+              "rank": 8
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.01449275,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01428571,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_403"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_403",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.68692292,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.66801078,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.64694524,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.4989117,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.12125979,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.10016271,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.01516448,
+              "rank": 8
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.00711948,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.0,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_403"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_403",
+              "score": 0.91163985,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.48973461,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.45046066,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.44327206,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.33636364,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.00797542,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.00137786,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.00098728,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.00081873,
+              "rank": 9
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.00067521,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_403"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.05589600000530481,
+          "dense": 431.6300419997424,
+          "rrf_fusion": 0.032041000202298164,
+          "weighted_fusion": 0.039564999751746655,
+          "rerank": 277.84819300007075
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.05589600000530481,
+          "dense": 431.6300419997424,
+          "rrf": 432.7404110003263,
+          "weighted": 432.7479349998757,
+          "rerank": 710.6737059988081
+        },
+        "total_pipeline_latency_ms": 710.689155000262,
+        "retrieval_wall_ms": 432.708370000124,
+        "candidate_overlap": 1,
+        "candidate_union": 10,
+        "rrf_rerank_pool_ids": [
+          "http_403",
+          "http_401",
+          "http_404",
+          "http_400",
+          "http_500",
+          "xr_7003",
+          "xr_7004",
+          "xr_7001",
+          "doc_watercycle",
+          "name_amelia_humphrey"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 2,
+            "rerank_rank": 2,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 3,
+            "rerank_rank": 4,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 4,
+            "rerank_rank": 3,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 6,
+            "rerank_rank": 8,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 7,
+            "rerank_rank": 7,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 8,
+            "rerank_rank": 9,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 9,
+            "rerank_rank": 10,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 10,
+            "rerank_rank": 6,
+            "rank_delta": 4
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "a562d9b9-b50b-910c-8779-5c0013e027bb",
+            "usage": {
+              "prompt_tokens": 50,
+              "total_tokens": 50
+            },
+            "elapsed_ms": 429.34,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "ae552e76-4570-91b0-846d-5020b649d9c6",
+            "usage": {
+              "prompt_tokens": 997,
+              "total_tokens": 997
+            },
+            "elapsed_ms": 277.7,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 4,
+      "query": "HTTP-400",
+      "category": "technical-code",
+      "expected": [
+        "http_400"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_400",
+              "score": 3.23399267,
+              "rank": 1
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_400"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_400",
+              "score": 0.72475174,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.62047886,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.5938843,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.56289266,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.56087332,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.30379965,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.21024802,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.20550454,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.18946198,
+              "rank": 9
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.18729932,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_400"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_400",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.01612903,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.01587302,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.01470588,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.01449275,
+              "rank": 9
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.01428571,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_400"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_400",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.80598678,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.75650413,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.69884018,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.69508292,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.21676399,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.04269903,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.03387319,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.00402391,
+              "rank": 9
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.0,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_400"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "http_400",
+              "score": 0.93638355,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.52761099,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.51283757,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.49760799,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.42533327,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.00117612,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.00084347,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.00079992,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.00077824,
+              "rank": 9
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.00066281,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "http_400"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.07519300002604723,
+          "dense": 289.4797240002081,
+          "rrf_fusion": 0.02705200109630823,
+          "weighted_fusion": 0.022231999784708023,
+          "rerank": 275.1171210007742
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.07519300002604723,
+          "dense": 289.4797240002081,
+          "rrf": 294.3585710013285,
+          "weighted": 294.3537510000169,
+          "rerank": 569.5301639996469
+        },
+        "total_pipeline_latency_ms": 569.543459999375,
+        "retrieval_wall_ms": 294.3315190002322,
+        "candidate_overlap": 1,
+        "candidate_union": 10,
+        "rrf_rerank_pool_ids": [
+          "http_400",
+          "http_404",
+          "http_401",
+          "http_403",
+          "http_500",
+          "xr_7004",
+          "xr_7002",
+          "xr_7005",
+          "xr_7001",
+          "xr_7003"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 2,
+            "rerank_rank": 2,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 3,
+            "rerank_rank": 3,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 4,
+            "rerank_rank": 4,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 6,
+            "rerank_rank": 6,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 7,
+            "rerank_rank": 9,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 8,
+            "rerank_rank": 10,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 9,
+            "rerank_rank": 8,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 10,
+            "rerank_rank": 7,
+            "rank_delta": 3
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "c6b9d968-33ac-93fd-b471-b92e89cc1b98",
+            "usage": {
+              "prompt_tokens": 50,
+              "total_tokens": 50
+            },
+            "elapsed_ms": 286.81,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "6b25982d-8e30-9f03-990a-50bd401a3266",
+            "usage": {
+              "prompt_tokens": 920,
+              "total_tokens": 920
+            },
+            "elapsed_ms": 275.01,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 5,
+      "query": "Alexander Humphrey",
+      "category": "exact-name",
+      "expected": [
+        "name_alexander_humphrey"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 5.11138401,
+              "rank": 1
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 2.55569201,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 2.55569201,
+              "rank": 3
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "name_alexander_humphrey"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.47529812,
+              "rank": 1
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.4277312,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.30985211,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.23150089,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.20839241,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.20256768,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.19996853,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.18900593,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.18864599,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.17979341,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "name_alexander_humphrey"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.03200205,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.03200205,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.01470588,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01449275,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01428571,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "name_alexander_humphrey"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.8390316,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.44012393,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.1749802,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.09678018,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.07706904,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.0682734,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.03117553,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.02995746,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.0,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "name_alexander_humphrey"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.90827948,
+              "rank": 1
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.31611313,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.24409558,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.05778869,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.05339103,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.04344943,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.04231311,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.03312145,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.0311897,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.02337893,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "name_alexander_humphrey"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.08929899986833334,
+          "dense": 373.52433899976313,
+          "rrf_fusion": 0.033894000574946404,
+          "weighted_fusion": 0.029375999234616756,
+          "rerank": 325.6319270003587
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.08929899986833334,
+          "dense": 373.52433899976313,
+          "rrf": 375.2428510002792,
+          "weighted": 375.23833299893886,
+          "rerank": 700.9750389996916
+        },
+        "total_pipeline_latency_ms": 701.0020299991593,
+        "retrieval_wall_ms": 375.20895699970424,
+        "candidate_overlap": 3,
+        "candidate_union": 10,
+        "rrf_rerank_pool_ids": [
+          "name_alexander_humphrey",
+          "name_alexander_hughes",
+          "name_amelia_humphrey",
+          "xr_7006",
+          "xr_7005",
+          "xr_7002",
+          "xr_7001",
+          "http_400",
+          "xr_7004",
+          "http_500"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "name_alexander_hughes",
+            "rrf_rank": 2,
+            "rerank_rank": 3,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 3,
+            "rerank_rank": 2,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 4,
+            "rerank_rank": 5,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "xr_7005",
+            "rrf_rank": 5,
+            "rerank_rank": 9,
+            "rank_delta": -4
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 6,
+            "rerank_rank": 6,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 7,
+            "rerank_rank": 8,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 8,
+            "rerank_rank": 4,
+            "rank_delta": 4
+          },
+          {
+            "doc_id": "xr_7004",
+            "rrf_rank": 9,
+            "rerank_rank": 7,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 10,
+            "rerank_rank": 10,
+            "rank_delta": 0
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "ea253b32-3fe9-92a0-8e48-54cf6bc31ad1",
+            "usage": {
+              "prompt_tokens": 48,
+              "total_tokens": 48
+            },
+            "elapsed_ms": 370.85,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "67480ca3-0225-9659-a019-e642dc69c6cc",
+            "usage": {
+              "prompt_tokens": 905,
+              "total_tokens": 905
+            },
+            "elapsed_ms": 325.19,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 6,
+      "query": "a beginner friendly language with tidy syntax",
+      "category": "semantic",
+      "expected": [
+        "sem_readable"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_readable",
+              "score": 2.91178675,
+              "rank": 1
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.74963184,
+              "rank": 2
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.74963184,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.74963184,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.74963184,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.74963184,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.74963184,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.72198149,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.72198149,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.72198149,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_readable"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_readable",
+              "score": 0.57351967,
+              "rank": 1
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.25686817,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.23655391,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.2154811,
+              "rank": 4
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.20860232,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.20620867,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.19560245,
+              "rank": 7
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.17050058,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.16780336,
+              "rank": 9
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.16358115,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_readable"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_readable",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.03036577,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.02963126,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.02877847,
+              "rank": 4
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01612903,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.01612903,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.01587302,
+              "rank": 7
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.015625,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.015625,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.01538462,
+              "rank": 10
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01538462,
+              "rank": 11
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.01515152,
+              "rank": 12
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.01515152,
+              "rank": 13
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.01492537,
+              "rank": 14
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.01470588,
+              "rank": 15
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.01428571,
+              "rank": 16
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_readable"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_readable",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.22756343,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.17800902,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.12660422,
+              "rank": 4
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.10982419,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.10398515,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.07811245,
+              "rank": 7
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.01687917,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.01262686,
+              "rank": 9
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.01262686,
+              "rank": 10
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.01262686,
+              "rank": 11
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01262686,
+              "rank": 12
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.01262686,
+              "rank": 13
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.01262686,
+              "rank": 14
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.01029961,
+              "rank": 15
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.0,
+              "rank": 16
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_readable"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_readable",
+              "score": 0.76421314,
+              "rank": 1
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.33694042,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.20299709,
+              "rank": 3
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.09218546,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.00079538,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.00077099,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.00073791,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.00070237,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.00068282,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.0005976,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_readable"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.13566800020635128,
+          "dense": 331.8682989999652,
+          "rrf_fusion": 0.03510599955916405,
+          "weighted_fusion": 0.03004699945449829,
+          "rerank": 445.41663600038737
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.13566800020635128,
+          "dense": 331.8682989999652,
+          "rrf": 333.7606959985569,
+          "weighted": 333.75563699845225,
+          "rerank": 779.2444699993357
+        },
+        "total_pipeline_latency_ms": 779.4025599993765,
+        "retrieval_wall_ms": 333.72558999899775,
+        "candidate_overlap": 4,
+        "candidate_union": 16,
+        "rrf_rerank_pool_ids": [
+          "sem_readable",
+          "http_401",
+          "http_400",
+          "http_403",
+          "name_amelia_humphrey",
+          "xr_7001",
+          "xr_7002",
+          "sem_gc",
+          "xr_7003",
+          "name_alexander_hughes"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "sem_readable",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 2,
+            "rerank_rank": 10,
+            "rank_delta": -8
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 3,
+            "rerank_rank": 9,
+            "rank_delta": -6
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 4,
+            "rerank_rank": 8,
+            "rank_delta": -4
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 5,
+            "rerank_rank": 4,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 6,
+            "rerank_rank": 6,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 7,
+            "rerank_rank": 5,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 8,
+            "rerank_rank": 2,
+            "rank_delta": 6
+          },
+          {
+            "doc_id": "xr_7003",
+            "rrf_rank": 9,
+            "rerank_rank": 7,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "name_alexander_hughes",
+            "rrf_rank": 10,
+            "rerank_rank": 3,
+            "rank_delta": 7
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "bb58f17c-08d9-9502-a6a0-683c5c92f763",
+            "usage": {
+              "prompt_tokens": 52,
+              "total_tokens": 52
+            },
+            "elapsed_ms": 329.37,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "befd4b52-9f9f-9268-a17a-b527cf698c6b",
+            "usage": {
+              "prompt_tokens": 940,
+              "total_tokens": 940
+            },
+            "elapsed_ms": 445.3,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 7,
+      "query": "reclaiming unused heap space without programmer effort",
+      "category": "semantic",
+      "expected": [
+        "sem_gc"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 0.0,
+            "hit@3": 0.0,
+            "mrr": 0.0,
+            "ndcg@3": 0.0
+          },
+          "ranked_docs": [],
+          "first_gold_rank": null,
+          "top_doc": null
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_gc",
+              "score": 0.38094068,
+              "rank": 1
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.26405692,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.26063092,
+              "rank": 3
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.23028825,
+              "rank": 4
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.2187826,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.20241138,
+              "rank": 6
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.20214496,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.19639325,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.18247804,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.1660906,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_gc"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_gc",
+              "score": 0.01639344,
+              "rank": 1
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.01612903,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01587302,
+              "rank": 3
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.01470588,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.01449275,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.01428571,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_gc"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_gc",
+              "score": 1.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.45597525,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.44002924,
+              "rank": 3
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.29880209,
+              "rank": 4
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.24525006,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.16905175,
+              "rank": 6
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.16781173,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.14104089,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.07627383,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.0,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_gc"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_gc",
+              "score": 0.54669427,
+              "rank": 1
+            },
+            {
+              "doc_id": "name_alexander_humphrey",
+              "score": 0.29564788,
+              "rank": 2
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.23294553,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.13039618,
+              "rank": 4
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.10178486,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.00102124,
+              "rank": 6
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.00100387,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.00080163,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.00076927,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.00052763,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_gc"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.0978760002180934,
+          "dense": 367.75155899953097,
+          "rrf_fusion": 0.026590999215841293,
+          "weighted_fusion": 0.019426999613642693,
+          "rerank": 272.9012500010431
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.0978760002180934,
+          "dense": 367.75155899953097,
+          "rrf": 369.4075379995629,
+          "weighted": 369.4003739999607,
+          "rerank": 642.3596139997244
+        },
+        "total_pipeline_latency_ms": 642.3746229996905,
+        "retrieval_wall_ms": 369.3809470003471,
+        "candidate_overlap": 0,
+        "candidate_union": 10,
+        "rrf_rerank_pool_ids": [
+          "sem_gc",
+          "sem_readable",
+          "name_amelia_humphrey",
+          "name_alexander_humphrey",
+          "sem_crypto",
+          "sem_photo",
+          "name_alexander_hughes",
+          "http_404",
+          "http_400",
+          "http_401"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "sem_readable",
+            "rrf_rank": 2,
+            "rerank_rank": 4,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 3,
+            "rerank_rank": 5,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "name_alexander_humphrey",
+            "rrf_rank": 4,
+            "rerank_rank": 2,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 5,
+            "rerank_rank": 6,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 6,
+            "rerank_rank": 7,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "name_alexander_hughes",
+            "rrf_rank": 7,
+            "rerank_rank": 3,
+            "rank_delta": 4
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 8,
+            "rerank_rank": 8,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 9,
+            "rerank_rank": 10,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 10,
+            "rerank_rank": 9,
+            "rank_delta": 1
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "2879f688-1fa5-9313-82c2-a0f616c04dad",
+            "usage": {
+              "prompt_tokens": 54,
+              "total_tokens": 54
+            },
+            "elapsed_ms": 365.37,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "25f2874c-b1b7-9c34-96a3-ff76095fa25d",
+            "usage": {
+              "prompt_tokens": 949,
+              "total_tokens": 949
+            },
+            "elapsed_ms": 272.79,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 8,
+      "query": "how vegetation turns light into food",
+      "category": "semantic",
+      "expected": [
+        "sem_photo"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 0.5,
+            "ndcg@3": 0.6309297535714575
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 3.53066181,
+              "rank": 1
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 2.46477806,
+              "rank": 2
+            }
+          ],
+          "first_gold_rank": 2,
+          "top_doc": "doc_watercycle"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_photo",
+              "score": 0.60011146,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.35821877,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.31445796,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.25033239,
+              "rank": 4
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.12694571,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.12340353,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.11623955,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.1143275,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_photo"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 0.5,
+            "ndcg@3": 0.6309297535714575
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.03252247,
+              "rank": 1
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.03252247,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.01587302,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01470588,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 2,
+          "top_doc": "doc_watercycle"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 0.5,
+            "ndcg@3": 0.6309297535714575
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 1.50205706,
+              "rank": 1
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 1.0,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.41197419,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.27996991,
+              "rank": 4
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.02597494,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.01868325,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.00393601,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.0,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 2,
+          "top_doc": "doc_watercycle"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_photo",
+              "score": 0.76285918,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.21134304,
+              "rank": 2
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.00840279,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.00457191,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.00406744,
+              "rank": 5
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.00327431,
+              "rank": 6
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.00259648,
+              "rank": 7
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.00246779,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_photo"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.07100499980151653,
+          "dense": 325.1606410006061,
+          "rrf_fusion": 0.027652000077068806,
+          "weighted_fusion": 0.021399999037384987,
+          "rerank": 418.6568600004539
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.07100499980151653,
+          "dense": 325.1606410006061,
+          "rrf": 326.1315460000187,
+          "weighted": 326.12529399897903,
+          "rerank": 744.964781999588
+        },
+        "total_pipeline_latency_ms": 744.9824359994382,
+        "retrieval_wall_ms": 326.10389399994165,
+        "candidate_overlap": 2,
+        "candidate_union": 8,
+        "rrf_rerank_pool_ids": [
+          "doc_watercycle",
+          "sem_photo",
+          "doc_volcano",
+          "sem_crypto",
+          "name_amelia_humphrey",
+          "sem_readable",
+          "http_403",
+          "http_500"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 1,
+            "rerank_rank": 2,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 2,
+            "rerank_rank": 1,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 3,
+            "rerank_rank": 8,
+            "rank_delta": -5
+          },
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 4,
+            "rerank_rank": 4,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 5,
+            "rerank_rank": 7,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "sem_readable",
+            "rrf_rank": 6,
+            "rerank_rank": 3,
+            "rank_delta": 3
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 7,
+            "rerank_rank": 5,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 8,
+            "rerank_rank": 6,
+            "rank_delta": 2
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "13ccb0e0-12e5-9954-8e50-f4480fc34a39",
+            "usage": {
+              "prompt_tokens": 51,
+              "total_tokens": 51
+            },
+            "elapsed_ms": 322.85,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 8,
+            "request_id": "91c6f8c2-2348-9d50-93ae-957990189b78",
+            "usage": {
+              "prompt_tokens": 882,
+              "total_tokens": 882
+            },
+            "elapsed_ms": 418.53,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 9,
+      "query": "hiding a note so eavesdroppers cannot understand it",
+      "category": "semantic",
+      "expected": [
+        "sem_crypto"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 5.26538263,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 1.47113637,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.84279709,
+              "rank": 3
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.74963184,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.74963184,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.74963184,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.74963184,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.74963184,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.74963184,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.72198149,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_crypto"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.42651336,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.22352147,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.21458651,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.20479383,
+              "rank": 4
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.20467023,
+              "rank": 5
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.20176347,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.20159445,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.19407441,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.19220467,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.1649395,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_crypto"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.03174603,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.02921109,
+              "rank": 3
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.01612903,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.01612903,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.015625,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.015625,
+              "rank": 7
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.01538462,
+              "rank": 8
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.01538462,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.01515152,
+              "rank": 10
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.01515152,
+              "rank": 11
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.01492537,
+              "rank": 12
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01470588,
+              "rank": 13
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.01470588,
+              "rank": 14
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.01449275,
+              "rank": 15
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.01449275,
+              "rank": 16
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01428571,
+              "rank": 17
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_crypto"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.22395955,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.21639253,
+              "rank": 3
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.16488856,
+              "rank": 4
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.15236357,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.15189102,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.14077845,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.14013229,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.1113831,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.10423504,
+              "rank": 10
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.00608583,
+              "rank": 11
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.00608583,
+              "rank": 12
+            },
+            {
+              "doc_id": "xr_7003",
+              "score": 0.00608583,
+              "rank": 13
+            },
+            {
+              "doc_id": "xr_7004",
+              "score": 0.00608583,
+              "rank": 14
+            },
+            {
+              "doc_id": "xr_7005",
+              "score": 0.00608583,
+              "rank": 15
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.00608583,
+              "rank": 16
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.0,
+              "rank": 17
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_crypto"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.71480135,
+              "rank": 1
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.0849795,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.01476937,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.00384956,
+              "rank": 4
+            },
+            {
+              "doc_id": "xr_7001",
+              "score": 0.00261806,
+              "rank": 5
+            },
+            {
+              "doc_id": "xr_7002",
+              "score": 0.00215394,
+              "rank": 6
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.00105443,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.00075898,
+              "rank": 8
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.0007454,
+              "rank": 9
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.00058783,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_crypto"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.09391900058835745,
+          "dense": 328.3857919992879,
+          "rrf_fusion": 0.03615900035947561,
+          "weighted_fusion": 0.03170999977737665,
+          "rerank": 249.43971200007945
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.09391900058835745,
+          "dense": 328.3857919992879,
+          "rrf": 329.57213000021875,
+          "weighted": 329.56768099963665,
+          "rerank": 579.0803119996563
+        },
+        "total_pipeline_latency_ms": 579.0989279998466,
+        "retrieval_wall_ms": 329.5359709998593,
+        "candidate_overlap": 3,
+        "candidate_union": 17,
+        "rrf_rerank_pool_ids": [
+          "sem_crypto",
+          "doc_watercycle",
+          "http_400",
+          "doc_volcano",
+          "http_403",
+          "sem_photo",
+          "xr_7001",
+          "sem_readable",
+          "xr_7002",
+          "http_404"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 2,
+            "rerank_rank": 7,
+            "rank_delta": -5
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 3,
+            "rerank_rank": 8,
+            "rank_delta": -5
+          },
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 4,
+            "rerank_rank": 10,
+            "rank_delta": -6
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 5,
+            "rerank_rank": 4,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 6,
+            "rerank_rank": 9,
+            "rank_delta": -3
+          },
+          {
+            "doc_id": "xr_7001",
+            "rrf_rank": 7,
+            "rerank_rank": 5,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "sem_readable",
+            "rrf_rank": 8,
+            "rerank_rank": 2,
+            "rank_delta": 6
+          },
+          {
+            "doc_id": "xr_7002",
+            "rrf_rank": 9,
+            "rerank_rank": 6,
+            "rank_delta": 3
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 10,
+            "rerank_rank": 3,
+            "rank_delta": 7
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "52369cdd-d6df-9caf-b63c-2b76c1431406",
+            "usage": {
+              "prompt_tokens": 57,
+              "total_tokens": 57
+            },
+            "elapsed_ms": 326.04,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "5b65467c-5980-95ff-aebc-ba3f59886dda",
+            "usage": {
+              "prompt_tokens": 1116,
+              "total_tokens": 1116
+            },
+            "elapsed_ms": 249.29,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 10,
+      "query": "植物如何把阳光转化为食物",
+      "category": "multilingual",
+      "expected": [
+        "sem_photo"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 0.0,
+            "hit@3": 0.0,
+            "mrr": 0.0,
+            "ndcg@3": 0.0
+          },
+          "ranked_docs": [],
+          "first_gold_rank": null,
+          "top_doc": null
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_photo",
+              "score": 0.73673025,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.36703428,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.33456171,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.24494062,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.15485092,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.14727325,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.14616149,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.14050614,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_photo"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_photo",
+              "score": 0.01639344,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.01612903,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.01587302,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.015625,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.01470588,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_photo"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_photo",
+              "score": 1.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.37993791,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.32547422,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.17515979,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.02405938,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01134996,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.00948529,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.0,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_photo"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "sem_photo",
+              "score": 0.75020501,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.11897195,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.08751645,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.05209369,
+              "rank": 4
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.02585282,
+              "rank": 5
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.02102674,
+              "rank": 6
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01401311,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.00926219,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "sem_photo"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 1364.7379769999534,
+          "dense": 393.27124399971217,
+          "rrf_fusion": 0.025307999923825264,
+          "weighted_fusion": 0.018895000219345093,
+          "rerank": 269.87431900110096
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 1364.7379769999534,
+          "dense": 393.27124399971217,
+          "rrf": 1365.8729799995199,
+          "weighted": 1365.8665669998154,
+          "rerank": 1635.806491999887
+        },
+        "total_pipeline_latency_ms": 1635.8191059995443,
+        "retrieval_wall_ms": 1365.847671999596,
+        "candidate_overlap": 0,
+        "candidate_union": 8,
+        "rrf_rerank_pool_ids": [
+          "sem_photo",
+          "doc_watercycle",
+          "doc_volcano",
+          "sem_crypto",
+          "http_401",
+          "name_amelia_humphrey",
+          "http_500",
+          "http_404"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 2,
+            "rerank_rank": 2,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 3,
+            "rerank_rank": 5,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 4,
+            "rerank_rank": 4,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 5,
+            "rerank_rank": 8,
+            "rank_delta": -3
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 6,
+            "rerank_rank": 7,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "http_500",
+            "rrf_rank": 7,
+            "rerank_rank": 6,
+            "rank_delta": 1
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 8,
+            "rerank_rank": 3,
+            "rank_delta": 5
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "93d009ce-7519-9f21-a946-5bba2f68e16b",
+            "usage": {
+              "prompt_tokens": 51,
+              "total_tokens": 51
+            },
+            "elapsed_ms": 390.34,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 8,
+            "request_id": "5a86721a-fdf6-9cad-b021-4a37d965ee19",
+            "usage": {
+              "prompt_tokens": 890,
+              "total_tokens": 890
+            },
+            "elapsed_ms": 269.73,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 11,
+      "query": "how does water move between the ocean and the sky",
+      "category": "semantic",
+      "expected": [
+        "doc_watercycle"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 9.83545401,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 2.62828342,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_400",
+              "score": 1.44396298,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_401",
+              "score": 1.44396298,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_403",
+              "score": 1.44396298,
+              "rank": 5
+            },
+            {
+              "doc_id": "http_404",
+              "score": 1.44396298,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_500",
+              "score": 1.44396298,
+              "rank": 7
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 1.44396298,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_watercycle"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.64908481,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.28766323,
+              "rank": 2
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.26281283,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.18397698,
+              "rank": 4
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.17900456,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.14930127,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.13504091,
+              "rank": 7
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.13299992,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_watercycle"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.03225806,
+              "rank": 2
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.03007689,
+              "rank": 3
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.0298574,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.01587302,
+              "rank": 5
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.01587302,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.015625,
+              "rank": 7
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.015625,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.01538462,
+              "rank": 9
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01538462,
+              "rank": 10
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.01492537,
+              "rank": 11
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.01470588,
+              "rank": 12
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_watercycle"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.44081929,
+              "rank": 2
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.25153403,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.09877651,
+              "rank": 4
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.08914162,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.03158657,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.00395476,
+              "rank": 7
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.0,
+              "rank": 8
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.0,
+              "rank": 9
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.0,
+              "rank": 10
+            },
+            {
+              "doc_id": "http_500",
+              "score": 0.0,
+              "rank": 11
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.0,
+              "rank": 12
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_watercycle"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.93844134,
+              "rank": 1
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.24227901,
+              "rank": 2
+            },
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.17511792,
+              "rank": 3
+            },
+            {
+              "doc_id": "http_404",
+              "score": 0.05932524,
+              "rank": 4
+            },
+            {
+              "doc_id": "http_400",
+              "score": 0.01731752,
+              "rank": 5
+            },
+            {
+              "doc_id": "http_403",
+              "score": 0.0169775,
+              "rank": 6
+            },
+            {
+              "doc_id": "http_401",
+              "score": 0.00160419,
+              "rank": 7
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.00112372,
+              "rank": 8
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.00106792,
+              "rank": 9
+            },
+            {
+              "doc_id": "sem_crypto",
+              "score": 0.00076778,
+              "rank": 10
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_watercycle"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.11288500018417835,
+          "dense": 364.42988699954003,
+          "rrf_fusion": 0.031250000931322575,
+          "weighted_fusion": 0.027362000197172165,
+          "rerank": 946.9424160011113
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.11288500018417835,
+          "dense": 364.42988699954003,
+          "rrf": 365.62038900051266,
+          "weighted": 365.6165009997785,
+          "rerank": 1312.6459119990468
+        },
+        "total_pipeline_latency_ms": 1312.6627739993855,
+        "retrieval_wall_ms": 365.58913899958134,
+        "candidate_overlap": 4,
+        "candidate_union": 12,
+        "rrf_rerank_pool_ids": [
+          "doc_watercycle",
+          "doc_volcano",
+          "http_404",
+          "name_alexander_hughes",
+          "http_400",
+          "sem_photo",
+          "http_401",
+          "sem_crypto",
+          "http_403",
+          "name_amelia_humphrey"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 2,
+            "rerank_rank": 3,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "http_404",
+            "rrf_rank": 3,
+            "rerank_rank": 4,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "name_alexander_hughes",
+            "rrf_rank": 4,
+            "rerank_rank": 9,
+            "rank_delta": -5
+          },
+          {
+            "doc_id": "http_400",
+            "rrf_rank": 5,
+            "rerank_rank": 5,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 6,
+            "rerank_rank": 2,
+            "rank_delta": 4
+          },
+          {
+            "doc_id": "http_401",
+            "rrf_rank": 7,
+            "rerank_rank": 7,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "sem_crypto",
+            "rrf_rank": 8,
+            "rerank_rank": 10,
+            "rank_delta": -2
+          },
+          {
+            "doc_id": "http_403",
+            "rrf_rank": 9,
+            "rerank_rank": 6,
+            "rank_delta": 3
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 10,
+            "rerank_rank": 8,
+            "rank_delta": 2
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "93e2a375-5380-9ed2-baaa-280c38d689f8",
+            "usage": {
+              "prompt_tokens": 55,
+              "total_tokens": 55
+            },
+            "elapsed_ms": 362.09,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 10,
+            "request_id": "2b286f9c-7e91-9441-ba2e-9ecd7a7b22ad",
+            "usage": {
+              "prompt_tokens": 1110,
+              "total_tokens": 1110
+            },
+            "elapsed_ms": 946.8,
+            "attempts": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_index": 12,
+      "query": "how are volcanoes formed from molten rock",
+      "category": "semantic",
+      "expected": [
+        "doc_volcano"
+      ],
+      "methods": {
+        "sparse": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 3.45569183,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 2.71549213,
+              "rank": 2
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 2.08626821,
+              "rank": 3
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_volcano"
+        },
+        "dense": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.70784921,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.37254031,
+              "rank": 2
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.22459609,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.15175434,
+              "rank": 4
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.14796799,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.14468829,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.13464504,
+              "rank": 7
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.11018343,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_volcano"
+        },
+        "rrf": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.03278689,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.03225806,
+              "rank": 2
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.03149802,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.01587302,
+              "rank": 4
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.01538462,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.01515152,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.01492537,
+              "rank": 7
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.01470588,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_volcano"
+        },
+        "weighted": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 2.0,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.89845007,
+              "rank": 2
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.1914325,
+              "rank": 3
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.06955544,
+              "rank": 4
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.06322021,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.0577327,
+              "rank": 6
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.04092858,
+              "rank": 7
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.0,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_volcano"
+        },
+        "rerank": {
+          "metrics": {
+            "recall@3": 1.0,
+            "hit@3": 1.0,
+            "mrr": 1.0,
+            "ndcg@3": 1.0
+          },
+          "ranked_docs": [
+            {
+              "doc_id": "doc_volcano",
+              "score": 0.93618666,
+              "rank": 1
+            },
+            {
+              "doc_id": "doc_watercycle",
+              "score": 0.18180948,
+              "rank": 2
+            },
+            {
+              "doc_id": "sem_readable",
+              "score": 0.00286164,
+              "rank": 3
+            },
+            {
+              "doc_id": "name_alexander_hughes",
+              "score": 0.0015519,
+              "rank": 4
+            },
+            {
+              "doc_id": "sem_photo",
+              "score": 0.00149592,
+              "rank": 5
+            },
+            {
+              "doc_id": "name_amelia_humphrey",
+              "score": 0.00122088,
+              "rank": 6
+            },
+            {
+              "doc_id": "sem_gc",
+              "score": 0.00114895,
+              "rank": 7
+            },
+            {
+              "doc_id": "xr_7006",
+              "score": 0.00042613,
+              "rank": 8
+            }
+          ],
+          "first_gold_rank": 1,
+          "top_doc": "doc_volcano"
+        }
+      },
+      "trace": {
+        "component_latency_ms": {
+          "sparse": 0.07777800131589174,
+          "dense": 306.3699610000476,
+          "rrf_fusion": 0.024385999888181686,
+          "weighted_fusion": 0.022353000938892365,
+          "rerank": 268.9127040002495
+        },
+        "estimated_method_latency_ms": {
+          "sparse": 0.07777800131589174,
+          "dense": 306.3699610000476,
+          "rrf": 307.6337230000645,
+          "weighted": 307.6316900011152,
+          "rerank": 576.6045270003378
+        },
+        "total_pipeline_latency_ms": 576.6191750001162,
+        "retrieval_wall_ms": 307.6093370001763,
+        "candidate_overlap": 3,
+        "candidate_union": 8,
+        "rrf_rerank_pool_ids": [
+          "doc_volcano",
+          "doc_watercycle",
+          "sem_gc",
+          "sem_photo",
+          "sem_readable",
+          "name_alexander_hughes",
+          "xr_7006",
+          "name_amelia_humphrey"
+        ],
+        "rank_changes": [
+          {
+            "doc_id": "doc_volcano",
+            "rrf_rank": 1,
+            "rerank_rank": 1,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "doc_watercycle",
+            "rrf_rank": 2,
+            "rerank_rank": 2,
+            "rank_delta": 0
+          },
+          {
+            "doc_id": "sem_gc",
+            "rrf_rank": 3,
+            "rerank_rank": 7,
+            "rank_delta": -4
+          },
+          {
+            "doc_id": "sem_photo",
+            "rrf_rank": 4,
+            "rerank_rank": 5,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "sem_readable",
+            "rrf_rank": 5,
+            "rerank_rank": 3,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "name_alexander_hughes",
+            "rrf_rank": 6,
+            "rerank_rank": 4,
+            "rank_delta": 2
+          },
+          {
+            "doc_id": "xr_7006",
+            "rrf_rank": 7,
+            "rerank_rank": 8,
+            "rank_delta": -1
+          },
+          {
+            "doc_id": "name_amelia_humphrey",
+            "rrf_rank": 8,
+            "rerank_rank": 6,
+            "rank_delta": 2
+          }
+        ],
+        "api_receipts_this_query": [
+          {
+            "stage": "embedding",
+            "model": "qwen3.7-text-embedding-flash",
+            "items": 1,
+            "request_id": "924c878a-0402-91e3-9d5a-2167703f9e84",
+            "usage": {
+              "prompt_tokens": 54,
+              "total_tokens": 54
+            },
+            "elapsed_ms": 303.98,
+            "attempts": 1
+          },
+          {
+            "stage": "rerank",
+            "model": "qwen3.7-text-rerank",
+            "items": 8,
+            "request_id": "745f8111-84ad-93bb-9b13-194805efd85a",
+            "usage": {
+              "prompt_tokens": 903,
+              "total_tokens": 903
+            },
+            "elapsed_ms": 268.77,
+            "attempts": 1
+          }
+        ]
+      }
+    }
+  ],
+  "eval_k": 3,
+  "evaluation_elapsed_ms": 9624.95
+}
