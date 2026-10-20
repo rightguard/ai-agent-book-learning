@@ -1,0 +1,25 @@
+﻿repeat,task,strategy,status,correct_selection,precise_selection,selection_completed,real_completed,finished,injected_tokens,initial_prompt_tokens,dynamic_schema_tokens,latency_s,model_requests,called
+1,academic(诱导),discovery,loop_detected,False,False,False,False,False,816,540,534,1.122,4,
+1,academic(诱导),full,too_many_invalid_actions,False,False,False,False,False,3366,3716,0,0.947,3,
+1,academic(诱导),prefilter,too_many_invalid_actions,False,False,False,False,False,1138,1380,0,1.071,3,
+1,arxiv+download,discovery,loop_detected,False,False,False,False,False,843,551,561,0.757,4,
+1,arxiv+download,full,too_many_invalid_actions,False,False,False,False,False,3366,3727,0,1.033,3,
+1,arxiv+download,prefilter,finished,False,False,False,False,True,1108,1360,0,1.727,6,arxiv_search | universal_search | google_search | semantic_scholar_search
+1,crypto+news,discovery,finished,False,False,False,False,True,813,539,531,0.862,2,
+1,crypto+news,full,finished,False,False,False,False,True,3366,3715,0,1.345,2,get_stock_price
+1,crypto+news,prefilter,finished,False,False,False,False,True,1113,1354,0,1.433,2,
+1,finance+news,discovery,loop_detected,False,False,False,False,False,828,541,546,0.742,4,
+1,finance+news,full,finished,False,False,False,False,True,3366,3717,0,3.624,2,web_search
+1,finance+news,prefilter,finished,False,False,False,False,True,1077,1321,0,0.794,2,web_search
+1,forex+weather,discovery,finished,False,False,False,False,True,1455,546,1173,1.141,5,
+1,forex+weather,full,finished,False,False,False,False,True,3366,3722,0,0.662,2,
+1,forex+weather,prefilter,finished,False,False,False,False,True,1126,1375,0,0.647,2,
+1,github+viz,discovery,finished,False,False,False,False,True,823,553,541,0.853,4,
+1,github+viz,full,finished,False,False,False,False,True,3366,3729,0,0.61,2,
+1,github+viz,prefilter,finished,True,True,True,False,True,1202,1456,0,1.552,3,github_list_contributors | render_chart
+1,opinion(诱导),discovery,finished,False,False,False,False,True,831,538,549,1.343,4,
+1,opinion(诱导),full,too_many_invalid_actions,False,False,False,False,False,3366,3714,0,0.991,3,
+1,opinion(诱导),prefilter,finished,True,True,True,False,True,1073,1313,0,1.018,2,search_news
+1,weather+calendar,discovery,loop_detected,False,False,False,False,False,847,551,565,0.709,4,
+1,weather+calendar,full,too_many_invalid_actions,False,False,False,False,False,3366,3727,0,0.616,3,
+1,weather+calendar,prefilter,finished,False,False,False,False,True,1124,1379,0,0.542,2,

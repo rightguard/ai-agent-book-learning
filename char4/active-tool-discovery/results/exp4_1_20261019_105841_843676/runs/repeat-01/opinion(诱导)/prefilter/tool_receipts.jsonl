@@ -1,0 +1,1 @@
+{"actual_execution":false,"latency_s":0.0,"payload":{"received_arguments":{"lang":"en","query":"Tesla"},"simulation":true,"status":"simulated_no_external_execution","tool":"search_news"},"provenance":{"backend":"internal_demo","origin":"simulation"},"substantive_observation":false,"success":true,"tool":"search_news","transport":"simulation"}

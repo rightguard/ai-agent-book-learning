@@ -1,0 +1,4 @@
+﻿strategy,runs,selection_evaluable,selection_correct,selection_precise,agent_finished,selection_completed,real_completed,context_overflow,schema_tokens_mean,schema_tokens_total,latency_mean_s,model_requests,discoveries,tool_calls,prompt_tokens_actual,completion_tokens_actual
+full,8,8,0,0,4,0,0,0,3366,26928,1.228,20,0,2,75544,548
+prefilter,8,8,2,2,7,2,0,0,1120.1,8961,1.098,22,0,8,33235,846
+discovery,8,8,0,0,4,0,0,0,907,7256,0.941,31,23,0,35422,650

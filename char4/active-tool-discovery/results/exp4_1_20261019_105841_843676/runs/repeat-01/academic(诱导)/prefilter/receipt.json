@@ -1,0 +1,279 @@
+{
+  "task": "academic(诱导)",
+  "strategy": "prefilter",
+  "model": "qwen3_0.6b",
+  "catalog_sha256": "42a17c5f8350ae2f332ef20dfc6c7a91034c74e57a76e00a8d746efdbec4fcca",
+  "prompt": "帮我了解一下最近'量子计算'方面有什么新的科研进展。",
+  "system_sha256": "df152b9b3cac755dd36c4eee30721e687ecad6ce6297c74c61b4701a8892dda9",
+  "initial_prompt_tokens": 1380,
+  "initial_schema_tokens": 1138,
+  "token_measure": "local_model_chat_template",
+  "selected_initial": [
+    "semantic_scholar_search",
+    "arxiv_search",
+    "google_search",
+    "universal_search",
+    "ask_knowledge_base",
+    "bing_search",
+    "calculator",
+    "code_interpreter",
+    "convert_currency",
+    "create_calendar_event"
+  ],
+  "discoveries": [],
+  "called": [],
+  "receipts": [],
+  "events": [
+    {
+      "turn": 1,
+      "kind": "invalid_or_failed_model_action",
+      "error": "invalid action kind: google_search",
+      "response": "```json\n{\"action\": \"google_search\", \"query\": \"量子计算 最近科研进展\"}\n```",
+      "request_messages_sha256": "1dcf9d317d01b047caf49801562662d8de9ec404c3909c911513b3e7fde605b6"
+    },
+    {
+      "turn": 2,
+      "kind": "invalid_or_failed_model_action",
+      "error": "invalid action kind: google_search",
+      "response": "```json\n{\"action\": \"google_search\", \"query\": \"量子计算 最近科研进展\"}\n```",
+      "request_messages_sha256": "74b1ad03ffa459e2b733435041a4592f480aa2253731ab7d08bc09d7805f20e0"
+    },
+    {
+      "turn": 3,
+      "kind": "invalid_or_failed_model_action",
+      "error": "invalid action kind: google_search",
+      "response": "```json\n{\"action\": \"google_search\", \"query\": \"量子计算 最近科研进展\"}\n```",
+      "request_messages_sha256": "b2ec6abc7c4adf803e199231afe07208c3e5bb66a8979321760d01ffdf3a9f72"
+    }
+  ],
+  "errors": [
+    "turn 1: ValueError: invalid action kind: google_search",
+    "turn 2: ValueError: invalid action kind: google_search",
+    "turn 3: ValueError: invalid action kind: google_search"
+  ],
+  "latency_s": 1.071,
+  "finished": false,
+  "answer": "",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 4275,
+    "total_tokens": 4344
+  },
+  "model_requests": 3,
+  "actual_tool_backend": "simulation",
+  "status": "too_many_invalid_actions",
+  "injected_tokens": 1138,
+  "dynamic_schema_tokens": 0,
+  "schema_count_exposed": 10,
+  "grade": {
+    "correct_selection": false,
+    "precise_selection": false,
+    "slot_coverage": 0.0,
+    "matched_slots": [
+      []
+    ],
+    "missed_slots": [
+      [
+        "arxiv_search",
+        "semantic_scholar_search",
+        "search_pubmed"
+      ]
+    ],
+    "generic_tool_usage": []
+  },
+  "artifacts": {
+    "pdfs": [],
+    "download_count": 0,
+    "svg_path": null,
+    "svg_bytes": 0,
+    "svg_header": false,
+    "svg_sha256": null
+  },
+  "real_completed": false,
+  "selection_completed": false,
+  "transcript_sha256": "dcb41efd3bcad43dcf92d8ecf4f8479d182a2cea7e0cf6809d2f8b55da2bfe5c",
+  "history_receipt": {
+    "event_count": 8,
+    "events": [
+      {
+        "sequence": 0,
+        "role": "system",
+        "event": "initial_system_prompt",
+        "turn": 0,
+        "content_sha256": "df152b9b3cac755dd36c4eee30721e687ecad6ce6297c74c61b4701a8892dda9",
+        "content_chars": 5495,
+        "content_tokens": 1291,
+        "available_tools": [
+          "arxiv_search",
+          "ask_knowledge_base",
+          "bing_search",
+          "calculator",
+          "code_interpreter",
+          "convert_currency",
+          "create_calendar_event",
+          "google_search",
+          "semantic_scholar_search",
+          "universal_search"
+        ],
+        "chain_sha256": "e15d2f13c956d58bdb895af2380f650a9654b7486b2d9a667aa536b1683182ae"
+      },
+      {
+        "sequence": 1,
+        "role": "user",
+        "event": "task_prompt",
+        "turn": 0,
+        "content_sha256": "9529a1c9cd5a25c0992716a9e2e861bfbba6a08b3bb990eeef9ab973ac2ec32f",
+        "content_chars": 261,
+        "content_tokens": 72,
+        "available_tools": [
+          "arxiv_search",
+          "ask_knowledge_base",
+          "bing_search",
+          "calculator",
+          "code_interpreter",
+          "convert_currency",
+          "create_calendar_event",
+          "google_search",
+          "semantic_scholar_search",
+          "universal_search"
+        ],
+        "chain_sha256": "1604ca01302a4161159b9972f9403e77df727e4ea73f9fbbcb1fc134d1582a67"
+      },
+      {
+        "sequence": 2,
+        "role": "assistant",
+        "event": "invalid_model_response",
+        "turn": 1,
+        "content_sha256": "53b3453bbfd88557a4650fc82a241a0aeb4ca2ae13e78521af07e61f9eb37195",
+        "content_chars": 63,
+        "content_tokens": 22,
+        "available_tools": [
+          "arxiv_search",
+          "ask_knowledge_base",
+          "bing_search",
+          "calculator",
+          "code_interpreter",
+          "convert_currency",
+          "create_calendar_event",
+          "google_search",
+          "semantic_scholar_search",
+          "universal_search"
+        ],
+        "chain_sha256": "45406a1e55e136898e4d228711296264552ac1b3b282cbfd8c6f8b153433d498"
+      },
+      {
+        "sequence": 3,
+        "role": "user",
+        "event": "format_correction",
+        "turn": 1,
+        "content_sha256": "1b8e7afcb9e1c74744a4a99fc920c20eadb54c73eeaf526d6c61e59c874a0614",
+        "content_chars": 64,
+        "content_tokens": 13,
+        "available_tools": [
+          "arxiv_search",
+          "ask_knowledge_base",
+          "bing_search",
+          "calculator",
+          "code_interpreter",
+          "convert_currency",
+          "create_calendar_event",
+          "google_search",
+          "semantic_scholar_search",
+          "universal_search"
+        ],
+        "chain_sha256": "bacf5a554f1c0c3e29c3e1bd4835eafb3a5a801c849a6778ed1f6f83cdc59ff3"
+      },
+      {
+        "sequence": 4,
+        "role": "assistant",
+        "event": "invalid_model_response",
+        "turn": 2,
+        "content_sha256": "53b3453bbfd88557a4650fc82a241a0aeb4ca2ae13e78521af07e61f9eb37195",
+        "content_chars": 63,
+        "content_tokens": 22,
+        "available_tools": [
+          "arxiv_search",
+          "ask_knowledge_base",
+          "bing_search",
+          "calculator",
+          "code_interpreter",
+          "convert_currency",
+          "create_calendar_event",
+          "google_search",
+          "semantic_scholar_search",
+          "universal_search"
+        ],
+        "chain_sha256": "810204cae1332eedacd74be8604f4870cb1742c2f24207d06c059506f03cd252"
+      },
+      {
+        "sequence": 5,
+        "role": "user",
+        "event": "format_correction",
+        "turn": 2,
+        "content_sha256": "1b8e7afcb9e1c74744a4a99fc920c20eadb54c73eeaf526d6c61e59c874a0614",
+        "content_chars": 64,
+        "content_tokens": 13,
+        "available_tools": [
+          "arxiv_search",
+          "ask_knowledge_base",
+          "bing_search",
+          "calculator",
+          "code_interpreter",
+          "convert_currency",
+          "create_calendar_event",
+          "google_search",
+          "semantic_scholar_search",
+          "universal_search"
+        ],
+        "chain_sha256": "9598b87ada9c3296d0cc3d9262ce03a3a3679fa53cf4ec39c1a5907c3c463e1a"
+      },
+      {
+        "sequence": 6,
+        "role": "assistant",
+        "event": "invalid_model_response",
+        "turn": 3,
+        "content_sha256": "53b3453bbfd88557a4650fc82a241a0aeb4ca2ae13e78521af07e61f9eb37195",
+        "content_chars": 63,
+        "content_tokens": 22,
+        "available_tools": [
+          "arxiv_search",
+          "ask_knowledge_base",
+          "bing_search",
+          "calculator",
+          "code_interpreter",
+          "convert_currency",
+          "create_calendar_event",
+          "google_search",
+          "semantic_scholar_search",
+          "universal_search"
+        ],
+        "chain_sha256": "09fe0945d585fce49377ac516aed0b746e3be1f710e3e666cecc82e8e9e14734"
+      },
+      {
+        "sequence": 7,
+        "role": "user",
+        "event": "format_correction",
+        "turn": 3,
+        "content_sha256": "1b8e7afcb9e1c74744a4a99fc920c20eadb54c73eeaf526d6c61e59c874a0614",
+        "content_chars": 64,
+        "content_tokens": 13,
+        "available_tools": [
+          "arxiv_search",
+          "ask_knowledge_base",
+          "bing_search",
+          "calculator",
+          "code_interpreter",
+          "convert_currency",
+          "create_calendar_event",
+          "google_search",
+          "semantic_scholar_search",
+          "universal_search"
+        ],
+        "chain_sha256": "f0c87ab884af5ee3a205292de9fb097232ef824afd0536a491a3f96353bd0189"
+      }
+    ],
+    "final_chain_sha256": "f0c87ab884af5ee3a205292de9fb097232ef824afd0536a491a3f96353bd0189"
+  },
+  "repeat": 1,
+  "run_fingerprint": "af23f09040a115f1576559aec511715ed5ce510cf00259066ebe4486e9b8a245"
+}

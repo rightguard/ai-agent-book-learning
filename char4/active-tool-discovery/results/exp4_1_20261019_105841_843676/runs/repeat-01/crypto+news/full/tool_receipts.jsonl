@@ -1,0 +1,1 @@
+{"actual_execution":false,"latency_s":0.0,"payload":{"received_arguments":{"symbol":"ETH"},"simulation":true,"status":"simulated_no_external_execution","tool":"get_stock_price"},"provenance":{"backend":"internal_demo","origin":"simulation"},"substantive_observation":false,"success":true,"tool":"get_stock_price","transport":"simulation"}
