@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""Chapter 5 mini lab: Code-for-Logic combined with a constrained Coding Agent.
-
-Single file; Python 3.10+; OpenAI-compatible local vLLM endpoint.
-No live source file outside the generated results directory is modified.
-"""
 from __future__ import annotations
 
 import argparse
@@ -22,10 +16,10 @@ from pathlib import Path
 from typing import Any
 
 
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 EXPECTED_TESTS = 4
-MAX_HISTORY_TURNS = 6
-MAX_FEEDBACK_CHARS = 1800
+MAX_HISTORY_TURNS = 4
+MAX_FEEDBACK_CHARS = 1200
 NAMES = ("A", "B", "C")
 GOLD = {"A": "knave", "B": "knight", "C": "knight"}
 DEFAULT_BASE_URL = "http://127.0.0.1:8000/v1"
@@ -119,28 +113,25 @@ PURE_SYSTEM = (
 )
 
 AGENT_SYSTEM = '''\
-You are a SMALL Coding Agent working in a disposable Python exercise project.
-The current solver.py has ONE deliberately incorrect logical expression.
-Your task is to use evidence to fix the constraint and pass the tests.
+You are a small Python Coding Agent. Fix exactly ONE incorrect Boolean rule.
+Use tools by outputting EXACTLY ONE JSON object per response, no Markdown:
+{"tool":"read_file","arguments":{"path":"solver.py"}}
+{"tool":"edit_file","arguments":{"path":"solver.py","new_expr":"PYTHON_BOOLEAN_EXPRESSION"}}
+{"tool":"run_tests","arguments":{}}
+{"tool":"finish","arguments":{"answer":"short summary"}}
 
-Tools are exposed through this text protocol. Every response must contain
-EXACTLY one JSON object (no markdown or explanation outside JSON):
-  {"tool":"read_file","arguments":{"path":"solver.py"}}
-  {"tool":"edit_file","arguments":{"path":"solver.py","new_expr":"BOOLEAN EXPRESSION"}}
-  {"tool":"run_tests","arguments":{}}
-  {"tool":"finish","arguments":{"answer":"brief summary"}}
+Workflow: READ solver.py -> EDIT its c_says_true expression -> TEST -> FINISH.
+Optionally TEST once after reading to diagnose the initial failure.
+When tests fail: EDIT a DIFFERENT logical expression before testing again.
+The harness rejects edits that only change parentheses or otherwise preserve
+exactly the same Boolean truth table. Re-running tests on unchanged code is
+also rejected. Read the test feedback carefully and correct the rule itself.
 
-Available tools: read_file, edit_file, run_tests, finish.
-You may read solver.py and test_solver.py; you may only edit the expression
-assigned to c_says_true in solver.py. It uses Python variables a, b and c,
-where True is knight and False is knave. You cannot modify tests or any
-other code. Make only the smallest necessary edit. Do not invent test results.
-
-Required workflow: read solver.py -> edit_file -> run_tests -> finish.
-If a test fails, read its feedback and revise the expression. At most one
-JSON action per response. Do not repeatedly read/discover tools or finish
-before a successful test run. Test success must be observed from the tool.
+Only the RIGHT-HAND SIDE of c_says_true can change. The variables a,b,c are
+Booleans: True means knight, False means knave. Do not edit tests or other code.
+Never claim tests passed without receiving a passing tool result.
 '''
+
 
 
 def sha256(data: bytes) -> str:
@@ -177,6 +168,61 @@ def validate_expr(expr: str) -> str:
         if isinstance(node, ast.BinOp) and not isinstance(node.op, ast.BitXor):
             raise ValueError("only Boolean XOR (^) is allowed as a binary operator")
     return expr
+
+
+def truth_signature(expr: str) -> tuple[bool, ...]:
+    """Compare candidate patches by actual semantics, not string formatting."""
+    from itertools import product
+    tree = ast.parse(validate_expr(expr), mode="eval")
+    code = compile(tree, "<safe-boolean-expression>", "eval")
+    result = []
+    for a, b, c in product((False, True), repeat=3):
+        value = eval(code, {"__builtins__": {}}, {"a": a, "b": b, "c": c})
+        if type(value) is not bool:
+            raise ValueError("Boolean expression must evaluate to bool")
+        result.append(value)
+    return tuple(result)
+
+
+def test_feedback(report: dict[str, Any]) -> dict[str, Any]:
+    """Send the small model useful evidence, not repeated multi-KB tracebacks.
+
+    The full unittest output remains in the JSONL trace for auditing.
+    """
+    if "error" in report:
+        return {"ok": False, "error": report["error"], "next": "edit_file"}
+    if report.get("ok"):
+        return {"ok": True, "tests_passed": report.get("tests_passed"),
+                "tests_run": report.get("tests_run"), "next": "finish"}
+    output = report.get("output", "")
+    failed = re.findall(r"^FAIL: (\w+)", output, re.MULTILINE)
+    errors = re.findall(r"^ERROR: (\w+)", output, re.MULTILINE)
+    # Report one concrete counterexample, not the full Python stack trace.
+    example = re.search(r"AssertionError: (True|False) != (True|False) : \((True|False), (True|False), (True|False)\)", output)
+    counterexample = None
+    if example:
+        actual, expected, a, b, c = example.groups()
+        counterexample = {"a": a == "True", "b": b == "True", "c": c == "True",
+                          "actual": actual == "True", "expected": expected == "True"}
+    return {"ok": False, "tests_passed": report.get("tests_passed"),
+            "tests_run": report.get("tests_run"), "failed_tests": failed,
+            "error_tests": errors, "counterexample": counterexample,
+            "next": "edit_file", "reason": "logic_not_fixed"}
+
+
+def compact_feedback(action: dict[str, Any] | None,
+                     observation: dict[str, Any]) -> dict[str, Any]:
+    """Return actionable, bounded feedback to the model; full data goes to trace."""
+    if action and action["tool"] == "run_tests" and "tests_run" in observation:
+        return test_feedback(observation)
+    if action and action["tool"] == "read_file" and observation.get("ok"):
+        return {"ok": True, "path": observation.get("path"),
+                "content": observation.get("content", "")}
+    if action and action["tool"] == "edit_file" and observation.get("ok"):
+        return {"ok": True, "old_expr": observation.get("old_expr"),
+                "new_expr": observation.get("new_expr"), "next": "run_tests"}
+    return {key: observation[key] for key in ("ok", "error", "hint", "next", "current_expr")
+            if key in observation}
 
 
 def render_solver(expression: str) -> str:
@@ -310,8 +356,9 @@ def parse_pure_answer(content: str) -> Any:
 
 def new_agent_state() -> dict[str, Any]:
     return {"edit_count": 0, "tests_count": 0, "tests_after_last_edit": False,
-            "last_test": None, "finished": False, "read_solver_count": 0,
-            "read_tests_count": 0}
+            "last_test": None, "last_tested_expr": None, "finished": False,
+            "read_solver_count": 0, "read_tests_count": 0,
+            "rejected_noops": 0, "blocked_retests": 0}
 
 
 def tool_observation(workspace: Path, action: dict[str, Any], state: dict[str, Any]) -> dict[str, Any]:
@@ -346,12 +393,17 @@ def tool_observation(workspace: Path, action: dict[str, Any], state: dict[str, A
             # Keep valid grouping parentheses intact; blindly dropping the
             # first and last parenthesis breaks expressions like (a != b) or (not c).
             new = validate_expr(new)
-            if before == new:
-                return {"ok": False, "error": "no change; pick a different expression", "expression": before}
+            if truth_signature(before) == truth_signature(new):
+                state["rejected_noops"] = state.get("rejected_noops", 0) + 1
+                return {"ok": False, "error": "semantic_noop: the new expression has "
+                        "exactly the same truth table as the old one. "
+                        "Parentheses or equivalent rewrites do not fix the bug.",
+                        "current_expr": before, "next": "edit_file"}
             (workspace / "solver.py").write_text(render_solver(new), encoding="utf-8")
             state["edit_count"] += 1
             state["tests_after_last_edit"] = False
             state["last_test"] = None
+            state["last_tested_expr"] = None
             diff = "".join(difflib.unified_diff(
                 render_solver(before).splitlines(keepends=True),
                 render_solver(new).splitlines(keepends=True),
@@ -362,9 +414,24 @@ def tool_observation(workspace: Path, action: dict[str, Any], state: dict[str, A
             return {"ok": False, "error": type(exc).__name__ + ": " + str(exc)}
 
     if name == "run_tests":
+        if state.get("read_solver_count", 0) < 1:
+            return {"ok": False, "error": "read_first: call read_file solver.py before testing",
+                    "next": "read_file"}
+        try:
+            current = expression_from_file(workspace)
+        except Exception as exc:
+            return {"ok": False, "error": "file_integrity_failure: " + str(exc),
+                    "next": "STOP"}
+        if state.get("last_tested_expr") == current:
+            state["blocked_retests"] = state.get("blocked_retests", 0) + 1
+            return {"ok": False, "error": "unchanged_code_retest_blocked: "
+                    "the same expression was already tested. Fix the code before retesting "
+                    "(or call finish if tests passed).", "current_expr": current,
+                    "next": "finish" if state.get("tests_after_last_edit") else "edit_file"}
         report = run_tests(workspace)
         state["tests_count"] += 1
         state["last_test"] = report
+        state["last_tested_expr"] = current
         state["tests_after_last_edit"] = bool(report["ok"])
         return report
 
@@ -502,6 +569,7 @@ def run_agent(chat: Any, workspace: Path, max_steps: int = 10, verbose: bool = T
     repeat_signature = None
     repeat_count = 0
     runtime_error = None
+    stop_reason = "max_steps_exhausted"
     try:
         from tqdm import tqdm
         iterator = tqdm(range(1, max_steps + 1), desc="Coding Agent", unit="step", disable=not verbose)
@@ -513,6 +581,7 @@ def run_agent(chat: Any, workspace: Path, max_steps: int = 10, verbose: bool = T
         except Exception as exc:
             runtime_error = type(exc).__name__ + ": " + str(exc)
             trace.append({"turn": step, "error_type": "model_runtime_failure", "error": runtime_error})
+            stop_reason = "model_runtime_failure"
             break
         raw = str(response.get("content") or "")
         try:
@@ -542,28 +611,32 @@ def run_agent(chat: Any, workspace: Path, max_steps: int = 10, verbose: bool = T
             else:
                 print(message)
         messages.append({"role": "assistant", "content": raw})
-        hint = (
-            "Next action: read_file solver.py to inspect the code."
-            if state["read_solver_count"] == 0
-            else "Next action: edit_file to repair the incorrect c_says_true expression."
-            if state["edit_count"] == 0
-            else "Tests failed. Next action: edit_file with a revised expression, then run_tests again."
-            if state["last_test"] is not None and not state["last_test"].get("ok")
-            else "Next action: run_tests to verify your last edit."
-            if not state["tests_after_last_edit"]
-            else "All tests have passed. Next action: finish."
-        )
-        # Keep a bounded history for the 8K-token local model while preserving
-        # the complete unabridged observation and model response in the trace.
-        feedback = "Tool feedback: " + json.dumps(observation, ensure_ascii=False)[:MAX_FEEDBACK_CHARS]
+        if state["read_solver_count"] == 0:
+            hint = "REQUIRED NEXT ACTION: read_file solver.py."
+        elif state["edit_count"] == 0 or (state["last_test"] is not None
+                                               and not state["last_test"].get("ok")):
+            hint = "REQUIRED NEXT ACTION: edit_file with a genuinely different Boolean rule."
+        elif not state["tests_after_last_edit"]:
+            hint = "REQUIRED NEXT ACTION: run_tests to verify the last code edit."
+        else:
+            hint = "REQUIRED NEXT ACTION: finish. All four tests passed."
+        # Prefer a specific tool rejection over the generic workflow hint.
+        if observation.get("next"):
+            hint = "REQUIRED NEXT ACTION: " + observation["next"] + ". " + hint
+        compact = compact_feedback(action, observation)
+        feedback = "Tool feedback: " + json.dumps(compact, ensure_ascii=False)[:MAX_FEEDBACK_CHARS]
         messages.append({"role": "user", "content": feedback +
                          "\n[STATE] reads=%d edits=%d tests=%d passing=%s\n" % (
                              state["read_solver_count"], state["edit_count"],
                              state["tests_count"], state["tests_after_last_edit"]) +
-                         hint + "\nReturn exactly one JSON action."})
+                         hint + "\nReturn exactly ONE JSON action."})
         if len(messages) > 2 + 2 * MAX_HISTORY_TURNS:
             messages = messages[:2] + messages[-2 * MAX_HISTORY_TURNS:]
-        if observation.get("error") == "repeated_same_action_three_times" or state["finished"]:
+        if observation.get("error") == "repeated_same_action_three_times":
+            stop_reason = "repeated_identical_actions"
+            break
+        if state["finished"]:
+            stop_reason = "completed"
             break
     check = run_tests(workspace)
     try:
@@ -583,6 +656,9 @@ def run_agent(chat: Any, workspace: Path, max_steps: int = 10, verbose: bool = T
             "tests_passed": check.get("tests_passed"), "final_test": check,
             "initial_expression": START_EXPR, "final_expression": final_expr,
             "runtime_error": runtime_error, "source_error": source_error,
+            "stop_reason": stop_reason,
+            "rejected_noops": state["rejected_noops"],
+            "blocked_retests": state["blocked_retests"],
             "elapsed_s": round(time.perf_counter() - started, 3),
             "usage": aggregate_usage(trace), "trace": trace, "expected": GOLD}
 
@@ -634,6 +710,26 @@ def self_test() -> int:
         state = new_agent_state()
         edit = tool_observation(ws, {"tool": "edit_file", "arguments": {"new_expr": "a != b"}}, state)
         check("editing without reading is rejected", not edit["ok"] and state["edit_count"] == 0)
+    with tempfile.TemporaryDirectory(prefix="exp5_semantic_noop_") as tmp:
+        ws = Path(tmp)
+        init_workspace(ws)
+        state = new_agent_state()
+        tool_observation(ws, {"tool": "read_file", "arguments": {}}, state)
+        noop = tool_observation(ws, {"tool": "edit_file", "arguments": {"new_expr": "(a == b)"}}, state)
+        check("parentheses-only edit rejected", not noop["ok"] and state["edit_count"] == 0)
+        check("parentheses-only edit leaves source untouched", expression_from_file(ws) == START_EXPR)
+        noop2 = tool_observation(ws, {"tool": "edit_file", "arguments": {"new_expr": "not (a != b)"}}, state)
+        check("semantically equivalent rewrite rejected", not noop2["ok"])
+        baseline = tool_observation(ws, {"tool": "run_tests", "arguments": {}}, state)
+        check("diagnostic test after read allowed", not baseline["ok"] and baseline["tests_run"] == EXPECTED_TESTS)
+        tool_observation(ws, {"tool": "edit_file", "arguments": {"new_expr": "a and b"}}, state)
+        first = tool_observation(ws, {"tool": "run_tests", "arguments": {}}, state)
+        second = tool_observation(ws, {"tool": "run_tests", "arguments": {}}, state)
+        check("unchanged code cannot be retested", not first["ok"] and not second["ok"] and
+              state["tests_count"] == 2 and state["blocked_retests"] == 1)
+        check("test feedback compact and actionable", "output" not in compact_feedback(
+              {"tool": "run_tests", "arguments": {}}, first) and
+              compact_feedback({"tool": "run_tests", "arguments": {}}, first)["next"] == "edit_file")
     check("pure answer parser", parse_pure_answer('{"A":"knave","B":"knight","C":"knight"}') == GOLD)
     check("action JSON recovery", parse_action('```json\n{"tool":"run_tests","arguments":{}}\n```')["tool"] == "run_tests")
     passed = sum(value for _, value in checks)
@@ -747,6 +843,9 @@ def display_summary(out: Path, results: dict[str, Any], model: str,
                       "- Source edits: %d" % agent["edits"],
                       "- Model-requested test runs: %d" % agent["tests_invoked_by_agent"],
                       "- Final tests passed: %s/%s" % (agent["tests_passed"], EXPECTED_TESTS),
+                      "- Semantic no-op edits rejected: %d" % agent.get("rejected_noops", 0),
+                      "- Redundant test calls blocked: %d" % agent.get("blocked_retests", 0),
+                      "- Stop reason: `%s`" % agent.get("stop_reason", "unknown"),
                       "- Changed constraint: `%s` -> `%s`" % (agent["initial_expression"], agent["final_expression"]),
                       "- Final acceptance: %s" % ("PASS" if agent["complete"] else "FAIL"),
                       "", "## Tool trajectory", ""])
@@ -850,6 +949,9 @@ def main() -> int:
             print("[%-4s] agent: reads=%s edits=%s test_runs=%s tests_passed=%s" %
                   ("PASS" if agent["complete"] else "FAIL", agent["read_solver_count"],
                    agent["edits"], agent["tests_invoked_by_agent"], agent["tests_passed"]))
+            print("Agent stop: %s | rejected semantic no-ops: %d | blocked retests: %d" % (
+                agent.get("stop_reason", "unknown"), agent.get("rejected_noops", 0),
+                agent.get("blocked_retests", 0)))
             if agent.get("runtime_error"):
                 result["error"] = "vLLM runtime failure: " + agent["runtime_error"]
     except Exception as exc:
