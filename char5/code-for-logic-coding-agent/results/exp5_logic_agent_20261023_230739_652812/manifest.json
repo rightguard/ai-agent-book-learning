@@ -1,0 +1,38 @@
+{
+  "experiment": "chapter5_custom_logic_coding_agent",
+  "version": "1.1.0",
+  "files": {
+    "results.json": {
+      "sha256": "676603cb270f422f5af7219b1e817c7f42f5538bdb14740b71686e55eb767ba1",
+      "bytes": 20642
+    },
+    "summary.md": {
+      "sha256": "ec960187ab45fdc1effdf6021555be1d80cad9c98793a3d175581e58364d4b0f",
+      "bytes": 1678
+    },
+    "agent_trace.jsonl": {
+      "sha256": "a9e449f56b870372994fefca6721eb4f98a8fb8d4f7390fbffa992f6268a4ed9",
+      "bytes": 11180
+    },
+    "changes.diff": {
+      "sha256": "30872421ab4693000f21b9cf9aaf5ebd0ca63a2ec1a8134c0d71e8c23892a3bc",
+      "bytes": 427
+    },
+    "solver_before.py": {
+      "sha256": "5b3e1b9f84d992c09b8ea5a0bca4928c811e83059459f51dd000fb14608d6eb5",
+      "bytes": 915
+    },
+    "solver_after.py": {
+      "sha256": "9c756a2a79bc5603e68354da1ecdc5e33893d6a92cd523586e39b47faa3a8ecb",
+      "bytes": 917
+    },
+    "workspace/solver.py": {
+      "sha256": "9c756a2a79bc5603e68354da1ecdc5e33893d6a92cd523586e39b47faa3a8ecb",
+      "bytes": 917
+    },
+    "workspace/test_solver.py": {
+      "sha256": "2bcd482e4cd07eeafa92d431911ea126a1136c09c1025a58e297f67982ac4e24",
+      "bytes": 1727
+    }
+  }
+}

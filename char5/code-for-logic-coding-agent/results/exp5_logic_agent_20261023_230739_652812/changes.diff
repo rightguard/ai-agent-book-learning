@@ -1,0 +1,11 @@
+--- before/solver.py
++++ after/solver.py
+@@ -13,7 +13,7 @@
+         b_says_true = c
+         # C says: "A and B have different identities."
+         # Repair this Boolean expression and verify the behavior.
+-        c_says_true = (a == b)
++        c_says_true = ((a == b))
+         if a == a_says_true and b == b_says_true and c == c_says_true:
+             solutions.append({
+                 "A": "knight" if a else "knave",
