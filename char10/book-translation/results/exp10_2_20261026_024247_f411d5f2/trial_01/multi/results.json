@@ -1,0 +1,417 @@
+{
+  "status": "PASS",
+  "runtime_error": null,
+  "wall_time_s": 14.7095,
+  "structure_gate_pass": true,
+  "protocol_gate_pass": true,
+  "protocol_errors": [],
+  "meter": {
+    "api_calls": 5,
+    "attempted_calls": 5,
+    "request_errors": 0,
+    "input_tokens": 2453,
+    "output_tokens": 1044,
+    "total_tokens": 3497,
+    "observed_input_tokens": 2453,
+    "observed_output_tokens": 1044,
+    "cached_input_tokens": 0,
+    "cached_usage_calls": 5,
+    "calls_missing_usage": 0,
+    "missing_input_calls": 0,
+    "missing_output_calls": 0,
+    "input_context_peak_tokens": 555,
+    "manager_context_peak_tokens": 338,
+    "call_latency_p50_s": 3.0161,
+    "call_latency_p95_s": 3.6643,
+    "call_latencies_s": [
+      1.3544,
+      3.723,
+      3.0161,
+      2.964,
+      3.4297
+    ],
+    "calls_by_role": {
+      "manager_plan": 1,
+      "translation": 4
+    },
+    "by_role": {
+      "manager_plan": {
+        "api_calls": 1,
+        "input_tokens": 338,
+        "output_tokens": 24,
+        "total_tokens": 362,
+        "call_latency_p50_s": null,
+        "call_latency_p95_s": null,
+        "call_latencies_s": [
+          1.3544
+        ]
+      },
+      "translation": {
+        "api_calls": 4,
+        "input_tokens": 2115,
+        "output_tokens": 1020,
+        "total_tokens": 3135,
+        "call_latency_p50_s": null,
+        "call_latency_p95_s": null,
+        "call_latencies_s": [
+          3.723,
+          3.0161,
+          2.964,
+          3.4297
+        ]
+      }
+    }
+  },
+  "execution": {
+    "mode": "independent_subagent_contexts",
+    "plan": {
+      "valid": true,
+      "order": [
+        "chapter1.md",
+        "chapter2.md",
+        "chapter3.md",
+        "chapter4.md"
+      ]
+    },
+    "reworks": 0,
+    "reviews": 0,
+    "manager_decisions": 0,
+    "global_reviews": 0,
+    "invalid_global_reviews": 0,
+    "review_issues_initial": 0,
+    "review_issues_final": 0,
+    "review_resolved": true,
+    "unresolved_review_files": [],
+    "invalid_review_reports": 0,
+    "invalid_manager_decisions": 0
+  },
+  "evaluation": {
+    "output_files": 4,
+    "expected_files": 4,
+    "deterministic_structure_pass": true,
+    "term_doc_hit_rate_proxy": 0.9667,
+    "term_doc_hits": 29,
+    "term_doc_applicable": 30,
+    "avg_paragraph_coverage_proxy": 1.0,
+    "possibly_missing_number_occurrences": 4,
+    "per_document": {
+      "chapter1.md": {
+        "checks": {
+          "fenced_code_exact": true,
+          "heading_levels_exact": true,
+          "link_targets_exact": true,
+          "image_targets_exact": true,
+          "reference_targets_exact": true,
+          "inline_code_exact": true,
+          "has_chinese_narrative": true
+        },
+        "structural_pass": true,
+        "source_paragraph_count": 4,
+        "target_paragraph_count": 4,
+        "paragraph_coverage_proxy": 1.0,
+        "possibly_missing_numbers": [
+          "1"
+        ],
+        "glossary_term_doc_count": 5,
+        "glossary_term_doc_hits": 5,
+        "glossary_adherence_proxy": 1.0,
+        "term_details": {
+          "token": {
+            "expected_zh": "词元",
+            "source_occurrences": 5,
+            "observed": true
+          },
+          "embedding": {
+            "expected_zh": "嵌入向量",
+            "source_occurrences": 2,
+            "observed": true
+          },
+          "prompt": {
+            "expected_zh": "提示词",
+            "source_occurrences": 6,
+            "observed": true
+          },
+          "inference": {
+            "expected_zh": "推理",
+            "source_occurrences": 4,
+            "observed": true
+          },
+          "latency": {
+            "expected_zh": "时延",
+            "source_occurrences": 3,
+            "observed": true
+          }
+        },
+        "warning": "术语检测、段落数和数字比对是启发式代理指标，不能证明翻译准确或完整。",
+        "exists": true,
+        "translated_sha256": "4936af6576dde40cd0efe20f006107911940478c7fae88778de225f65cb54867"
+      },
+      "chapter2.md": {
+        "checks": {
+          "fenced_code_exact": true,
+          "heading_levels_exact": true,
+          "link_targets_exact": true,
+          "image_targets_exact": true,
+          "reference_targets_exact": true,
+          "inline_code_exact": true,
+          "has_chinese_narrative": true
+        },
+        "structural_pass": true,
+        "source_paragraph_count": 3,
+        "target_paragraph_count": 3,
+        "paragraph_coverage_proxy": 1.0,
+        "possibly_missing_numbers": [
+          "2"
+        ],
+        "glossary_term_doc_count": 7,
+        "glossary_term_doc_hits": 7,
+        "glossary_adherence_proxy": 1.0,
+        "term_details": {
+          "token": {
+            "expected_zh": "词元",
+            "source_occurrences": 7,
+            "observed": true
+          },
+          "embedding": {
+            "expected_zh": "嵌入向量",
+            "source_occurrences": 1,
+            "observed": true
+          },
+          "prompt": {
+            "expected_zh": "提示词",
+            "source_occurrences": 2,
+            "observed": true
+          },
+          "inference": {
+            "expected_zh": "推理",
+            "source_occurrences": 1,
+            "observed": true
+          },
+          "latency": {
+            "expected_zh": "时延",
+            "source_occurrences": 1,
+            "observed": true
+          },
+          "attention": {
+            "expected_zh": "注意力",
+            "source_occurrences": 5,
+            "observed": true
+          },
+          "transformer": {
+            "expected_zh": "Transformer",
+            "source_occurrences": 4,
+            "observed": true
+          }
+        },
+        "warning": "术语检测、段落数和数字比对是启发式代理指标，不能证明翻译准确或完整。",
+        "exists": true,
+        "translated_sha256": "d1cd83162a2d0971a3b5da972d724d33a5880b4ce69153e7d5b28eb62ac4d3d4"
+      },
+      "chapter3.md": {
+        "checks": {
+          "fenced_code_exact": true,
+          "heading_levels_exact": true,
+          "link_targets_exact": true,
+          "image_targets_exact": true,
+          "reference_targets_exact": true,
+          "inline_code_exact": true,
+          "has_chinese_narrative": true
+        },
+        "structural_pass": true,
+        "source_paragraph_count": 4,
+        "target_paragraph_count": 4,
+        "paragraph_coverage_proxy": 1.0,
+        "possibly_missing_numbers": [
+          "3"
+        ],
+        "glossary_term_doc_count": 8,
+        "glossary_term_doc_hits": 8,
+        "glossary_adherence_proxy": 1.0,
+        "term_details": {
+          "token": {
+            "expected_zh": "词元",
+            "source_occurrences": 3,
+            "observed": true
+          },
+          "prompt": {
+            "expected_zh": "提示词",
+            "source_occurrences": 1,
+            "observed": true
+          },
+          "inference": {
+            "expected_zh": "推理",
+            "source_occurrences": 3,
+            "observed": true
+          },
+          "latency": {
+            "expected_zh": "时延",
+            "source_occurrences": 5,
+            "observed": true
+          },
+          "throughput": {
+            "expected_zh": "吞吐量",
+            "source_occurrences": 3,
+            "observed": true
+          },
+          "attention": {
+            "expected_zh": "注意力",
+            "source_occurrences": 1,
+            "observed": true
+          },
+          "KV cache": {
+            "expected_zh": "KV 缓存",
+            "source_occurrences": 1,
+            "observed": true
+          },
+          "batching": {
+            "expected_zh": "批处理",
+            "source_occurrences": 1,
+            "observed": true
+          }
+        },
+        "warning": "术语检测、段落数和数字比对是启发式代理指标，不能证明翻译准确或完整。",
+        "exists": true,
+        "translated_sha256": "0289ed9a294390e3ce8f0045a92bc58e71cc6528ff29af5de4dd0c8696837f88"
+      },
+      "chapter4.md": {
+        "checks": {
+          "fenced_code_exact": true,
+          "heading_levels_exact": true,
+          "link_targets_exact": true,
+          "image_targets_exact": true,
+          "reference_targets_exact": true,
+          "inline_code_exact": true,
+          "has_chinese_narrative": true
+        },
+        "structural_pass": true,
+        "source_paragraph_count": 4,
+        "target_paragraph_count": 4,
+        "paragraph_coverage_proxy": 1.0,
+        "possibly_missing_numbers": [
+          "4"
+        ],
+        "glossary_term_doc_count": 10,
+        "glossary_term_doc_hits": 9,
+        "glossary_adherence_proxy": 0.9,
+        "term_details": {
+          "token": {
+            "expected_zh": "词元",
+            "source_occurrences": 3,
+            "observed": true
+          },
+          "embedding": {
+            "expected_zh": "嵌入向量",
+            "source_occurrences": 2,
+            "observed": true
+          },
+          "prompt": {
+            "expected_zh": "提示词",
+            "source_occurrences": 3,
+            "observed": true
+          },
+          "inference": {
+            "expected_zh": "推理",
+            "source_occurrences": 2,
+            "observed": true
+          },
+          "latency": {
+            "expected_zh": "时延",
+            "source_occurrences": 2,
+            "observed": true
+          },
+          "throughput": {
+            "expected_zh": "吞吐量",
+            "source_occurrences": 1,
+            "observed": true
+          },
+          "KV cache": {
+            "expected_zh": "KV 缓存",
+            "source_occurrences": 1,
+            "observed": false
+          },
+          "batching": {
+            "expected_zh": "批处理",
+            "source_occurrences": 1,
+            "observed": true
+          },
+          "fine-tuning": {
+            "expected_zh": "微调",
+            "source_occurrences": 5,
+            "observed": true
+          },
+          "deployment": {
+            "expected_zh": "部署",
+            "source_occurrences": 3,
+            "observed": true
+          }
+        },
+        "warning": "术语检测、段落数和数字比对是启发式代理指标，不能证明翻译准确或完整。",
+        "exists": true,
+        "translated_sha256": "06a0df53c0d116dbc0db9cf6cd9422021d07df23d2bf2e39ef0ca509a123d97f"
+      }
+    },
+    "caveat": "结构 PASS 不等于语义翻译 PASS；遗漏率仅有代理指标，需人工或异源评审。"
+  },
+  "quality": {
+    "enabled": true,
+    "judged_documents": 4,
+    "all_judgments_valid": true,
+    "mean_quality_score": 5.0,
+    "reported_omissions": 0,
+    "per_document": {
+      "chapter1.md": {
+        "schema_valid": true,
+        "scores": {
+          "accuracy": 5.0,
+          "coverage": 5.0,
+          "fluency": 5.0,
+          "terminology": 5.0
+        },
+        "mean_score": 5.0,
+        "omissions": [],
+        "reported_omissions": 0,
+        "summary": "译文准确、完整、流畅，术语使用与共享术语表一致，无遗漏或错误。"
+      },
+      "chapter2.md": {
+        "schema_valid": true,
+        "scores": {
+          "accuracy": 5.0,
+          "coverage": 5.0,
+          "fluency": 5.0,
+          "terminology": 5.0
+        },
+        "mean_score": 5.0,
+        "omissions": [],
+        "reported_omissions": 0,
+        "summary": "译文准确、完整、流畅，术语使用符合共享术语表，无遗漏或错误。"
+      },
+      "chapter3.md": {
+        "schema_valid": true,
+        "scores": {
+          "accuracy": 5.0,
+          "coverage": 5.0,
+          "fluency": 5.0,
+          "terminology": 5.0
+        },
+        "mean_score": 5.0,
+        "omissions": [],
+        "reported_omissions": 0,
+        "summary": "译文准确、完整、流畅，术语使用符合共享术语表，无遗漏或错误。"
+      },
+      "chapter4.md": {
+        "schema_valid": true,
+        "scores": {
+          "accuracy": 5.0,
+          "coverage": 5.0,
+          "fluency": 5.0,
+          "terminology": 5.0
+        },
+        "mean_score": 5.0,
+        "omissions": [],
+        "reported_omissions": 0,
+        "summary": "译文准确、完整、流畅，术语使用与共享术语表一致，无遗漏或错误。"
+      }
+    },
+    "caveat": "单模型盲评可能偏置；只有使用异源模型/人工复核才算更独立的质量证据。"
+  }
+}

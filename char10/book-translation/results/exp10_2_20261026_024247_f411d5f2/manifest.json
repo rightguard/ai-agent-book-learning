@@ -1,0 +1,38 @@
+{
+  "run_id": "exp10_2_20261026_024247_f411d5f2",
+  "created_utc": "2026-10-26T02:42:47.536+00:00",
+  "version": "1.1.0",
+  "program_sha256": "a3925694ab0448f52f8c7890e9ee7b7ad99acc197c1cb302db0a454b7d06c2ed",
+  "input_files": [
+    {
+      "file": "chapter1.md",
+      "sha256": "a2fbd2f7d6bca44a03c55be1728f6f9c4309d1391af246b2aa3258f9b35ad29d"
+    },
+    {
+      "file": "chapter2.md",
+      "sha256": "84b589a81710170ce822874647acbc1d9d5a8b23aa4edfb4b5effffef9eeb7ed"
+    },
+    {
+      "file": "chapter3.md",
+      "sha256": "bcf4ba38efd22630f58d5c40d15d4d6529f3e537ea47504aae7bd4a5c356af47"
+    },
+    {
+      "file": "chapter4.md",
+      "sha256": "68ece63867a8f31d2cd932aa17ac5d799b0b87b4081ebb4664427a3f75f7e814"
+    }
+  ],
+  "model": "deepseek-v4-flash-0731",
+  "judge_model": "deepseek-v4-flash-0731",
+  "quality_judge_enabled": true,
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "mode": "all",
+  "trials": 1,
+  "temperature": 0.0,
+  "max_tokens": 2200,
+  "max_api_calls": 120,
+  "json_tokens": 900,
+  "thinking_mode": "off",
+  "max_revisions": 1,
+  "skip_glossary_llm": false,
+  "note": "教学对照，非官方实验结果。请求/回复存储在 raw_calls 中，可能含原文内容，请勿上传敏感资料。"
+}

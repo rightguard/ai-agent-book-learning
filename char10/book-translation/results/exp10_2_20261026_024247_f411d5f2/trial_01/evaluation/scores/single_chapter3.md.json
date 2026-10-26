@@ -1,0 +1,13 @@
+{
+  "schema_valid": true,
+  "scores": {
+    "accuracy": 5.0,
+    "coverage": 5.0,
+    "fluency": 5.0,
+    "terminology": 5.0
+  },
+  "mean_score": 5.0,
+  "omissions": [],
+  "reported_omissions": 0,
+  "summary": "译文准确传达了原文含义，内容完整无遗漏，中文表达流畅自然，术语使用与共享术语表一致。"
+}

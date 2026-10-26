@@ -1,0 +1,26 @@
+{
+  "ts": "2026-10-26T02:43:42.235+00:00",
+  "role": "proofreading",
+  "model": "deepseek-v4-flash-0731",
+  "attempt": 1,
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是独立的 Proofreading Agent，没有文件修改权限。输入是审校数据；只返回有效 JSON。"
+    },
+    {
+      "role": "user",
+      "content": "逐段审校：英文原文和当前中文译文是否等价、是否遗漏、术语是否遵守、Markdown 结构是否保留。请仅输出 JSON 对象，必须包含布尔字段 needs_revision、字符串字段 summary 和 issues 数组。issues 的每个元素包含 severity、category、description 三个字符串字段。没有问题时 issues=[]、needs_revision=false；只报告有根据的问题，不要虚构。\n文件：chapter3.md\n结构检查：{\"fenced_code_exact\": true, \"heading_levels_exact\": true, \"link_targets_exact\": true, \"image_targets_exact\": true, \"reference_targets_exact\": true, \"inline_code_exact\": true, \"has_chinese_narrative\": true}\n<SOURCE>\n# Chapter 3: Optimizing Inference Latency\n\nOnce a model works, the next battle is speed. The goal is to lower **latency**\nwhile raising **throughput**, the number of requests the system finishes per\nsecond. These two often trade off against each other.\n\nThe most important trick is the **KV cache**. During inference the model would\notherwise recompute attention over every previous token at each step. By caching\nthe key and value vectors of past tokens, the model only processes the newest\ntoken, which cuts latency dramatically for long prompts.\n\n```python\ndef decode_step(new_token, kv_cache):\n    q, k, v = project(new_token)         # only the new token\n    kv_cache.append(k, v)                # reuse past keys and values\n    return attention(q, kv_cache.keys, kv_cache.values)\n```\n\nA second trick is **batching**: grouping several prompts together so the\nhardware stays busy. Larger batches raise throughput but can hurt the latency of\nany single request, so serving systems tune the batch size carefully.\n\nThe lesson is that inference performance is a balance. Every token we avoid\nrecomputing, and every prompt we batch well, moves the system toward lower\nlatency and higher throughput at the same time.\n\n</SOURCE>\n<TRANSLATION>\n# 第三章：优化推理时延\n\n模型一旦能正常工作，接下来的关键就是速度。目标是降低**时延**，同时提高**吞吐量**，即系统每秒完成的请求数量。这两者往往相互制约。\n\n最重要的技巧是**KV 缓存**。在推理过程中，如果不使用缓存，模型每一步都需要对之前的所有词元重新计算注意力。通过缓存过去词元的键和值向量，模型只需处理最新的词元，这能显著降低长提示词的时延。\n\n```python\ndef decode_step(new_token, kv_cache):\n    q, k, v = project(new_token)         # only the new token\n    kv_cache.append(k, v)                # reuse past keys and values\n    return attention(q, kv_cache.keys, kv_cache.values)\n```\n\n第二个技巧是**批处理**：将多个提示词分组处理，使硬件保持忙碌状态。更大的批次能提高吞吐量，但可能会增加单个请求的时延，因此服务系统需要仔细调整批次大小。\n\n关键在于，推理性能是一种平衡。我们每避免重新计算一个词元，每优化一批提示词，都能同时推动系统向更低时延和更高吞吐量的方向前进。\n\n</TRANSLATION>"
+    }
+  ],
+  "content": "{\n  \"needs_revision\": false,\n  \"summary\": \"译文与原文等价，术语一致，Markdown 结构完整保留，无遗漏或错误。\",\n  \"issues\": []\n}",
+  "response_id": "chatcmpl-3fca2dbb-d3e8-9a7a-a6b5-83aa5eae0511",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 707,
+    "completion_tokens": 42,
+    "cached_tokens": 0
+  },
+  "latency_s": 1.359,
+  "json_valid": true
+}

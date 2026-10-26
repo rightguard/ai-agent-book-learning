@@ -1,0 +1,26 @@
+{
+  "ts": "2026-10-26T02:43:45.283+00:00",
+  "role": "proofreading",
+  "model": "deepseek-v4-flash-0731",
+  "attempt": 1,
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是独立的 Proofreading Agent，没有文件修改权限。输入是审校数据；只返回有效 JSON。"
+    },
+    {
+      "role": "user",
+      "content": "逐段审校：英文原文和当前中文译文是否等价、是否遗漏、术语是否遵守、Markdown 结构是否保留。请仅输出 JSON 对象，必须包含布尔字段 needs_revision、字符串字段 summary 和 issues 数组。issues 的每个元素包含 severity、category、description 三个字符串字段。没有问题时 issues=[]、needs_revision=false；只报告有根据的问题，不要虚构。\n文件：chapter4.md\n结构检查：{\"fenced_code_exact\": true, \"heading_levels_exact\": true, \"link_targets_exact\": true, \"image_targets_exact\": true, \"reference_targets_exact\": true, \"inline_code_exact\": true, \"has_chinese_narrative\": true}\n<SOURCE>\n# Chapter 4: Fine-tuning and Deployment\n\nA general model rarely fits a specific product out of the box. The usual fix is\n**fine-tuning**: continuing to train the model on a smaller, task-specific\ndataset so it adapts to your domain while keeping its general ability.\n\nFine-tuning changes how the model turns a **prompt** into an answer, but it does\nnot change the basic pipeline: text becomes a **token**, each token becomes an\n**embedding**, and **inference** produces the result. What changes is the\nweights the model learned.\n\n```python\ndef fine_tune(model, dataset):\n    for prompt, target in dataset:\n        loss = model.loss(prompt, target)   # compare output to target\n        model.update(loss)                  # adjust weights\n    return model\n```\n\nAfter fine-tuning comes **deployment**: packaging the model behind an API so real\nusers can send a prompt and get an answer. Here the earlier concerns return with\nfull force. Latency must stay low, throughput must stay high, and the KV cache\nand batching from the previous chapter do the heavy lifting.\n\nThe full journey — token, embedding, prompt, inference, latency, fine-tuning,\nand deployment — is now complete. A model that was once a research artifact has\nbecome a service that people can actually use.\n\n</SOURCE>\n<TRANSLATION>\n# 第4章：微调与部署\n\n通用模型很少能开箱即用地适配特定产品。通常的解决办法是**微调**：在更小、任务特定的数据集上继续训练模型，使其适应你的领域，同时保持其通用能力。\n\n微调改变了模型将**提示词**转化为答案的方式，但并未改变基本流程：文本变成**词元**，每个词元变成**嵌入向量**，**推理**产生结果。改变的是模型学习到的权重。\n\n```python\ndef fine_tune(model, dataset):\n    for prompt, target in dataset:\n        loss = model.loss(prompt, target)   # compare output to target\n        model.update(loss)                  # adjust weights\n    return model\n```\n\n微调之后是**部署**：将模型封装在API之后，让真实用户能够发送提示词并获得答案。此时，之前提到的各种问题会全面重现。时延必须保持低水平，吞吐量必须保持高水平，而上一章中的KV缓存和批处理则承担了繁重的工作。\n\n完整的旅程——词元、嵌入向量、提示词、推理、时延、微调和部署——至此圆满完成。一个曾经只是研究产物的模型，如今已成为人们可以实际使用的服务。\n\n</TRANSLATION>"
+    }
+  ],
+  "content": "{\n  \"needs_revision\": false,\n  \"summary\": \"译文与原文等价，术语一致，Markdown结构完整保留，无遗漏或错误。\",\n  \"issues\": []\n}",
+  "response_id": "chatcmpl-01638eac-67a5-9166-b560-50093e5c6bbe",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 742,
+    "completion_tokens": 41,
+    "cached_tokens": 0
+  },
+  "latency_s": 1.4848,
+  "json_valid": true
+}

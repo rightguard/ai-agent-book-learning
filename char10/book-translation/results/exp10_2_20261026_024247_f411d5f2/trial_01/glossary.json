@@ -1,0 +1,14 @@
+{
+  "token": "词元",
+  "embedding": "嵌入向量",
+  "prompt": "提示词",
+  "inference": "推理",
+  "latency": "时延",
+  "throughput": "吞吐量",
+  "attention": "注意力",
+  "transformer": "Transformer",
+  "KV cache": "KV 缓存",
+  "batching": "批处理",
+  "fine-tuning": "微调",
+  "deployment": "部署"
+}

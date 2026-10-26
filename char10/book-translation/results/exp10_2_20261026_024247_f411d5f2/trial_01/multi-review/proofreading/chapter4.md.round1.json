@@ -1,0 +1,84 @@
+{
+  "file": "chapter4.md",
+  "round": 1,
+  "structure": {
+    "checks": {
+      "fenced_code_exact": true,
+      "heading_levels_exact": true,
+      "link_targets_exact": true,
+      "image_targets_exact": true,
+      "reference_targets_exact": true,
+      "inline_code_exact": true,
+      "has_chinese_narrative": true
+    },
+    "structural_pass": true,
+    "source_paragraph_count": 4,
+    "target_paragraph_count": 4,
+    "paragraph_coverage_proxy": 1.0,
+    "possibly_missing_numbers": [
+      "4"
+    ],
+    "glossary_term_doc_count": 10,
+    "glossary_term_doc_hits": 9,
+    "glossary_adherence_proxy": 0.9,
+    "term_details": {
+      "token": {
+        "expected_zh": "词元",
+        "source_occurrences": 3,
+        "observed": true
+      },
+      "embedding": {
+        "expected_zh": "嵌入向量",
+        "source_occurrences": 2,
+        "observed": true
+      },
+      "prompt": {
+        "expected_zh": "提示词",
+        "source_occurrences": 3,
+        "observed": true
+      },
+      "inference": {
+        "expected_zh": "推理",
+        "source_occurrences": 2,
+        "observed": true
+      },
+      "latency": {
+        "expected_zh": "时延",
+        "source_occurrences": 2,
+        "observed": true
+      },
+      "throughput": {
+        "expected_zh": "吞吐量",
+        "source_occurrences": 1,
+        "observed": true
+      },
+      "KV cache": {
+        "expected_zh": "KV 缓存",
+        "source_occurrences": 1,
+        "observed": false
+      },
+      "batching": {
+        "expected_zh": "批处理",
+        "source_occurrences": 1,
+        "observed": true
+      },
+      "fine-tuning": {
+        "expected_zh": "微调",
+        "source_occurrences": 5,
+        "observed": true
+      },
+      "deployment": {
+        "expected_zh": "部署",
+        "source_occurrences": 3,
+        "observed": true
+      }
+    },
+    "warning": "术语检测、段落数和数字比对是启发式代理指标，不能证明翻译准确或完整。"
+  },
+  "review": {
+    "needs_revision": false,
+    "issues": [],
+    "summary": "译文与原文等价，术语一致，Markdown结构完整保留，无遗漏或错误。",
+    "schema_valid": true
+  }
+}

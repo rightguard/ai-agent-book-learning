@@ -1,0 +1,11 @@
+{
+  "schema_valid": true,
+  "issues_by_file": {
+    "chapter1.md": [],
+    "chapter2.md": [],
+    "chapter3.md": [],
+    "chapter4.md": []
+  },
+  "total_issues": 0,
+  "summary": "所有章节的术语使用与指定术语表一致，未发现跨章节术语漂移或相互矛盾的称谓。"
+}

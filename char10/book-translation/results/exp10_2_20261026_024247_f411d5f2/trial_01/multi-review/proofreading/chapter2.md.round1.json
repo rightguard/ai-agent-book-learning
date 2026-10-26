@@ -1,0 +1,69 @@
+{
+  "file": "chapter2.md",
+  "round": 1,
+  "structure": {
+    "checks": {
+      "fenced_code_exact": true,
+      "heading_levels_exact": true,
+      "link_targets_exact": true,
+      "image_targets_exact": true,
+      "reference_targets_exact": true,
+      "inline_code_exact": true,
+      "has_chinese_narrative": true
+    },
+    "structural_pass": true,
+    "source_paragraph_count": 3,
+    "target_paragraph_count": 3,
+    "paragraph_coverage_proxy": 1.0,
+    "possibly_missing_numbers": [
+      "2"
+    ],
+    "glossary_term_doc_count": 7,
+    "glossary_term_doc_hits": 7,
+    "glossary_adherence_proxy": 1.0,
+    "term_details": {
+      "token": {
+        "expected_zh": "词元",
+        "source_occurrences": 7,
+        "observed": true
+      },
+      "embedding": {
+        "expected_zh": "嵌入向量",
+        "source_occurrences": 1,
+        "observed": true
+      },
+      "prompt": {
+        "expected_zh": "提示词",
+        "source_occurrences": 2,
+        "observed": true
+      },
+      "inference": {
+        "expected_zh": "推理",
+        "source_occurrences": 1,
+        "observed": true
+      },
+      "latency": {
+        "expected_zh": "时延",
+        "source_occurrences": 1,
+        "observed": true
+      },
+      "attention": {
+        "expected_zh": "注意力",
+        "source_occurrences": 5,
+        "observed": true
+      },
+      "transformer": {
+        "expected_zh": "Transformer",
+        "source_occurrences": 4,
+        "observed": true
+      }
+    },
+    "warning": "术语检测、段落数和数字比对是启发式代理指标，不能证明翻译准确或完整。"
+  },
+  "review": {
+    "needs_revision": false,
+    "issues": [],
+    "summary": "译文与原文等价，无遗漏，术语一致，Markdown 结构完整保留。",
+    "schema_valid": true
+  }
+}

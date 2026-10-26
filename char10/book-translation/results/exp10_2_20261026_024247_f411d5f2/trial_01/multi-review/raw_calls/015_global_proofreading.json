@@ -1,0 +1,26 @@
+{
+  "ts": "2026-10-26T02:43:48.580+00:00",
+  "role": "global_proofreading",
+  "model": "deepseek-v4-flash-0731",
+  "attempt": 1,
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是 Global Proofreading Agent，负责所有章节之间的专业术语一致性与交叉引用检查。可以读取全部中文译文和共享术语表，但不能修改文件，也看不到各 Agent 内部轨迹。仅报告确切的跨章节术语漂移、违反指定术语或明显相互矛盾的称谓。只返回 JSON 对象，包含 issues_by_file 对象和 summary 字符串；issues_by_file 必须为每个真实文件名保留一个数组，即使没有问题也要用空数组。每个问题包含字符串 severity、category、description 和 evidence；evidence 必须逐字复制当前章节译文中确实存在的短片段，长度 3~120 字符。请勿虚构、猜测或转述证据；无问题时不要编造问题。"
+    },
+    {
+      "role": "user",
+      "content": "阶段: final\n指定术语: {\"KV cache\": \"KV 缓存\", \"attention\": \"注意力\", \"batching\": \"批处理\", \"deployment\": \"部署\", \"embedding\": \"嵌入向量\", \"fine-tuning\": \"微调\", \"inference\": \"推理\", \"latency\": \"时延\", \"prompt\": \"提示词\", \"throughput\": \"吞吐量\", \"token\": \"词元\", \"transformer\": \"Transformer\"}\n文件名清单: [\"chapter1.md\", \"chapter2.md\", \"chapter3.md\", \"chapter4.md\"]\n<ALL_TRANSLATIONS>\n<DOCUMENT filename=\"chapter1.md\">\n# 第1章：LLM推理基础\n\n大语言模型在能够推理任何内容之前，会先将文本转换为数字。每一段文本首先被分割成**词元**，即模型消费的最小单位。随后，每个词元被映射为一个**嵌入向量**，这是一个在高维空间中捕捉其含义的稠密向量。\n\n当用户发送请求时，他们编写的文本被称为**提示词**。模型在该提示词上运行以生成答案的过程被称为**推理**。从发送提示词到收到第一个响应之间的时间，就是用户直接感受到的**时延**。\n\n一个最小化的推理调用如下所示：\n\n```python\ndef generate(prompt: str, model) -> str:\n    tokens = model.tokenize(prompt)      # split prompt into tokens\n    embeddings = model.embed(tokens)     # map each token to an embedding\n    output = model.forward(embeddings)   # run inference\n    return model.detokenize(output)\n```\n\n有两个数字主导着用户体验。第一，提示词中的词元数量，因为更长的提示词需要更多的计算成本。第二，第一个词元的时延，因为缓慢的首词元会让整个系统感觉迟钝。在本书中，我们将不断回到这些概念：词元、嵌入向量、提示词、推理和时延。现在就把它们的定义弄清楚，可以避免之后的混淆。\n\n</DOCUMENT>\n\n<DOCUMENT filename=\"chapter2.md\">\n# 第2章：Transformer 与注意力\n\n现代语言模型建立在 **Transformer** 架构之上。其核心思想是 **注意力**：模型并非严格从左到右读取序列，而是让每个词元都能查看其他所有词元，并决定哪些词元更为重要。这就是为什么 Transformer 能够将代词与许多词元之前出现的名词关联起来。\n\n注意力机制作用于每个词元的 **嵌入向量**。对于每个词元，模型会计算三个向量——查询、键和值——并用它们来权衡每个词元应多大程度地关注其他词元。\n\n```python\ndef attention(query, key, value):\n    scores = query @ key.T          # similarity between tokens\n    weights = softmax(scores)       # attention weights\n    return weights @ value          # weighted embedding\n```\n\n由于注意力机制会将每个词元与其他所有词元进行比较，其计算成本会随着提示词变长而迅速增加。这是我们在下一章将要解决的时延问题的根本原因。尽管如此，注意力正是 Transformer 强大能力的来源：在推理过程中，它使模型能够在整个提示词范围内灵活地路由信息，而非通过固定的流水线。\n\n</DOCUMENT>\n\n<DOCUMENT filename=\"chapter3.md\">\n# 第三章：优化推理时延\n\n模型一旦能正常工作，接下来的关键就是速度。目标是降低**时延**，同时提高**吞吐量**，即系统每秒完成的请求数量。这两者往往相互制约。\n\n最重要的技巧是**KV 缓存**。在推理过程中，如果不使用缓存，模型每一步都需要对之前的所有词元重新计算注意力。通过缓存过去词元的键和值向量，模型只需处理最新的词元，这能显著降低长提示词的时延。\n\n```python\ndef decode_step(new_token, kv_cache):\n    q, k, v = project(new_token)         # only the new token\n    kv_cache.append(k, v)                # reuse past keys and values\n    return attention(q, kv_cache.keys, kv_cache.values)\n```\n\n第二个技巧是**批处理**：将多个提示词分组处理，使硬件保持忙碌状态。更大的批次能提高吞吐量，但可能会增加单个请求的时延，因此服务系统需要仔细调整批次大小。\n\n关键在于，推理性能是一种平衡。我们每避免重新计算一个词元，每优化一批提示词，都能同时推动系统向更低时延和更高吞吐量的方向前进。\n\n</DOCUMENT>\n\n<DOCUMENT filename=\"chapter4.md\">\n# 第4章：微调与部署\n\n通用模型很少能开箱即用地适配特定产品。通常的解决办法是**微调**：在更小、任务特定的数据集上继续训练模型，使其适应你的领域，同时保持其通用能力。\n\n微调改变了模型将**提示词**转化为答案的方式，但并未改变基本流程：文本变成**词元**，每个词元变成**嵌入向量**，**推理**产生结果。改变的是模型学习到的权重。\n\n```python\ndef fine_tune(model, dataset):\n    for prompt, target in dataset:\n        loss = model.loss(prompt, target)   # compare output to target\n        model.update(loss)                  # adjust weights\n    return model\n```\n\n微调之后是**部署**：将模型封装在API之后，让真实用户能够发送提示词并获得答案。此时，之前提到的各种问题会全面重现。时延必须保持低水平，吞吐量必须保持高水平，而上一章中的KV缓存和批处理则承担了繁重的工作。\n\n完整的旅程——词元、嵌入向量、提示词、推理、时延、微调和部署——至此圆满完成。一个曾经只是研究产物的模型，如今已成为人们可以实际使用的服务。\n\n</DOCUMENT>\n</ALL_TRANSLATIONS>"
+    }
+  ],
+  "content": "{\n  \"issues_by_file\": {\n    \"chapter1.md\": [],\n    \"chapter2.md\": [],\n    \"chapter3.md\": [],\n    \"chapter4.md\": []\n  },\n  \"summary\": \"所有章节均一致使用指定术语，未发现跨章节术语漂移或相互矛盾的称谓。\"\n}",
+  "response_id": "chatcmpl-b3385c38-92b4-9367-9002-62a665512e26",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 1367,
+    "completion_tokens": 65,
+    "cached_tokens": 0
+  },
+  "latency_s": 1.4307,
+  "json_valid": true
+}

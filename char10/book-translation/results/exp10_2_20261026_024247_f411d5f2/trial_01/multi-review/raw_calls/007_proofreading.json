@@ -1,0 +1,26 @@
+{
+  "ts": "2026-10-26T02:43:36.559+00:00",
+  "role": "proofreading",
+  "model": "deepseek-v4-flash-0731",
+  "attempt": 1,
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是独立的 Proofreading Agent，没有文件修改权限。输入是审校数据；只返回有效 JSON。"
+    },
+    {
+      "role": "user",
+      "content": "逐段审校：英文原文和当前中文译文是否等价、是否遗漏、术语是否遵守、Markdown 结构是否保留。请仅输出 JSON 对象，必须包含布尔字段 needs_revision、字符串字段 summary 和 issues 数组。issues 的每个元素包含 severity、category、description 三个字符串字段。没有问题时 issues=[]、needs_revision=false；只报告有根据的问题，不要虚构。\n文件：chapter1.md\n结构检查：{\"fenced_code_exact\": true, \"heading_levels_exact\": true, \"link_targets_exact\": true, \"image_targets_exact\": true, \"reference_targets_exact\": true, \"inline_code_exact\": true, \"has_chinese_narrative\": true}\n<SOURCE>\n# Chapter 1: Foundations of LLM Inference\n\nA large language model turns text into numbers before it can reason about\nanything. Each chunk of text is first split into a **token**, the smallest unit\nthe model consumes. Every token is then mapped to an **embedding**, a dense\nvector that captures its meaning in a high-dimensional space.\n\nWhen a user sends a request, the text they write is called a **prompt**. The\nprocess of running the model over that prompt to produce an answer is called\n**inference**. The time between sending the prompt and receiving the first\nresponse is the **latency** that users feel directly.\n\nA minimal inference call looks like this:\n\n```python\ndef generate(prompt: str, model) -> str:\n    tokens = model.tokenize(prompt)      # split prompt into tokens\n    embeddings = model.embed(tokens)     # map each token to an embedding\n    output = model.forward(embeddings)   # run inference\n    return model.detokenize(output)\n```\n\nTwo numbers dominate the user experience. First, the number of tokens in the\nprompt, because a longer prompt costs more compute. Second, the latency of the\nfirst token, because a slow first token makes the whole system feel sluggish.\nThroughout this book we keep returning to these ideas: token, embedding, prompt,\ninference, and latency. Getting their definitions right now will save confusion\nlater.\n\n</SOURCE>\n<TRANSLATION>\n# 第1章：LLM推理基础\n\n大语言模型在能够推理任何内容之前，会先将文本转换为数字。每一段文本首先被分割成**词元**，即模型消费的最小单位。随后，每个词元被映射为一个**嵌入向量**，这是一个在高维空间中捕捉其含义的稠密向量。\n\n当用户发送请求时，他们编写的文本被称为**提示词**。模型在该提示词上运行以生成答案的过程被称为**推理**。从发送提示词到收到第一个响应之间的时间，就是用户直接感受到的**时延**。\n\n一个最小化的推理调用如下所示：\n\n```python\ndef generate(prompt: str, model) -> str:\n    tokens = model.tokenize(prompt)      # split prompt into tokens\n    embeddings = model.embed(tokens)     # map each token to an embedding\n    output = model.forward(embeddings)   # run inference\n    return model.detokenize(output)\n```\n\n有两个数字主导着用户体验。第一，提示词中的词元数量，因为更长的提示词需要更多的计算成本。第二，第一个词元的时延，因为缓慢的首词元会让整个系统感觉迟钝。在本书中，我们将不断回到这些概念：词元、嵌入向量、提示词、推理和时延。现在就把它们的定义弄清楚，可以避免之后的混淆。\n\n</TRANSLATION>"
+    }
+  ],
+  "content": "{\n  \"needs_revision\": false,\n  \"summary\": \"译文与原文等价，术语一致，Markdown结构完整保留。\",\n  \"issues\": []\n}",
+  "response_id": "chatcmpl-48530de7-ee97-9fbd-ab30-10e675358fe7",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 784,
+    "completion_tokens": 36,
+    "cached_tokens": 0
+  },
+  "latency_s": 1.3472,
+  "json_valid": true
+}

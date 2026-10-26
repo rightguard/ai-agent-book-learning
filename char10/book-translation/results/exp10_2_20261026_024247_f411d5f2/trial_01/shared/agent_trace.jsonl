@@ -1,0 +1,2 @@
+{"ts": "2026-10-26T02:42:50.220+00:00", "type": "llm_call", "role": "glossary", "call_number": 1, "json_valid": true, "raw_path": "raw_calls/001_glossary.json", "input_tokens": 962, "output_tokens": 109, "latency_s": 2.6384, "response_sha256": "7af2285f66ab3386396e4e23ad5b3809377a4173dadb88fe60e84d43858d0c6a"}
+{"ts": "2026-10-26T02:42:50.230+00:00", "type": "glossary_ready", "term_count": 12, "source": "llm_and_house_style", "chunks": 1, "invalid_chunks": 0}

@@ -1,0 +1,26 @@
+{
+  "ts": "2026-10-26T02:43:39.279+00:00",
+  "role": "proofreading",
+  "model": "deepseek-v4-flash-0731",
+  "attempt": 1,
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是独立的 Proofreading Agent，没有文件修改权限。输入是审校数据；只返回有效 JSON。"
+    },
+    {
+      "role": "user",
+      "content": "逐段审校：英文原文和当前中文译文是否等价、是否遗漏、术语是否遵守、Markdown 结构是否保留。请仅输出 JSON 对象，必须包含布尔字段 needs_revision、字符串字段 summary 和 issues 数组。issues 的每个元素包含 severity、category、description 三个字符串字段。没有问题时 issues=[]、needs_revision=false；只报告有根据的问题，不要虚构。\n文件：chapter2.md\n结构检查：{\"fenced_code_exact\": true, \"heading_levels_exact\": true, \"link_targets_exact\": true, \"image_targets_exact\": true, \"reference_targets_exact\": true, \"inline_code_exact\": true, \"has_chinese_narrative\": true}\n<SOURCE>\n# Chapter 2: The Transformer and Attention\n\nModern language models are built on the **transformer** architecture. Its\ncentral idea is **attention**: instead of reading a sequence strictly left to\nright, the model lets every token look at every other token and decide which\nones matter. This is why a transformer can connect a pronoun to a noun that\nappeared many tokens earlier.\n\nAttention works on the **embedding** of each token. For every token the model\ncomputes three vectors — a query, a key, and a value — and uses them to weigh\nhow much each token should attend to the others.\n\n```python\ndef attention(query, key, value):\n    scores = query @ key.T          # similarity between tokens\n    weights = softmax(scores)       # attention weights\n    return weights @ value          # weighted embedding\n```\n\nBecause attention compares every token with every other token, its cost grows\nquickly as the prompt gets longer. This is the root cause of the latency\nproblems we will attack in the next chapter. Still, attention is what gives the\ntransformer its power: during inference, it lets the model route information\nflexibly across the whole prompt rather than through a fixed pipeline.\n\n</SOURCE>\n<TRANSLATION>\n# 第2章：Transformer 与注意力\n\n现代语言模型建立在 **Transformer** 架构之上。其核心思想是 **注意力**：模型并非严格从左到右读取序列，而是让每个词元都能查看其他所有词元，并决定哪些词元更为重要。这就是为什么 Transformer 能够将代词与许多词元之前出现的名词关联起来。\n\n注意力机制作用于每个词元的 **嵌入向量**。对于每个词元，模型会计算三个向量——查询、键和值——并用它们来权衡每个词元应多大程度地关注其他词元。\n\n```python\ndef attention(query, key, value):\n    scores = query @ key.T          # similarity between tokens\n    weights = softmax(scores)       # attention weights\n    return weights @ value          # weighted embedding\n```\n\n由于注意力机制会将每个词元与其他所有词元进行比较，其计算成本会随着提示词变长而迅速增加。这是我们在下一章将要解决的时延问题的根本原因。尽管如此，注意力正是 Transformer 强大能力的来源：在推理过程中，它使模型能够在整个提示词范围内灵活地路由信息，而非通过固定的流水线。\n\n</TRANSLATION>"
+    }
+  ],
+  "content": "{\n  \"needs_revision\": false,\n  \"summary\": \"译文与原文等价，无遗漏，术语一致，Markdown 结构完整保留。\",\n  \"issues\": []\n}",
+  "response_id": "chatcmpl-4b97356a-7e3d-9a53-ae67-00b0c370f62a",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 693,
+    "completion_tokens": 40,
+    "cached_tokens": 0
+  },
+  "latency_s": 1.3721,
+  "json_valid": true
+}
